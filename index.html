@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="/favicon.svg" />
+	<title>The Last Rule · P0 氛围样板间</title>
+	<style>
+		html, body { margin: 0; height: 100%; background: #0b0c0c; overflow: hidden; font-family: system-ui, "Microsoft YaHei", sans-serif; }
+		canvas { display: block; }
+		#hud { position: fixed; left: 10px; top: 10px; color: #cfd6d0; font: 12px/1.5 Consolas, monospace; background: rgba(0,0,0,.55); padding: 8px 10px; border-radius: 4px; pointer-events: none; white-space: pre; z-index: 10; }
+		#help { position: fixed; left: 10px; bottom: 10px; color: #9aa39c; font-size: 12px; background: rgba(0,0,0,.45); padding: 6px 10px; border-radius: 4px; pointer-events: none; }
+		#loading { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; color: #9aa39c; font-size: 14px; background: #0b0c0c; z-index: 20; }
+	</style>
+</head>
+<body>
+	<div id="loading">加载中…</div>
+	<div id="hud"></div>
+	<div id="help">右键拖动：旋转视角　滚轮：缩放　WASD：平移　C：切换俯视 / 近景　P：截图</div>
+	<script type="module" src="/src/main.js"></script>
+</body>
+</html>
