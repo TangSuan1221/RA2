@@ -1,0 +1,5 @@
+import puppeteer from 'puppeteer-core';
+const browser=await puppeteer.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:'new',args:['--enable-unsafe-webgpu','--enable-features=Vulkan,WebGPU','--use-angle=d3d11','--ignore-gpu-blocklist'],defaultViewport:{width:1600,height:900}});
+const page=await browser.newPage();await page.goto('http://localhost:5173/?scene=hospital&ui=0');await page.waitForFunction('window.__ready',{timeout:120000});
+await page.evaluate(()=>{__app.toggles.ao=false;__app.rebuild();__app.scene.traverse(o=>{if(o.isMesh&&['hospital-cloth','hospital-wall'].includes(o.material?.name)){o.material.colorNode=null;o.material.color.set(0xbbcccc);o.material.normalNode=null;o.material.roughnessNode=null;o.material.roughness=.9;o.material.needsUpdate=true;}if(o.isSpotLight)o.map=null;});});await new Promise(r=>setTimeout(r,2000));await page.screenshot({path:'shots/continuation/interiors/hospital_plain.jpg'});
+console.log(await page.evaluate(()=>{let o=[];__app.scene.traverse(n=>{if(n.isLight)o.push([n.type,n.intensity,n.position.toArray()]);});return o;}));await browser.close();

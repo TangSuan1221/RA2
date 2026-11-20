@@ -1,0 +1,200 @@
+[
+  {
+    "id": "00",
+    "title": "全城战略布局",
+    "png": "plates/00.png",
+    "svg": "plates/00.svg"
+  },
+  {
+    "id": "01",
+    "title": "道路等级与桥梁通行",
+    "png": "plates/01.png",
+    "svg": "plates/01.svg"
+  },
+  {
+    "id": "02",
+    "title": "风险梯度 / 尸潮 / 潮汐",
+    "png": "plates/02.png",
+    "svg": "plates/02.svg"
+  },
+  {
+    "id": "03",
+    "title": "营地网络与控制节点",
+    "png": "plates/03.png",
+    "svg": "plates/03.svg"
+  },
+  {
+    "id": "04",
+    "title": "地下—地面—高架分层",
+    "png": "plates/04.png",
+    "svg": "plates/04.svg"
+  },
+  {
+    "id": "05",
+    "title": "十座桥梁 · 状态与通行布局",
+    "png": "plates/05.png",
+    "svg": "plates/05.svg"
+  },
+  {
+    "id": "06",
+    "title": "西北 / 巴拉德—因特湾",
+    "png": "plates/06.png",
+    "svg": "plates/06.svg"
+  },
+  {
+    "id": "07",
+    "title": "东北 / 联合湖—华大",
+    "png": "plates/07.png",
+    "svg": "plates/07.svg"
+  },
+  {
+    "id": "08",
+    "title": "中西 / 女王山—太空针",
+    "png": "plates/08.png",
+    "svg": "plates/08.svg"
+  },
+  {
+    "id": "09",
+    "title": "中东 / 国会山—中央区",
+    "png": "plates/09.png",
+    "svg": "plates/09.svg"
+  },
+  {
+    "id": "10",
+    "title": "滨海 / 市场—地下城",
+    "png": "plates/10.png",
+    "svg": "plates/10.svg"
+  },
+  {
+    "id": "11",
+    "title": "第一山 / 医院—互通",
+    "png": "plates/11.png",
+    "svg": "plates/11.svg"
+  },
+  {
+    "id": "12",
+    "title": "西南 / 港口—球场",
+    "png": "plates/12.png",
+    "svg": "plates/12.svg"
+  },
+  {
+    "id": "13",
+    "title": "东南 / 灯塔山—封锁线",
+    "png": "plates/13.png",
+    "svg": "plates/13.svg"
+  },
+  {
+    "id": "32",
+    "title": "T3 / T4 与 C2 / C3 · 通用地块库",
+    "png": "plates/32.png",
+    "svg": "plates/32.svg"
+  },
+  {
+    "id": "C1-01",
+    "title": "煤气厂 · 要塞营地",
+    "png": "plates/C1-01.png",
+    "svg": "plates/C1-01.svg"
+  },
+  {
+    "id": "C1-02",
+    "title": "华大红场 · 要塞营地",
+    "png": "plates/C1-02.png",
+    "svg": "plates/C1-02.svg"
+  },
+  {
+    "id": "C1-03",
+    "title": "劳顿堡 · 要塞营地",
+    "png": "plates/C1-03.png",
+    "svg": "plates/C1-03.svg"
+  },
+  {
+    "id": "C1-04",
+    "title": "巴拉德船闸 · 要塞营地",
+    "png": "plates/C1-04.png",
+    "svg": "plates/C1-04.svg"
+  },
+  {
+    "id": "C1-05",
+    "title": "志愿者水塔 · 要塞营地",
+    "png": "plates/C1-05.png",
+    "svg": "plates/C1-05.svg"
+  },
+  {
+    "id": "T1-01",
+    "title": "太空针塔 · 军方隔离区",
+    "png": "plates/T1-01.png",
+    "svg": "plates/T1-01.svg"
+  },
+  {
+    "id": "T1-02",
+    "title": "港湾医疗中心 · 第一山",
+    "png": "plates/T1-02.png",
+    "svg": "plates/T1-02.svg"
+  },
+  {
+    "id": "T1-03",
+    "title": "流明球场 · 联邦撤离营",
+    "png": "plates/T1-03.png",
+    "svg": "plates/T1-03.svg"
+  },
+  {
+    "id": "T1-04",
+    "title": "波音机场 · 可选地图扩展",
+    "png": "plates/T1-04.png",
+    "svg": "plates/T1-04.svg"
+  },
+  {
+    "id": "T2-01",
+    "title": "西雅图港 · 港岛与集装箱",
+    "png": "plates/T2-01.png",
+    "svg": "plates/T2-01.svg"
+  },
+  {
+    "id": "T2-02",
+    "title": "水族馆 · 半淹没探索",
+    "png": "plates/T2-02.png",
+    "svg": "plates/T2-02.svg"
+  },
+  {
+    "id": "T2-03",
+    "title": "派克市场 · 下沉式迷宫",
+    "png": "plates/T2-03.png",
+    "svg": "plates/T2-03.svg"
+  },
+  {
+    "id": "T2-04",
+    "title": "市中心 · 摩天楼立体群",
+    "png": "plates/T2-04.png",
+    "svg": "plates/T2-04.svg"
+  },
+  {
+    "id": "T2-05",
+    "title": "先锋广场 · 黑暗地下城",
+    "png": "plates/T2-05.png",
+    "svg": "plates/T2-05.svg"
+  },
+  {
+    "id": "T2-06",
+    "title": "球体温室 · 植物迷宫",
+    "png": "plates/T2-06.png",
+    "svg": "plates/T2-06.svg"
+  },
+  {
+    "id": "T2-07",
+    "title": "因特湾铁路场 · 工程资源",
+    "png": "plates/T2-07.png",
+    "svg": "plates/T2-07.svg"
+  },
+  {
+    "id": "T2-08",
+    "title": "华大实验楼 · 门禁研究",
+    "png": "plates/T2-08.png",
+    "svg": "plates/T2-08.svg"
+  },
+  {
+    "id": "T2-09",
+    "title": "SODO 仓储超市 · 批量搬运",
+    "png": "plates/T2-09.png",
+    "svg": "plates/T2-09.svg"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "20",
+    "key": "tunnel",
+    "drawCalls": 244,
+    "triangles": 593815,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "21",
+    "key": "corridor",
+    "drawCalls": 759,
+    "triangles": 1791282,
+    "environmentReady": true,
+    "errors": []
+  }
+]

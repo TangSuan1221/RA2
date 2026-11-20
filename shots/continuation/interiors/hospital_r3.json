@@ -1,0 +1,16 @@
+[
+  {
+    "out": "shots/continuation/interiors/hospital_r3.jpg",
+    "ms": 13090,
+    "error": null,
+    "stats": {
+      "fps": 59.99999999999997,
+      "ms": 16.666666666666675,
+      "gpu": 0.7012479999999999,
+      "drawCalls": 194,
+      "triangles": 730563,
+      "mem": 704968728
+    },
+    "logs": []
+  }
+]

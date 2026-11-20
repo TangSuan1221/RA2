@@ -1,0 +1,16 @@
+[
+  {
+    "out": "shots/continuation/interiors/flooded_baseline.jpg",
+    "ms": 105885,
+    "error": null,
+    "stats": {
+      "fps": 10,
+      "ms": 100,
+      "gpu": 2.63856,
+      "drawCalls": 286,
+      "triangles": 13264354,
+      "mem": 636764053
+    },
+    "logs": []
+  }
+]

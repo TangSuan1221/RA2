@@ -1,0 +1,50 @@
+[
+  {
+    "id": "19a",
+    "key": "shops",
+    "drawCalls": 528,
+    "triangles": 2083546,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "19b",
+    "key": "store-2",
+    "drawCalls": 470,
+    "triangles": 2108730,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "19c",
+    "key": "store-3",
+    "drawCalls": 458,
+    "triangles": 1805412,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "19d",
+    "key": "store-4",
+    "drawCalls": 396,
+    "triangles": 1820876,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "19e",
+    "key": "store-5",
+    "drawCalls": 360,
+    "triangles": 1617020,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "19f",
+    "key": "store-6",
+    "drawCalls": 365,
+    "triangles": 1497827,
+    "environmentReady": true,
+    "errors": []
+  }
+]

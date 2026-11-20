@@ -1,0 +1,16 @@
+[
+  {
+    "out": "shots/continuation/interiors/flooded_r5b.jpg",
+    "ms": 68787,
+    "error": null,
+    "stats": {
+      "fps": 5.624296962816791,
+      "ms": 177.80000000198683,
+      "gpu": 2.8391040000000003,
+      "drawCalls": 299,
+      "triangles": 13655194,
+      "mem": 636977399
+    },
+    "logs": []
+  }
+]

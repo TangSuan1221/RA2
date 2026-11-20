@@ -1,0 +1,106 @@
+[
+  {
+    "id": "17a",
+    "key": "radio",
+    "drawCalls": 165,
+    "triangles": 426635,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "17b",
+    "key": "radio-gate",
+    "drawCalls": 160,
+    "triangles": 433547,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "17c",
+    "key": "radio-roof",
+    "drawCalls": 130,
+    "triangles": 308274,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "18a",
+    "key": "power&power=off",
+    "drawCalls": 242,
+    "triangles": 861226,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "18b",
+    "key": "power&power=on",
+    "drawCalls": 242,
+    "triangles": 861226,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "19a",
+    "key": "shops",
+    "drawCalls": 508,
+    "triangles": 2026914,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "19b",
+    "key": "store-2",
+    "drawCalls": 456,
+    "triangles": 2052178,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "19c",
+    "key": "store-3",
+    "drawCalls": 442,
+    "triangles": 1749076,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "19d",
+    "key": "store-4",
+    "drawCalls": 394,
+    "triangles": 1783484,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "19e",
+    "key": "store-5",
+    "drawCalls": 360,
+    "triangles": 1568372,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "19f",
+    "key": "store-6",
+    "drawCalls": 359,
+    "triangles": 1499283,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "20",
+    "key": "tunnel",
+    "drawCalls": 247,
+    "triangles": 589807,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "id": "21",
+    "key": "corridor",
+    "drawCalls": 771,
+    "triangles": 1778198,
+    "environmentReady": true,
+    "errors": []
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "state": {
+    "ready": true,
+    "phase": "ready",
+    "stats": {
+      "fps": 59.9880023966602,
+      "ms": 16.670000000794733,
+      "gpu": 4.4694400000000005,
+      "drawCalls": 551,
+      "triangles": 15195549,
+      "mem": 1168507036
+    },
+    "app": true
+  },
+  "logs": []
+}

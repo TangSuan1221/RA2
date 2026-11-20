@@ -1,0 +1,35 @@
+{
+  "fixture": "Enemy combat disabled only for isolated visual traversal check",
+  "prone": {
+    "clip": "Prone_Crawl_Forward",
+    "head": [
+      0.02845798103051347,
+      0.4235484451332346,
+      -5.262281035980135
+    ],
+    "pos": [
+      0,
+      0.005000000000001448,
+      -5.858666666666682
+    ],
+    "height": 0.55
+  },
+  "vault": {
+    "clip": "Safety_Vault",
+    "state": "vault",
+    "pos": [
+      -0.0002509720335954557,
+      1.1500000000000001,
+      7.575383343373498
+    ]
+  },
+  "end": {
+    "state": "idle",
+    "pos": [
+      -0.0002509720335954172,
+      0.004999999999998284,
+      7.87
+    ]
+  },
+  "errors": []
+}

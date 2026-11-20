@@ -1,0 +1,86 @@
+[
+  {
+    "key": "home",
+    "drawingBuffer": [
+      1600,
+      900
+    ],
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5080 (0x00002C02) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "median": 16.69999999999891,
+    "p95": 16.800000000000182,
+    "drawCalls": 612,
+    "triangles": 1476294,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "key": "underground",
+    "drawingBuffer": [
+      1600,
+      900
+    ],
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5080 (0x00002C02) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "median": 16.69999999999891,
+    "p95": 16.80000000000109,
+    "drawCalls": 657,
+    "triangles": 2618466,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "key": "rail",
+    "drawingBuffer": [
+      1600,
+      900
+    ],
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5080 (0x00002C02) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "median": 16.699999999999818,
+    "p95": 16.799999999999272,
+    "drawCalls": 409,
+    "triangles": 1348790,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "key": "power",
+    "drawingBuffer": [
+      1600,
+      900
+    ],
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5080 (0x00002C02) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "median": 16.699999999999818,
+    "p95": 16.800000000000182,
+    "drawCalls": 242,
+    "triangles": 859966,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "key": "corridor",
+    "drawingBuffer": [
+      1600,
+      900
+    ],
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5080 (0x00002C02) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "median": 16.699999999999818,
+    "p95": 16.800000000000182,
+    "drawCalls": 767,
+    "triangles": 1778306,
+    "environmentReady": true,
+    "errors": []
+  },
+  {
+    "key": "overview",
+    "drawingBuffer": [
+      1600,
+      900
+    ],
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5080 (0x00002C02) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "median": 16.699999999999818,
+    "p95": 16.800000000000182,
+    "drawCalls": 214,
+    "triangles": 783398,
+    "environmentReady": true,
+    "errors": []
+  }
+]

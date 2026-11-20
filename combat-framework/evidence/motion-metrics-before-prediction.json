@@ -1,0 +1,30 @@
+{
+  "steps": 1200,
+  "sourceFrames": 7685,
+  "clipChanges": 68,
+  "maxBoneDeltaDeg": 21.56232678228261,
+  "worst": {
+    "step": 430,
+    "bone": "lowerarm_l",
+    "clip": "CMU_09_04"
+  },
+  "maxFullLockSlipMeters": 1.27675647831893e-15,
+  "fullLockSamples": 372,
+  "lowFootMaxHorizontalMeters": 0.11287942302190562,
+  "lowFootSamples": 901,
+  "estimatedSupport": {
+    "maxHorizontalDriftMeters": 0.6675973566197808,
+    "samples": 427,
+    "worst": {
+      "step": 413,
+      "start": 407,
+      "side": "r",
+      "clip": "Idle_Loop"
+    },
+    "pass": false,
+    "caveat": "Offline estimated contacts, not independently hand-labelled support phases"
+  },
+  "lowFootCaveat": "low ankle height is a diagnostic proxy, not labelled support phase",
+  "anglePass": true,
+  "lockSlipPass": true
+}

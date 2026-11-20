@@ -1,0 +1,4 @@
+import fs from 'node:fs/promises';
+import crypto from 'node:crypto';
+async function collect(root){const files=[];for(const e of await fs.readdir(root,{withFileTypes:true})){const path=root+'/'+e.name;if(e.isDirectory())files.push(...await collect(path));else files.push(path);}return files;}
+export async function evidenceStamp(){const paths=[...await collect('combat-framework/src'),...await collect('combat-framework/render'),'package-lock.json','combat.html',...await collect('public/data/combat'),'public/assets/combat/character-female.glb'].sort();const hash=crypto.createHash('sha256');for(const path of paths){hash.update(path+'\0');hash.update(await fs.readFile(path));}return {inputHash:hash.digest('hex'),inputFiles:paths.length,hashScope:'src, render, package-lock, combat.html, all public/data/combat files, character-female.glb'};}

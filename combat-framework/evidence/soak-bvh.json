@@ -1,0 +1,40 @@
+{
+  "started": "2026-11-20T11:02:29.629Z",
+  "inputHash": "2422aeff7d38b6b37e607f9c26b78ed407505639e682f21fda66e7e3e6970fbf",
+  "inputFiles": 203,
+  "hashScope": "src, render, package-lock, combat.html, all public/data/combat files, character-female.glb",
+  "inputUnchanged": false,
+  "wallSeconds": 600.895,
+  "scenario": "10-minute real headless-browser repeated combat; test harness replenishes dead actors and scripts circular movement; no fast-forward",
+  "environment": {
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5080 (0x00002C02) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "resolution": [
+      1280,
+      800
+    ],
+    "devicePixelRatio": 1
+  },
+  "render": {
+    "elapsed": 600.5834999998636,
+    "frames": 36029,
+    "step": 36034,
+    "overrun": 1,
+    "p50": 16.699999999953434,
+    "p95": 16.79999999998836,
+    "p99": 16.800000000046566,
+    "max": 48.60000000000218
+  },
+  "logical": {
+    "count": 36034,
+    "p50": 2,
+    "p95": 3.699999988079071,
+    "p99": 14.800000011920929,
+    "max": 49.89999997615814
+  },
+  "resets": 5,
+  "maxTokens": 2,
+  "invalidPose": false,
+  "heap": 101630446,
+  "errors": []
+}

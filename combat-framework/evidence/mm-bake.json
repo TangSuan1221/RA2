@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "source": "CMU measured root + Quaternius in-place authored root calibration",
+  "frameCount": 7685,
+  "measuredFrames": 7368,
+  "clipCount": 74,
+  "uniqueSourceFrames": 7685,
+  "mirroredFrames": 0,
+  "syntheticFrames": 0,
+  "excluded": [
+    {
+      "clip": "CMU_07_12",
+      "frame": 1,
+      "speed": 74.06658660764556,
+      "reason": "root speed exceeds 12 m/s; adjacent samples excluded"
+    },
+    {
+      "clip": "CMU_09_10",
+      "frame": 1,
+      "speed": 51.762937847970534,
+      "reason": "root speed exceeds 12 m/s; adjacent samples excluded"
+    }
+  ],
+  "kdNodes": 1023,
+  "sha256": "5d1dcc8d3c8082cb1d3529394d009886f6d064510e36a3cbab6142e1fd3d6fb2",
+  "minimum6000": true,
+  "remainingGates": [
+    "phase cycles reliable only for a subset; contacts are estimated",
+    "no mirrored turn augmentation",
+    "visual foot sliding/turning metrics not yet certified"
+  ]
+}

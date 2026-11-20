@@ -1,0 +1,18 @@
+{
+  "flooded_baseline": {
+    "left": "reference",
+    "right": "render"
+  },
+  "hospital_baseline": {
+    "left": "reference",
+    "right": "render"
+  },
+  "city_baseline": {
+    "left": "render",
+    "right": "reference"
+  },
+  "street_baseline": {
+    "left": "reference",
+    "right": "render"
+  }
+}

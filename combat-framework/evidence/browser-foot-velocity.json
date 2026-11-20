@@ -1,0 +1,48 @@
+{
+  "steps": 1200,
+  "input": "jog requested speed 3.35*(1+0.3*sin(step*.1)) m/s",
+  "scope": "Actual model foot matrixWorld after production pose application; enlarged cloned BVH ground and every-step grounded assertion",
+  "maxFootMinusActorVelocity": 10.012837679069358,
+  "worstRelative": {
+    "step": 326,
+    "side": 1,
+    "clip": "Jog_Fwd_Loop",
+    "time": 0.5279938480643399,
+    "previousClip": "Jog_Fwd_Loop",
+    "previousTime": 0.5093271813976732,
+    "velocity": [
+      0.0010780482104748301,
+      1.205489585955447,
+      -5.6592248672102485
+    ],
+    "actorVelocity": [
+      0,
+      0,
+      4.280780770783932
+    ],
+    "position": [
+      -0.004145404333344473,
+      0.16260849060909277,
+      10.075859543107939
+    ],
+    "previousPosition": [
+      -0.004163371803519053,
+      0.14251699750983532,
+      10.170179957561443
+    ],
+    "rootWeight": 0,
+    "poseRateLimits": 2
+  },
+  "maxEstimatedGroundedSupportFootSpeed": 0.1428793395993559,
+  "supportSamples": 6,
+  "continuousSupportSamples": 3,
+  "maxContinuousSupportSpeed": 0.1428793395993559,
+  "maxRateDeviation": 0.1200000000000001,
+  "maxRenderedFKError": 0.000001259305254278674,
+  "B5LiteralPass": false,
+  "caveat": "12 B5 literal foot-world-minus-actor velocity also counts swing and planted feet; physical planted-foot slip reported separately; source contacts remain estimated",
+  "inputHash": "c0313766d5a54f7cec494e26aefab1fa41083a18a0f41e14790f45782a16b85e",
+  "inputFiles": 212,
+  "hashScope": "src, render, package-lock, combat.html, all public/data/combat files, character-female.glb",
+  "inputUnchanged": true
+}

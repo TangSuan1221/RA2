@@ -1,0 +1,23 @@
+{
+  "sourceFrames": 7685,
+  "B2": {
+    "clip": "Jog_Fwd_Loop",
+    "tag": 2,
+    "rmseMeters": 6.946537134841966e-9,
+    "threshold": 0.18,
+    "pass": true
+  },
+  "B3": {
+    "steps": 1500,
+    "input": "yaw=(step*.7) degrees, desired speed=1+4*abs(sin(step*.01)); exact 60Hz motor; real MMDB",
+    "switches": 78,
+    "switchRate": 0.052,
+    "searches": 757,
+    "hardViolations": 0,
+    "fallbacks": 109,
+    "fallbackRate": 0.07266666666666667,
+    "pass": true,
+    "expandedSearches": 0
+  },
+  "scope": "B2 is startup query. B3 includes production ANIM sampling, final skeleton, inertial blending and foot IK feedback. Expanded full-tag searches are separate from no-result fallbacks and violate the strict 32-candidate budget. Does not certify M3 or all support-phase slip."
+}

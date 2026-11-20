@@ -1,0 +1,76 @@
+[
+  {
+    "label": "01-start",
+    "hud": "THE LAST RULE · 西雅图\n滨海撤离\n2 / 6　消防站\n\n沿滨海路北行，去消防站取急救箱。\n\n领取急救箱 沿导航驾驶\n0 km/h　·　距目标 805 m\n驾驶与环境\nW/S 加速与倒车 · A/D 转向 · 空格制动 · E 互动 · G 导航驾驶 · C 镜头"
+  },
+  {
+    "label": "02-drive-turn",
+    "hud": "THE LAST RULE · 西雅图\n滨海撤离\n2 / 6　消防站\n\n沿滨海路北行，去消防站取急救箱。\n\n领取急救箱 沿导航驾驶\n96 km/h　·　距目标 771 m\n驾驶与环境\nW/S 加速与倒车 · A/D 转向 · 空格制动 · E 互动 · G 导航驾驶 · C 镜头"
+  },
+  {
+    "label": "03-brake",
+    "hud": "THE LAST RULE · 西雅图\n滨海撤离\n2 / 6　消防站\n\n沿滨海路北行，去消防站取急救箱。\n\n领取急救箱 沿导航驾驶\n0 km/h　·　距目标 772 m\n驾驶与环境\nW/S 加速与倒车 · A/D 转向 · 空格制动 · E 互动 · G 导航驾驶 · C 镜头"
+  },
+  {
+    "label": "04-reverse",
+    "hud": "THE LAST RULE · 西雅图\n滨海撤离\n2 / 6　消防站\n\n沿滨海路北行，去消防站取急救箱。\n\n领取急救箱 沿导航驾驶\n22 km/h　·　距目标 775 m\n驾驶与环境\nW/S 加速与倒车 · A/D 转向 · 空格制动 · E 互动 · G 导航驾驶 · C 镜头"
+  },
+  {
+    "label": "05-walk",
+    "hud": "THE LAST RULE · 西雅图\n滨海撤离\n2 / 6　消防站\n\n沿滨海路北行，去消防站取急救箱。\n\n领取急救箱 沿导航驾驶\n0 km/h　·　距目标 779 m\n驾驶与环境\n通行类型 \n轿车\n摩托\n卡车\n步行\n 中桥升起\n 低桥清障\n 涨潮\n 降雨\n 夜间\n切换跟车 / 俯视\nW/S 加速与倒车 · A/D 转向 · 空格制动 · E 互动 · G 导航驾驶 · C 镜头"
+  },
+  {
+    "label": "06-walk-camera",
+    "hud": "THE LAST RULE · 西雅图\n滨海撤离\n2 / 6　消防站\n\n沿滨海路北行，去消防站取急救箱。\n\n领取急救箱 沿导航驾驶\n0 km/h　·　距目标 714 m\n驾驶与环境\n通行类型 \n轿车\n摩托\n卡车\n步行\n 中桥升起\n 低桥清障\n 涨潮\n 降雨\n 夜间\n切换跟车 / 俯视\nW/S 加速与倒车 · A/D 转向 · 空格制动 · E 互动 · G 导航驾驶 · C 镜头"
+  },
+  {
+    "label": "env-中桥升起",
+    "hud": "THE LAST RULE · 西雅图\n滨海撤离\n2 / 6　消防站\n\n沿滨海路北行，去消防站取急救箱。\n\n领取急救箱 沿导航驾驶\n0 km/h　·　距目标 714 m\n驾驶与环境\n通行类型 \n轿车\n摩托\n卡车\n步行\n 中桥升起\n 低桥清障\n 涨潮\n 降雨\n 夜间\n切换跟车 / 俯视\nW/S 加速与倒车 · A/D 转向 · 空格制动 · E 互动 · G 导航驾驶 · C 镜头"
+  },
+  {
+    "label": "中桥升起",
+    "orig": false,
+    "changed": true,
+    "restored": false
+  },
+  {
+    "label": "env-低桥清障",
+    "hud": "THE LAST RULE · 西雅图\n滨海撤离\n2 / 6　消防站\n\n沿滨海路北行，去消防站取急救箱。\n\n领取急救箱 沿导航驾驶\n0 km/h　·　距目标 714 m\n驾驶与环境\n通行类型 \n轿车\n摩托\n卡车\n步行\n 中桥升起\n 低桥清障\n 涨潮\n 降雨\n 夜间\n切换跟车 / 俯视\nW/S 加速与倒车 · A/D 转向 · 空格制动 · E 互动 · G 导航驾驶 · C 镜头"
+  },
+  {
+    "label": "低桥清障",
+    "orig": false,
+    "changed": true,
+    "restored": false
+  },
+  {
+    "label": "env-涨潮",
+    "hud": "THE LAST RULE · 西雅图\n滨海撤离\n2 / 6　消防站\n\n沿滨海路北行，去消防站取急救箱。\n\n领取急救箱 沿导航驾驶\n0 km/h　·　距目标 714 m\n驾驶与环境\n通行类型 \n轿车\n摩托\n卡车\n步行\n 中桥升起\n 低桥清障\n 涨潮\n 降雨\n 夜间\n切换跟车 / 俯视\nW/S 加速与倒车 · A/D 转向 · 空格制动 · E 互动 · G 导航驾驶 · C 镜头"
+  },
+  {
+    "label": "涨潮",
+    "orig": false,
+    "changed": true,
+    "restored": false
+  },
+  {
+    "label": "env-降雨",
+    "hud": "THE LAST RULE · 西雅图\n滨海撤离\n2 / 6　消防站\n\n沿滨海路北行，去消防站取急救箱。\n\n领取急救箱 沿导航驾驶\n0 km/h　·　距目标 714 m\n驾驶与环境\n通行类型 \n轿车\n摩托\n卡车\n步行\n 中桥升起\n 低桥清障\n 涨潮\n 降雨\n 夜间\n切换跟车 / 俯视\nW/S 加速与倒车 · A/D 转向 · 空格制动 · E 互动 · G 导航驾驶 · C 镜头"
+  },
+  {
+    "label": "降雨",
+    "orig": false,
+    "changed": true,
+    "restored": false
+  },
+  {
+    "label": "env-夜间",
+    "hud": "THE LAST RULE · 西雅图\n滨海撤离\n2 / 6　消防站\n\n沿滨海路北行，去消防站取急救箱。\n\n领取急救箱 沿导航驾驶\n0 km/h　·　距目标 714 m\n驾驶与环境\n通行类型 \n轿车\n摩托\n卡车\n步行\n 中桥升起\n 低桥清障\n 涨潮\n 降雨\n 夜间\n切换跟车 / 俯视\nW/S 加速与倒车 · A/D 转向 · 空格制动 · E 互动 · G 导航驾驶 · C 镜头"
+  },
+  {
+    "label": "夜间",
+    "orig": false,
+    "changed": true,
+    "restored": false
+  }
+]

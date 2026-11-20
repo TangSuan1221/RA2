@@ -1,0 +1,3 @@
+body{background:#192723;margin:0;color:#efeee3;font:15px/1.5 "Microsoft YaHei",sans-serif}#panel,aside,footer{position:fixed;background:#14211eee;border:1px solid #56625b;border-radius:6px;padding:14px;z-index:2}#panel{left:18px;top:18px;max-width:330px}#panel small{letter-spacing:2px;color:#c4cbb4}h1{font-size:27px;margin:3px 0 12px}#task{color:#eed19d}button,select{background:#35493e;color:#fff;border:1px solid #718275;padding:8px;cursor:pointer;border-radius:4px}button:disabled{opacity:.45}aside{right:14px;bottom:14px;width:min(210px,22vw)}aside canvas{width:100%}aside label{display:block}footer{bottom:12px;left:12px;font-size:12px}#trip{margin-top:8px;font-variant-numeric:tabular-nums}
+
+.review #panel,.review aside,.review footer{display:none}

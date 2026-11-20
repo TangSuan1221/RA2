@@ -1,0 +1,180 @@
+import {beginExecutionPair,updateExecutionPair} from './combat/execution-pair.mjs';
+import {CC,CB,AI,DT,MM} from './core/constants.mjs';
+import {CFG} from './config.mjs';
+import {InputBuffer} from './input/buffer.mjs';
+import {separateActors} from './character/separation.mjs';
+import {motor,wrap} from './character/motor.mjs';
+import {moveCapsule,trace,fits,raySphere,fitsBody} from './character/collision.mjs';
+import {createFighter,beginAttack,attackInfo,applyHit,canExecute,sweptHit} from './combat/resolve.mjs';
+import {createTable,updateTable,requestSlot,releaseSlot,freezeTargetTokens,countAttackers} from './combat/slot.mjs';
+import {LocomotionMatcher} from './anim/locomotion.mjs';
+import {montageTime,worldLandmark} from './anim/montage.mjs';
+import {SkeletonPlayer} from './anim/player.mjs';
+import {applyFootIK} from './anim/feet.mjs';
+import {Q} from './anim/inertial.mjs';
+import {slerp,forwardKinematics,rotate} from './anim/skeleton.mjs';
+import {navigationGoal} from './ai/navigation.mjs';
+import {updateTraversalCandidate,beginTraversal,advanceTraversal,probeTraversal} from './character/traversal.mjs';
+
+const distance=(a,b)=>Math.hypot(a.pos[0]-b.pos[0],a.pos[2]-b.pos[2]);
+const direction=(a,b)=>Math.atan2(b.pos[0]-a.pos[0],b.pos[2]-a.pos[2]);
+function actor(id,pos){return {...createFighter(id,{pos}),prev:[...pos],radius:CC.CAP_RADIUS,height:CC.STAND_H,vel:[0,0,0],posture:'stand',grounded:true,attack:null,actionTime:0,clip:'Idle_Loop',clipTime:0,busyUntil:0,awareness:0,lastKnown:null};}
+export class World {
+  constructor({enemyCount=CFG.enemyCount,obstacles=CFG.obstacles}={}) {
+    this.step=0;this.obstacles=structuredClone(obstacles);this.player=actor('player',[...CFG.playerSpawn]);
+    this.enemies=Array.from({length:enemyCount},(_,i)=>actor('enemy-'+i,[Math.sin(i*2.399)*7,0,Math.cos(i*2.399)*7+5]));
+    for(const e of this.enemies){const original=[...e.pos];for(let j=0;!fits(e.pos,e.radius,e.height,this.obstacles)&&j<128;j++)e.pos=[original[0]+Math.sin(j*2.399)*(.4+j*.03),0,original[2]+Math.cos(j*2.399)*(.4+j*.03)];e.prev=[...e.pos];}
+    this.table=createTable();this.buffer=new InputBuffer();this.events=[];this.projectiles=[];this.history=[];this.noises=[];
+    this.ammo=CFG.weapon.magazine;this.reserve=CFG.weapon.reserve;this.medkits=CFG.medkit.count;this.grenades=CFG.throwable.count;this.nextShot=0;this.exec=null;this.shot=null;this.paused=false;
+  }
+  emit(type,actorId,detail={}){this.events.push({step:this.step,type,actorId,...detail});if(this.events.length>300)this.events.shift();}
+  reportHit(attacker,target,result){if(!result.blocked||['execLock','iframe','parried'].includes(result.reason))this.emit('hit',attacker.id,{target:target.id,damage:result.damage,blocked:result.blocked,reason:result.reason??null,part:result.part??null});}
+  noise(pos,radius){this.noises.push({pos:[...pos],radius,until:this.step+30});}
+  setAnimationDatabase(db,manifest){this.animationDatabase=db;if(manifest)this.animationClips=new Map(manifest.clips.map(c=>[c.id,c]));for(const a of [this.player,...this.enemies]){a.matcher=new LocomotionMatcher(db);a.prepareLocomotion=dt=>this.selectLocomotion(a,dt);if(a.rootAnimation)a.rootAnimation.metadata=this.animationClips;}}
+  setSkeletonAnimations(bones,clips){this.bones=bones;for(const a of [this.player,...this.enemies]){a.skeletonPlayer=new SkeletonPlayer(bones,clips);a.rootAnimation={clips,metadata:this.animationClips};}}
+  selectLocomotion(a,dt){
+    if(a.motionSelectedStep===this.step||!a.matcher||a.state!=='idle'||a.posture==='prone'||this.step<a.hitstopUntil)return;
+    const allow=(this.tickSearches??0)<MM.SEARCH_ACTORS&&(a===this.player||Number(a.id.split('-')[1])%2===this.step%2),pose=a.matcher.update(a,dt,this.step,allow);
+    if(a.matcher.lastDecision)this.tickSearches=(this.tickSearches??0)+1;
+    a.motionSelectedStep=this.step;a.selectedMotion=pose;
+    if(pose){a.clip=pose.clip;a.clipTime=pose.time;a.mmFrame=pose.frame;}
+  }
+  updatePose(a,dt){if(a.skeletonPlayer&&a.poseStep!==this.step){const previous=a.pose;a.skeletonPlayer.update(a,dt);applyFootIK(a,this.bones,this.obstacles,dt,this.animationClips?.get(a.clip));if(previous){let limited=false;for(let i=0;i<this.bones.length;i++){const angle=Q.angleDeg(Q.norm(Q.mul(a.pose.rotations[i],Q.conj(previous.rotations[i]))));if(angle>24.99){a.pose.rotations[i]=slerp(previous.rotations[i],a.pose.rotations[i],24.99/angle);limited=true;const name=this.bones[i].name;if(/thigh|calf|foot/.test(name)){const side=name.endsWith('_l')?'l':'r';if(a.footLocks?.[side])a.footLocks[side]={weight:0,anchor:null};}}}if(limited){a.boneWorld=forwardKinematics(this.bones,a.pose.rotations,a.pose.translations);a.poseRateLimits=(a.poseRateLimits||0)+1;}}a.poseStep=this.step;}}
+  bonePosition(a,name){const i=this.bones.findIndex(b=>b.name===name);if(i<0)throw Error('Missing hit bone '+name);const v=a.boneWorld.positions[i],scale=a.modelScale??1,c=Math.cos(a.yaw),s=Math.sin(a.yaw);return [a.pos[0]+scale*(v[0]*c+v[2]*s),a.pos[1]+scale*v[1]+(a.modelYOffset??0),a.pos[2]+scale*(-v[0]*s+v[2]*c)];}
+  startAttack(a,heavy=false,move=null){a.attack=beginAttack(a,move||(heavy?CFG.moves.heavy:CFG.moves.light),this.step);a.actionTime=0;a.state='attack';a.clip=a.attack.move.clip;a.clipTime=0;a.previousHitbox=null;this.emit('tell',a.id,{hitAt:this.step+a.attack.windup});if(a===this.player)freezeTargetTokens(this.table,'player',this.step);}
+  visible(a,b){const o=[a.pos[0],a.pos[1]+a.height*.85,a.pos[2]],t=[b.pos[0],b.pos[1]+b.height*.7,b.pos[2]],d=t.map((v,i)=>v-o[i]),len=Math.hypot(...d);return !trace(o,d.map(v=>v/Math.max(len,.001)),len,this.obstacles).object;}
+  nearest(){return this.enemies.filter(e=>e.hp>0).sort((a,b)=>distance(this.player,a)-distance(this.player,b))[0];}
+  update(input={},dt=DT){
+    if(this.paused)return;
+    const p=this.player,s=this.step;this.shot=null;
+    for(const a of [p,...this.enemies])a.prev=[...a.pos];
+    for(const command of input.commands||[])this.buffer.push(command,s);
+    if(this.exec){const target=this.enemies.find(e=>e.id===this.exec.targetId),outcome=updateExecutionPair(this.exec,p,target,s);if(outcome){this.table.freezeUntil.delete('player');this.emit(outcome.type,p.id,{target:target.id,reason:outcome.reason});this.exec=null;}}
+    for(const a of [p,...this.enemies])if(a.execLock&&s>=a.execLock.untilStep){a.execLock=null;if(a.state==='locked'){a.state='idle';a.busyUntil=s;}}
+    this.noises=this.noises.filter(n=>n.until>s);
+    updateTable(this.table,{pos:[p.pos[0],p.pos[2]],yaw:p.yaw*180/Math.PI},this.obstacles,s);
+    this.tickSearches=0;
+    if(p.hp>0)this.playerInput(input,dt);
+    for(const e of this.enemies)this.enemy(e,dt);
+    separateActors([p,...this.enemies],p,this.obstacles,dt,s);
+    for(const a of [p,...this.enemies]){this.advanceActor(a,dt);if(a.matcher&&a.state==='idle'&&a.posture!=='prone'&&s>=a.hitstopUntil){this.selectLocomotion(a,dt);if(a.selectedMotion){a.clip=a.selectedMotion.clip;a.clipTime=a.selectedMotion.time;a.mmFrame=a.selectedMotion.frame;}}if(s>=a.hitstopUntil)this.updatePose(a,dt);else if(a.pose)a.previousPose=a.pose;}
+    this.animationSearches=this.tickSearches;
+    this.projectiles=this.projectiles.filter(g=>{
+      if(s>=g.explode){const source=createFighter('grenade',{pos:g.pos}),atk=beginAttack(source,{id:'blast',windupMs:0,activeMs:1,recoveryMs:0},s);for(const a of [p,...this.enemies])if(a.hp>0&&Math.hypot(...a.pos.map((v,i)=>v-g.pos[i]))<CFG.throwable.radius&&this.visible({pos:g.pos,height:.2},a)){const hit=applyHit(source,a,atk,{damage:CFG.throwable.damage,poiseDamage:60,hitstopMs:0},s);this.reportHit(source,a,hit);}this.emit('explosion','player',{pos:g.pos});this.noise(g.pos,AI.HEAR.gunshot);return false;}
+      g.vel[1]-=CFG.gravity*dt;const len=Math.hypot(...g.vel)*dt;const hit=trace(g.pos,g.vel.map(v=>v/(len/dt||1)),len,this.obstacles,.08);if(hit.object)g.vel=g.vel.map(v=>-v*.25);else g.pos=g.pos.map((v,i)=>v+g.vel[i]*dt);if(g.pos[1]<.12){g.pos[1]=.12;g.vel=g.vel.map((v,i)=>i===1?Math.abs(v)*.3:v*.85);}return true;
+    });
+    if(countAttackers(this.table)>2)throw Error('I2 attacker cap');
+    for(const a of [p,...this.enemies])if(a.stepGuard>0)a.stepGuard--;
+    this.step++;
+  }
+  playerInput(i,dt){const p=this.player,s=this.step;if(p.execLock||s<p.stunUntil)return;
+    if(p.traversal){if(s<p.staggerUntil){p.traversal=null;p.busyUntil=s;}else {if(s>=p.hitstopUntil)advanceTraversal(p,dt,this.obstacles,s);return;}}
+    if(p.postureAction){
+      if(s<p.staggerUntil){p.postureAction=null;p.posture='crouch';p.busyUntil=s;}
+      else {const action=p.postureAction;p.vel=[0,0,0];if(s<p.hitstopUntil)return;action.elapsed+=dt;p.clip='Crouch_To_Prone';p.clipTime=action.enter?1.5+action.elapsed:4-action.elapsed;motor(p,{x:0,z:0,scale:0},dt,this.obstacles);if(action.elapsed>=2.5){p.postureAction=null;p.busyUntil=s;p.state='idle';p.posture=action.enter?'prone':fits(p.pos,p.radius,CC.STAND_H,this.obstacles)?'stand':'crouch';if(action.enter){p.height=CFG.proneHeight;p.heightTransition=null;}}return;}
+    }
+    p.aim=!!i.aim;p.aimPitch=i.pitch??0;
+    updateTraversalCandidate(p,this.obstacles,s,Math.hypot(i.x||0,i.z||0)>.1||!!this.buffer.peek('execute',s));
+    if(i.commands?.includes('execute')){let target=null,attempt={ok:false,reason:'no_target'};const candidates=this.enemies.filter(e=>e.hp>0).sort((a,b)=>distance(p,a)-distance(p,b)||(a.id<b.id?-1:1));for(const candidate of candidates){const result=beginExecutionPair(p,candidate,{step:s,actors:[p,...this.enemies],visible:(a,b)=>this.visible(a,b)},CFG.executionSteps*DT);if(result.ok){target=candidate;attempt=result;break;}if(attempt.reason==='no_target')attempt=result;}
+      if(attempt.ok){this.buffer.consume('execute',s,0);this.exec=attempt.pair;p.clip='Sword_Attack';target.clip='Hit_Knockback';p.clipTime=target.clipTime=0;p.aim=target.aim=false;freezeTargetTokens(this.table,'player',s);releaseSlot(this.table,target.id,s,'execution');this.table.freezeUntil.set('player',this.exec.end);this.emit('execution_start',p.id,{target:target.id});return;}
+      const traversal=probeTraversal(p,this.obstacles);
+      if(!traversal&&candidates.some(e=>distance(p,e)<=CB.EXEC_RANGE))this.emit('execution_rejected',p.id,{reason:attempt.reason});
+      // A failed execution never retries from the buffer. E may still represent
+      // an independently validated traversal intent awaiting its stable window.
+      if(!traversal)this.buffer.consume('execute',s,0);
+    }
+    if(this.buffer.consume('crouch',s))p.posture=p.posture==='crouch'?'stand':'crouch';
+    if(this.buffer.consume('prone',s)){p.traversalCandidate=null;const enter=p.posture!=='prone',clear=enter?fitsBody({...p,posture:'prone'},p.pos,CFG.proneHeight,this.obstacles):fits(p.pos,p.radius,CC.CROUCH_H,this.obstacles);
+      if(clear&&!p.attack&&!p.execLock&&s>=p.busyUntil&&s>=p.staggerUntil&&s>=p.hitstopUntil){
+        if(this.animationClips?.has('Crouch_To_Prone')){p.postureAction={enter,elapsed:0};p.state=enter?'prone_enter':'prone_exit';p.posture='crouch';p.busyUntil=s+150;p.clip='Crouch_To_Prone';p.clipTime=enter?1.5:4;p.upperClip=null;p.aim=false;p.vel=[0,0,0];return;}
+        p.posture=enter?'prone':'stand';
+      }
+    }
+    const free=!p.execLock&&s>=p.staggerUntil&&s>=p.hitstopUntil;
+    const phase=p.attack?attackInfo(p.attack,s):null;
+    let canCancel=phase?.phase==='recovery'&&phase.pct>=CB.CANCEL_POINT;
+    if(free&&p.attack&&p.attack.hitSet.size&&canCancel&&this.buffer.consume('light',s)){this.startAttack(p,false,p.attack.move===CFG.moves.light?CFG.moves.light2:CFG.moves.light);canCancel=false;}
+    if(free&&(p.attack?canCancel:s>=p.busyUntil)&&this.buffer.consume('dodge',s)){
+      p.attack=null;p.state='dodge';p.busyUntil=s+Math.round(CB.DODGE_TOTAL_MS/1000/DT);p.iframeUntil=s+Math.round(CB.DODGE_IFRAME[1]/1000/DT);p.clip='Roll';p.clipTime=0;p.dodgeDir=Math.hypot(i.x||0,i.z||0)?Math.atan2(i.x,i.z):p.yaw;this.emit('dodge',p.id);
+    }
+    if(free&&!p.attack&&s>=p.busyUntil){
+      if(this.buffer.consume('parry',s)){p.parryUntil=s+Math.round(CB.PARRY_WINDOW_MS/1000/DT);p.busyUntil=p.parryUntil;p.clip='Pistol_Aim_Neutral';p.clipTime=0;}
+      else if(this.buffer.peek('execute',s)&&beginTraversal(p,s,this.obstacles)){this.buffer.consume('execute',s);this.emit('traversal_start',p.id,{kind:p.state});return;}
+      else if(this.buffer.consume('heavy',s))this.startAttack(p,true);
+      else if(this.buffer.consume('light',s))this.startAttack(p);
+      else if(this.buffer.consume('reload',s)&&this.ammo<CFG.weapon.magazine&&this.reserve){p.state='reload';p.busyUntil=s+CFG.weapon.reloadSteps;p.clip='Pistol_Reload';p.clipTime=0;}
+      else if(this.buffer.consume('heal',s)&&this.medkits&&p.hp<p.maxHp){p.state='heal';p.busyUntil=s+CFG.medkit.steps;p.clip='Fixing_Kneeling';p.clipTime=0;}
+      else if(this.buffer.consume('throw',s)&&this.grenades){this.grenades--;this.projectiles.push({pos:[p.pos[0],p.pos[1]+1.3,p.pos[2]],vel:[Math.sin(i.yaw??p.yaw)*8,5,Math.cos(i.yaw??p.yaw)*8],explode:s+CFG.throwable.fuseSteps});this.noise(p.pos,6);}
+      if(i.fire&&i.aim&&!p.attack&&!p.execLock&&s>=p.busyUntil&&s>=this.nextShot&&this.ammo){this.ammo--;this.nextShot=s+CFG.weapon.intervalSteps;this.shoot(i);}
+    }
+    if(!free)return;
+    if(p.state==='dodge'&&s<p.busyUntil){moveCapsule(p,[Math.sin(p.dodgeDir)*CFG.dodgeSpeed*dt,0,Math.cos(p.dodgeDir)*CFG.dodgeSpeed*dt],this.obstacles,CC.STEP_UP);return;}
+    if(p.execLock||s<p.stunUntil)return;
+    motor(p,{...i,scale:p.attack?.2:s<p.busyUntil?.15:1},dt,this.obstacles);
+    if(Math.hypot(p.vel[0],p.vel[2])>1&&s%15===0)this.noise(p.pos,i.sprint?AI.HEAR.sprint:p.posture==='stand'?AI.HEAR.walk:2);
+  }
+  shotQuery(origin,dir,range){let best=trace(origin,dir,range,this.obstacles).distance,target=null,part='torso';
+    for(const e of this.enemies){if(e.hp<=0)continue;for(const [h,r,group] of [[e.height*.9,.19,'head'],[e.height*.57,.3,'torso'],[e.height*.22,.25,'leg']]){const along=raySphere(origin,dir,[e.pos[0],e.pos[1]+h,e.pos[2]],r);if(along<best){best=along;target=e;part=group;}}}
+    return {best,target,part};
+  }
+  shoot(i){const p=this.player,yaw=i.yaw??p.yaw,pitch=i.pitch??0,origin=[p.pos[0],p.pos[1]+p.height*.85,p.pos[2]],viewDir=i.cameraDirection||[Math.sin(yaw)*Math.cos(pitch),Math.sin(pitch),Math.cos(yaw)*Math.cos(pitch)],viewOrigin=i.cameraOrigin||origin,viewHit=this.shotQuery(viewOrigin,viewDir,CFG.weapon.range),aimPoint=viewOrigin.map((v,j)=>v+viewDir[j]*viewHit.best),delta=aimPoint.map((v,j)=>v-origin[j]),length=Math.hypot(...delta),dir=delta.map(v=>v/(length||1));
+    // Camera selects the reticle target; the physical shot is checked again from
+    // the weapon origin so a visible target cannot be shot through nearby cover.
+    const {best,target,part}=this.shotQuery(origin,dir,Math.min(length+.001,CFG.weapon.range));
+    if(target){const attack=beginAttack(p,{id:'shot',windupMs:0,activeMs:1,recoveryMs:0},this.step);const hit=applyHit(p,target,attack,{damage:CFG.weapon.damage,poiseDamage:25,hitstopMs:0},this.step,{part});this.reportHit(p,target,hit);this.emit('shot_hit',p.id,{target:target.id,damage:hit.damage,part});}
+    this.shot={from:origin,to:origin.map((v,j)=>v+dir[j]*best)};this.noise(p.pos,AI.HEAR.gunshot);this.emit('shot',p.id);p.upperClip='Pistol_Shoot';p.upperTime=0;p.upperUntil=this.step+CFG.weapon.intervalSteps;
+  }
+  enemy(e,dt){const s=this.step,p=this.player;if(e.hp<=0||p.hp<=0){releaseSlot(this.table,e.id,s,'dead');return;}
+    if(s%10===0){const d=distance(e,p),seen=d<AI.VIEW_DIST&&Math.abs(wrap(direction(e,p)-e.yaw))<AI.VIEW_FOV*Math.PI/360&&this.visible(e,p);if(seen){e.awareness=Math.min(1,e.awareness+10*DT/AI.NOTICE_T);e.lastKnown=[...p.pos];e.lastSeen=s;}else{e.awareness=Math.max(0,e.awareness-.03);for(const n of this.noises)if(Math.hypot(...e.pos.map((v,j)=>v-n.pos[j]))<n.radius){e.awareness=Math.min(1,e.awareness+AI.HEAR_AWARE_BURST);e.lastKnown=[...n.pos];}}
+      if(e.awareness>=1&&!e.shouted){e.shouted=s+Math.round(AI.SHARE_DELAY_MS/1000/DT);this.emit('alert',e.id);}
+      if(e.shouted&&s>=e.shouted)for(const other of this.enemies)if(other!==e&&distance(e,other)<AI.SHARE_RADIUS){other.lastKnown=[...e.lastKnown];other.awareness=Math.max(other.awareness,.7);}
+    }
+    if(e.execLock||s<e.stunUntil||s<e.hitstopUntil||s<e.staggerUntil||s<e.busyUntil)return;
+    if(e.attack){if(attackInfo(e.attack,s).phase==='windup'&&distance(e,p)>CFG.meleeRange){const a=direction(e,p);motor(e,{x:Math.sin(a),z:Math.cos(a),walk:true},dt,this.obstacles);}else e.vel=[0,0,0];return;}
+    if(e.awareness<.25||!e.lastKnown){motor(e,{x:0,z:0},dt,this.obstacles);return;}
+    let goal=e.lastKnown;
+    if(e.awareness>=.7&&this.visible(e,p)){
+      const occupied=new Set([...this.table.tokens.values()].filter(t=>t.actorId!==e.id).map(t=>t.slotIndex));const slots=this.table.slots.filter(slot=>!occupied.has(slot.index)).sort((a,b)=>Math.hypot(a.x-e.pos[0],a.z-e.pos[2])-Math.hypot(b.x-e.pos[0],b.z-e.pos[2]));const held=this.table.tokens.get(e.id),slot=held?this.table.slots[held.slotIndex]:slots[0];
+      if(slot){const d=Math.hypot(slot.x-e.pos[0],slot.z-e.pos[2]),grant=requestSlot(this.table,{actorId:e.id,targetId:'player',role:d<.6?'attacker':'approach',slotIndex:slot.index,distanceToSlot:d},s);if(grant.granted){goal=[slot.x,p.pos[1],slot.z];if(grant.token.role==='attacker'){e.yaw=direction(e,p);this.startAttack(e);return;}}else{const angle=Number(e.id.split('-')[1])*2.399;goal=[p.pos[0]+Math.sin(angle)*3.8,p.pos[1],p.pos[2]+Math.cos(angle)*3.8];}}
+    }
+    goal=navigationGoal(e,goal,this.obstacles,s);
+    const x=goal[0]-e.pos[0],z=goal[2]-e.pos[2],d=Math.hypot(x,z);motor(e,{x:d>.3?x/d:0,z:d>.3?z/d:0,walk:true},dt,this.obstacles);
+  }
+  advanceActor(a,dt){const s=this.step;if(a.hp<=0){if(a.state!=='dead'||a.clip!=='Death01'){a.state='dead';a.clip='Death01';a.clipTime=0;a.attack=null;a.postureAction=null;a.traversal=null;a.traversalCandidate=null;a.busyUntil=s;this.emit('death',a.id);}a.clipTime+=dt;return;}
+    if(s<a.hitstopUntil){if(a.attack){a.attack.startStep++;a.attack.endStep++;}return;}
+    if(a.traversal||a.postureAction)return;
+    if(a.hitReaction){a.hitReaction.elapsed+=dt;if(a.hitReaction.elapsed>1)a.hitReaction=null;}
+    a.clipTime+=dt;
+    a.upperTime=(a.upperTime??0)+dt;
+    if(s>=(a.upperUntil??0)){a.upperClip=a.aim?'Pistol_Aim_Neutral':null;a.upperTime=0;}
+    if(a.execLock)return;
+    if(s<a.stunUntil){a.attack=null;if(a.state!=='stun'){a.state='stun';a.clip='Hit_Head';a.clipTime=0;}return;}
+    if(a.knockback){moveCapsule(a,a.knockback.map(v=>v*dt),this.obstacles,0);a.knockback=a.knockback.map(v=>v*Math.exp(-12*dt));}
+    if(s<a.staggerUntil){a.attack=null;if(a.state!=='stagger'||a.staggerAnimationUntil!==a.staggerUntil){a.staggerAnimationUntil=a.staggerUntil;a.state='stagger';a.clip=a.hitReaction?.poiseBreak?'Hit_Knockback':'Hit_Chest';a.clipTime=0;}return;}
+    if(a.execLock)return;
+    if(a.attack){
+      const info=attackInfo(a.attack,s);a.actionTime=s-a.attack.startStep;
+      const clip=this.animationClips?.get(a.attack.move.clip);let hitbox=null;
+      if(clip){a.clipTime=montageTime(info,a.attack.move,clip.duration);this.updatePose(a,dt);const center=a.boneWorld?this.bonePosition(a,a.attack.move.bone):worldLandmark(a,clip,a.attack.move.bone,a.clipTime);let rotation;if(a.boneWorld){const index=this.bones.findIndex(b=>b.name===a.attack.move.bone);rotation=Q.mul([0,Math.sin(a.yaw/2),0,Math.cos(a.yaw/2)],a.boneWorld.rotations[index]);const offset=rotate(rotation,[0,.12*(a.modelScale??1),0]);for(let axis=0;axis<3;axis++)center[axis]+=offset[axis];}else{center[0]+=Math.sin(a.yaw)*.12;center[2]+=Math.cos(a.yaw)*.12;}hitbox={center,rotation,yaw:a.yaw*180/Math.PI,half:rotation?[.22,a.attack.move===CFG.moves.heavy?.4:.22,.22]:[.22,.22,.55]};}
+      if(a!==this.player&&!this.table.tokens.has(a.id)){a.attack=null;a.state='idle';a.busyUntil=s+CFG.attackGapSteps;return;}
+      if(info.phase==='active')for(const t of a===this.player?this.enemies:[this.player])if(t.hp>0&&Math.abs(a.pos[1]-t.pos[1])<=.6&&distance(a,t)<CFG.meleeRange+.32&&Math.abs(wrap(direction(a,t)-a.yaw))<CFG.meleeHalfAngle*Math.PI/180&&this.visible(a,t)){
+        if(hitbox&&!sweptHit(a.previousHitbox||hitbox,hitbox,[t.pos[0],t.pos[1]+t.height*.65,t.pos[2]],t.radius,3).hit)continue;
+        const hit=applyHit(a,t,a.attack,a.attack.move,s);this.reportHit(a,t,hit);if(!hit.blocked){this.emit('melee_hit',a.id,{target:t.id,damage:hit.damage,token:a===this.player||this.table.tokens.has(a.id)});this.noise(a.pos,8);}
+      }
+      a.previousHitbox=hitbox;
+      if(info.phase==='done'){a.attack=null;a.busyUntil=s+CFG.attackGapSteps;if(a!==this.player)releaseSlot(this.table,a.id,s,'attack_end');}else return;
+    }
+    if(s<a.busyUntil)return;
+    if(a.state==='reload'){const n=Math.min(CFG.weapon.magazine-this.ammo,this.reserve);this.ammo+=n;this.reserve-=n;}
+    if(a.state==='heal'){a.hp=Math.min(a.maxHp,a.hp+CFG.medkit.heal);this.medkits--;}
+    a.state='idle';if(s-a.lastHitStep>60)a.poise=Math.min(CB.POISE_MAX,a.poise+CB.POISE_REGEN*dt);
+    if(a.posture==='prone'&&this.animationClips?.has('Prone_Crawl_Forward')){
+      const speed=Math.hypot(a.vel[0],a.vel[2]),back=a.vel[0]*Math.sin(a.yaw)+a.vel[2]*Math.cos(a.yaw)<-.02,clip=back?'Prone_Crawl_Backward':'Prone_Crawl_Forward';
+      if(!a.clip.startsWith('Prone_Crawl_')||speed>.02&&a.clip!==clip){a.clip=clip;a.clipTime=2;}
+      else {a.clipTime-=dt;if(speed>.02){const duration=this.animationClips.get(a.clip).duration,end=duration-1;a.clipTime+=dt*Math.min(1.12,speed/.15);if(a.clipTime>=end)a.clipTime=2+(a.clipTime-end);}}
+      a.upperClip=null;return;
+    }
+    const speed=Math.hypot(a.vel[0],a.vel[2]);const clip=a.posture==='prone'?'Crouch_Idle_Loop':a.posture==='crouch'?(speed>.1?'Crouch_Fwd_Loop':'Crouch_Idle_Loop'):speed>4.48?'Sprint_Loop':speed>2.45?'Jog_Fwd_Loop':speed>.1?'Walk_Loop':'Idle_Loop';if(a.clip!==clip){a.clip=clip;a.clipTime=0;}
+  }
+  snapshot(){return {step:this.step,execution:this.exec,actors:[this.player,...this.enemies].map(a=>({id:a.id,pos:a.pos,vel:a.vel,yaw:a.yaw,hp:a.hp,poise:a.poise,state:a.state,execLock:a.execLock,hitstunUntil:a.hitstunUntil,stunUntil:a.stunUntil,clip:a.clip,time:a.clipTime,awareness:a.awareness,attack:a.attack?{id:a.attack.id,start:a.attack.startStep,hits:[...a.attack.hitSet]}:null})),ammo:this.ammo,reserve:this.reserve,medkits:this.medkits,grenades:this.grenades,projectiles:this.projectiles,tokens:[...this.table.tokens],events:this.events};}
+}

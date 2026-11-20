@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "coverage": "Front/head prototype only; directional 8-entry set remains incomplete",
+  "reactions": [
+    {"id":"hit_light_front","trigger":{"dir":"front","heavy":false,"poiseBreak":false},"additive":{"clip":"Hit_Chest","layer":"hitReaction","weight":0.85,"decayMs":250},"hitstunMs":220,"lockLowerBody":false,"knockbackScale":1},
+    {"id":"hit_heavy_front","trigger":{"dir":"front","heavy":true,"poiseBreak":false},"additive":{"clip":"Hit_Chest","layer":"hitReaction","weight":1,"decayMs":400},"hitstunMs":220,"lockLowerBody":false,"knockbackScale":1},
+    {"id":"hit_head","trigger":{"part":"head","poiseBreak":false},"additive":{"clip":"Hit_Head","layer":"hitReaction","weight":0.85,"decayMs":350},"hitstunMs":220,"lockLowerBody":false,"knockbackScale":1},
+    {"id":"hit_poise_break","trigger":{"poiseBreak":true},"additive":{"clip":"Hit_Knockback","layer":"hitReaction","weight":1,"decayMs":400},"hitstunMs":900,"lockLowerBody":true,"knockbackScale":1.6}
+  ]
+}

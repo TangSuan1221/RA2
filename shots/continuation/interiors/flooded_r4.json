@@ -1,0 +1,16 @@
+[
+  {
+    "out": "shots/continuation/interiors/flooded_r4.jpg",
+    "ms": 25541,
+    "error": null,
+    "stats": {
+      "fps": 7.528703181130479,
+      "ms": 132.82499999552965,
+      "gpu": 2.78592,
+      "drawCalls": 292,
+      "triangles": 13630886,
+      "mem": 636818621
+    },
+    "logs": []
+  }
+]

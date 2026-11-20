@@ -107,5 +107,9 @@ const total = jobs.length;
 await Promise.all( Array.from( { length: 6 }, worker ) );
 
 const ids = [ ...HDRIS.map( h => h[ 0 ] ), ...TEXTURES.map( t => t[ 0 ] ), ...MODELS ];
-await writeFile( join( OUT, 'LICENSES.md' ), `# 资产授权\n\n以下资产均来自 Poly Haven（https://polyhaven.com），授权为 CC0（公共领域，可商用，无需署名）。\n\n${ids.map( i => `- ${i} — https://polyhaven.com/a/${i}` ).join( '\n' )}\n` );
+const licenseFile = join( OUT, 'LICENSES.md' );
+const previous = await exists( licenseFile ) ? await readFile( licenseFile, 'utf8' ) : '# 资产授权\n\nPoly Haven · CC0\n';
+const entries = ids.map( id => `- ${id} — https://polyhaven.com/a/${id}` );
+const additions = entries.filter( entry => !previous.split( /\r?\n/ ).includes( entry ) );
+if ( additions.length ) await writeFile( licenseFile, previous.trimEnd() + '\n' + additions.join( '\n' ) + '\n' );
 console.log( `完成：${done}/${total} 个文件，本次下载 ${( bytes / 1e6 ).toFixed( 1 )} MB` );

@@ -1,0 +1,121 @@
+{
+  "length": 490.7504457461043,
+  "tunnelY": 0,
+  "carY": 0,
+  "checks": [
+    {
+      "direction": 1,
+      "peak": 10.8,
+      "finish": 9.592326932761353e-15,
+      "maxStep": 0.08281413771968893,
+      "menuRouteWaypoints": 3,
+      "meshSamples": 51,
+      "missingMesh": 0,
+      "groundCrossingSamples": 0
+    },
+    {
+      "direction": -1,
+      "peak": 10.8,
+      "finish": 0,
+      "maxStep": 0.08281413771968893,
+      "menuRouteWaypoints": 2,
+      "meshSamples": 51,
+      "missingMesh": 0,
+      "groundCrossingSamples": 0
+    }
+  ],
+  "pioneer": [
+    {
+      "from": "440,1244",
+      "to": "430,1330",
+      "minimum": -3.65,
+      "maxStep": 0.19499999999999984,
+      "missingMesh": 0
+    },
+    {
+      "from": "430,1330",
+      "to": "440,1244",
+      "minimum": -3.65,
+      "maxStep": 0.19499999999999984,
+      "missingMesh": 0
+    },
+    {
+      "from": "295,1834",
+      "to": "430,1330",
+      "minimum": -3.65,
+      "maxStep": 0.28260555555552713,
+      "missingMesh": 0
+    },
+    {
+      "from": "430,1330",
+      "to": "295,1834",
+      "minimum": -3.65,
+      "maxStep": 0.28260555555552713,
+      "missingMesh": 0
+    },
+    {
+      "from": "760,1580",
+      "to": "430,1330",
+      "minimum": -3.65,
+      "maxStep": 0.10037500000001254,
+      "missingMesh": 0
+    },
+    {
+      "from": "430,1330",
+      "to": "760,1580",
+      "minimum": -3.65,
+      "maxStep": 0.10037500000001254,
+      "missingMesh": 0
+    }
+  ],
+  "stairs": [
+    {
+      "x": 426.3,
+      "direction": 1,
+      "first": -0.6899166666667054,
+      "last": -3.4699999999999998,
+      "maxJump": 0.16830555555558746,
+      "missingMesh": 0
+    },
+    {
+      "x": 426.3,
+      "direction": -1,
+      "first": -3.4699999999999998,
+      "last": -0.6899166666667054,
+      "maxJump": 0.16830555555558746,
+      "missingMesh": 0
+    },
+    {
+      "x": 432.3,
+      "direction": 1,
+      "first": -0.18013888888887042,
+      "last": -3.455,
+      "maxJump": 0.17236111111113916,
+      "missingMesh": 0
+    },
+    {
+      "x": 432.3,
+      "direction": -1,
+      "first": -3.455,
+      "last": -0.18013888888887042,
+      "maxJump": 0.17236111111113916,
+      "missingMesh": 0
+    },
+    {
+      "x": 436.75,
+      "direction": 1,
+      "first": -3.48,
+      "last": 0.055,
+      "maxJump": 0.25500000000000017,
+      "missingMesh": 0
+    },
+    {
+      "x": 436.75,
+      "direction": -1,
+      "first": 0.055,
+      "last": -3.48,
+      "maxJump": 0.25500000000000017,
+      "missingMesh": 0
+    }
+  ]
+}

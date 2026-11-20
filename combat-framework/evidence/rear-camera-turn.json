@@ -1,0 +1,76 @@
+{
+  "pass": true,
+  "results": [
+    {
+      "fixture": "open",
+      "yaw": -0.6500000000000001,
+      "rearDot": -1.6733594403626493,
+      "viewYaw": -0.6500000000000001,
+      "fading": false
+    },
+    {
+      "fixture": "open",
+      "yaw": 0.5999999999999999,
+      "rearDot": -1.735954899276014,
+      "viewYaw": 0.5999999999999999,
+      "fading": false
+    },
+    {
+      "fixture": "open",
+      "yaw": -0.8078989299420922,
+      "rearDot": -1.7782225738220263,
+      "viewYaw": -0.8078989299420922,
+      "fading": false
+    },
+    {
+      "fixture": "open",
+      "yaw": 0.5914035240356332,
+      "rearDot": -1.7919695391638062,
+      "viewYaw": 0.5914035240356332,
+      "fading": false
+    },
+    {
+      "fixture": "open",
+      "yaw": -3.7470027081099033e-16,
+      "rearDot": -1.794243071344715,
+      "viewYaw": -3.7470027081099033e-16,
+      "fading": false
+    },
+    {
+      "fixture": "corner",
+      "yaw": -0.6500000000000005,
+      "rearDot": -1.4952025594539289,
+      "viewYaw": -0.6500000000000005,
+      "fading": true
+    },
+    {
+      "fixture": "corner",
+      "yaw": 0.5999999999999995,
+      "rearDot": -1.4952025594539304,
+      "viewYaw": 0.5999999999999995,
+      "fading": true
+    },
+    {
+      "fixture": "corner",
+      "yaw": -0.8078989299420927,
+      "rearDot": -1.4952025594539302,
+      "viewYaw": -0.8078989299420927,
+      "fading": true
+    },
+    {
+      "fixture": "corner",
+      "yaw": 0.591403524035633,
+      "rearDot": -1.4952025594539273,
+      "viewYaw": 0.591403524035633,
+      "fading": true
+    },
+    {
+      "fixture": "corner",
+      "yaw": -8.187894806610529e-16,
+      "rearDot": -1.4952025594539293,
+      "viewYaw": -8.187894806610529e-16,
+      "fading": true
+    }
+  ],
+  "errors": []
+}

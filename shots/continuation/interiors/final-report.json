@@ -1,0 +1,44 @@
+[
+  {
+    "out": "shots/continuation/interiors/flooded_final.jpg",
+    "ms": 25874,
+    "error": null,
+    "stats": {
+      "fps": 7.970667941822067,
+      "ms": 125.46000000238416,
+      "gpu": 2.773472000000001,
+      "drawCalls": 304,
+      "triangles": 13743766,
+      "mem": 654297038
+    },
+    "logs": []
+  },
+  {
+    "out": "shots/continuation/interiors/flooded_top.jpg",
+    "ms": 23914,
+    "error": null,
+    "stats": {
+      "fps": 7.870916961549107,
+      "ms": 127.05000000447036,
+      "gpu": 2.4623999999999997,
+      "drawCalls": 292,
+      "triangles": 13740118,
+      "mem": 654166086
+    },
+    "logs": []
+  },
+  {
+    "out": "shots/continuation/interiors/hospital_final.jpg",
+    "ms": 11132,
+    "error": null,
+    "stats": {
+      "fps": 59.98800240023504,
+      "ms": 16.669999999801327,
+      "gpu": 0.75152,
+      "drawCalls": 201,
+      "triangles": 800943,
+      "mem": 767859330
+    },
+    "logs": []
+  }
+]

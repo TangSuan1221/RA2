@@ -1,5 +1,8 @@
 node_modules/
 dist/
 .cache/
-public/assets/
 *.log
+combat-framework/assets-source/
+.env
+.env.*
+!.env.example

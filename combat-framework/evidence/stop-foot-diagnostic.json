@@ -1,0 +1,4181 @@
+[
+  {
+    "step": 998,
+    "pos": [
+      10.5716372046357,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      3.35,
+      0,
+      0
+    ],
+    "clip": "CMU_09_09",
+    "time": 0.6333333253860474,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          9.96187819011019,
+          0.38650514273138903,
+          -5.458010033001581
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "count": 0,
+          "height": null,
+          "normal": null
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.787864439144968,
+          0.11412291022176041,
+          -5.2522503056934315
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      false,
+      false
+    ]
+  },
+  {
+    "step": 999,
+    "pos": [
+      10.627470537969034,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      3.35,
+      0,
+      0
+    ],
+    "clip": "CMU_09_09",
+    "time": 0.6479999920527141,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.020407962258217,
+          0.4171359288995252,
+          -5.453347095112502
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "count": 0,
+          "height": null,
+          "normal": null
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.82127809969335,
+          0.10442529572451814,
+          -5.267191471110599
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      false,
+      false
+    ]
+  },
+  {
+    "step": 1000,
+    "pos": [
+      10.677192760191256,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      2.9833333333333334,
+      0,
+      0
+    ],
+    "clip": "CMU_09_09",
+    "time": 0.6626666587193808,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.07782562146467,
+          0.45411583847245196,
+          -5.447369447370946
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "count": 0,
+          "height": null,
+          "normal": null
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.85539993761145,
+          0.09683240767837292,
+          -5.282920225456316
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      false,
+      false
+    ]
+  },
+  {
+    "step": 1001,
+    "pos": [
+      10.720803871302367,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      2.6166666666666667,
+      0,
+      0
+    ],
+    "clip": "CMU_09_09",
+    "time": 0.6773333253860475,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.134066237512956,
+          0.48938486186088503,
+          -5.4410654612132054
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "count": 0,
+          "height": null,
+          "normal": null
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.871807902900388,
+          0.08993279732346987,
+          -5.300980472882716
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      false,
+      false
+    ]
+  },
+  {
+    "step": 1002,
+    "pos": [
+      10.758303871302367,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      2.25,
+      0,
+      0
+    ],
+    "clip": "CMU_07_10",
+    "time": 1.7666666507720947,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.171566200231503,
+          0.4893847038519056,
+          -5.441065442230114
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "count": 0,
+          "height": null,
+          "normal": null
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.909307401576557,
+          0.08993285103418946,
+          -5.300980452029293
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      false,
+      false
+    ]
+  },
+  {
+    "step": 1003,
+    "pos": [
+      10.789692760191256,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      1.8833333333333333,
+      0,
+      0
+    ],
+    "clip": "CMU_07_10",
+    "time": 1.7819128312211445,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.222035328330982,
+          0.5148957612971974,
+          -5.428318351528528
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "count": 0,
+          "height": null,
+          "normal": null
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.914598072548257,
+          0.08245565243922442,
+          -5.309656558408122
+        ],
+        "lock": {
+          "weight": 0.20833333333333331,
+          "anchor": [
+            10.914598072548257,
+            0.075,
+            -5.309656558408122
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      false,
+      true
+    ]
+  },
+  {
+    "step": 1004,
+    "pos": [
+      10.814970537969034,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      1.5166666666666666,
+      0,
+      0
+    ],
+    "clip": "CMU_07_10",
+    "time": 1.7965794978878111,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.268018093479382,
+          0.5334249885127879,
+          -5.4171991729443265
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "count": 0,
+          "height": null,
+          "normal": null
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.915984241210998,
+          0.07964074793577208,
+          -5.31541814466183
+        ],
+        "lock": {
+          "weight": 0.41666666666666663,
+          "anchor": [
+            10.914598072548257,
+            0.075,
+            -5.309656558408122
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      false,
+      true
+    ]
+  },
+  {
+    "step": 1005,
+    "pos": [
+      10.8341372046357,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      1.15,
+      0,
+      0
+    ],
+    "clip": "CMU_07_10",
+    "time": 1.8112461645544777,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.310275024402735,
+          0.530519074699109,
+          -5.409590554237627
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "count": 0,
+          "height": null,
+          "normal": null
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.915844045697028,
+          0.0789789125336216,
+          -5.316032252261645
+        ],
+        "lock": {
+          "weight": 0.625,
+          "anchor": [
+            10.914598072548257,
+            0.075,
+            -5.309656558408122
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      false,
+      true
+    ]
+  },
+  {
+    "step": 1006,
+    "pos": [
+      10.847192760191255,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0.7833333333333332,
+      0,
+      0
+    ],
+    "clip": "CMU_07_10",
+    "time": 1.8259128312211443,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.346975211714545,
+          0.5154192233906433,
+          -5.406435401234801
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "count": 0,
+          "height": null,
+          "normal": null
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.91436907578226,
+          0.07791807244088184,
+          -5.313251136385865
+        ],
+        "lock": {
+          "weight": 0.8333333333333333,
+          "anchor": [
+            10.914598072548257,
+            0.075,
+            -5.309656558408122
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      false,
+      true
+    ]
+  },
+  {
+    "step": 1007,
+    "pos": [
+      10.8541372046357,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0.4166666666666666,
+      0,
+      0
+    ],
+    "clip": "CMU_07_10",
+    "time": 1.840579497887811,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.377766280873871,
+          0.48522461613335566,
+          -5.40787274809193
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "count": 0,
+          "height": null,
+          "normal": null
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.909051510291738,
+          0.08485033898083344,
+          -5.318242377990419
+        ],
+        "lock": {
+          "weight": 0.625,
+          "anchor": null,
+          "releaseGoal": [
+            10.914598072548257,
+            0.075,
+            -5.309656558408122
+          ],
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      false,
+      false
+    ]
+  },
+  {
+    "step": 1008,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0.04999999999999993,
+      0,
+      0
+    ],
+    "clip": "CMU_127_17",
+    "time": 1.5333333015441895,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.378599614207202,
+          0.48522461613335743,
+          -5.407872748091932
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "count": 0,
+          "height": null,
+          "normal": null
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.906456197927003,
+          0.09032274952573938,
+          -5.323012277758364
+        ],
+        "lock": {
+          "weight": 0.4166666666666667,
+          "anchor": null,
+          "releaseGoal": [
+            10.914598072548257,
+            0.075,
+            -5.309656558408122
+          ],
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1009,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_17",
+    "time": 1.547999968210856,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.400782807977894,
+          0.4569465168518649,
+          -5.421366507005655
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "count": 0,
+          "height": null,
+          "normal": null
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.887971072113565,
+          0.10285026772003686,
+          -5.327341688185906
+        ],
+        "lock": {
+          "weight": 0.20833333333333337,
+          "anchor": null,
+          "releaseGoal": [
+            10.914598072548257,
+            0.075,
+            -5.309656558408122
+          ],
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1010,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_17",
+    "time": 1.5646666348775227,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.424812926110908,
+          0.4219547773657888,
+          -5.438160072024661
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "count": 0,
+          "height": null,
+          "normal": null
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.857711737100487,
+          0.11726409230775275,
+          -5.330730238706539
+        ],
+        "lock": {
+          "weight": 5.551115123125783e-17,
+          "anchor": null,
+          "releaseGoal": [
+            10.914598072548257,
+            0.075,
+            -5.309656558408122
+          ],
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1011,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_17",
+    "time": 1.5813333015441893,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.45344562610544,
+          0.3772821410163423,
+          -5.458383546318729
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "count": 0,
+          "height": null,
+          "normal": null
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.830014718454754,
+          0.1215749279049832,
+          -5.328459162001734
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1012,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_17",
+    "time": 1.5979999682108559,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.489341120676158,
+          0.32528923211423005,
+          -5.479642068103149
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "count": 0,
+          "height": null,
+          "normal": null
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.798676488550017,
+          0.12326569216324923,
+          -5.325091498074538
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1013,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.8333333134651184,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.489341120676158,
+          0.32528923211422994,
+          -5.479642068103148
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "count": 0,
+          "height": null,
+          "normal": null
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.798676488549997,
+          0.12326569216325739,
+          -5.325091498074537
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1014,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.8499999801317851,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.531195144729613,
+          0.27803637357129457,
+          -5.502282110063935
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.769595508633028,
+          0.12538671195904233,
+          -5.319578188987366
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1015,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.8666666467984518,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.575311281214319,
+          0.23572618391580935,
+          -5.520648563085819
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.743823177972839,
+          0.1255965795672096,
+          -5.310773185652957
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1016,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.8833333134651186,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.61687094002775,
+          0.198616439483757,
+          -5.533116163871743
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.723010452899352,
+          0.12238649099845733,
+          -5.297867680897541
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1017,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.8999999801317853,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.652288960148724,
+          0.16643292496455364,
+          -5.539605671630741
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.707803869124065,
+          0.11560675187611757,
+          -5.281348670780413
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1018,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.916666646798452,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.6792106287785,
+          0.13894620173014632,
+          -5.541120638957245
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.09968502753568403,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 0.20833333333333331,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1019,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.9333333134651187,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.697700574658418,
+          0.1162768996181125,
+          -5.539359244755698
+        ],
+        "lock": {
+          "weight": 0,
+          "anchor": null,
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.694523505412322,
+          0.08707432018020267,
+          -5.25183692227869
+        ],
+        "lock": {
+          "weight": 0.41666666666666663,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1020,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.9499999801317854,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.09377385630528073,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 0.20833333333333331,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.69473398263182,
+          0.07906926419976723,
+          -5.249505358633444
+        ],
+        "lock": {
+          "weight": 0.625,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1021,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.5,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620223,
+          0.08883336780388984,
+          -5.535998849813397
+        ],
+        "lock": {
+          "weight": 0.41666666666666663,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.696434903028289,
+          0.07680856186656326,
+          -5.256831842026733
+        ],
+        "lock": {
+          "weight": 0.8333333333333333,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1022,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.5166666666666667,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.712457575144194,
+          0.07771479347225779,
+          -5.534675727919761
+        ],
+        "lock": {
+          "weight": 0.625,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07499999999999996,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1023,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.5333333333333334,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.711664972444602,
+          0.07403363850620648,
+          -5.534888975249255
+        ],
+        "lock": {
+          "weight": 0.8333333333333333,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07499999999999979,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1024,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.5500000000000002,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07499999999999946,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07499999999999979,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1025,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.5666666666666669,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07500000000000012,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07499999999999996,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1026,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.5833333333333336,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07500000000000007,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07499999999999946,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1027,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.6000000000000003,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07499999999999984,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07500000000000001,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1028,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.616666666666667,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07499999999999979,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07499999999999979,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1029,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.6333333333333337,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07500000000000023,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.0749999999999999,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1030,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.6500000000000005,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07499999999999979,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07500000000000023,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1031,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.6666666666666672,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07499999999999984,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07500000000000018,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1032,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.6833333333333339,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07500000000000029,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07500000000000023,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1033,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.7000000000000006,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07500000000000023,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07499999999999968,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1034,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.7166666666666673,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07500000000000018,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07499999999999996,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1035,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.7333333333333341,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07499999999999996,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07499999999999968,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1036,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.7500000000000008,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.0749999999999999,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07500000000000001,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1037,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.7666666666666675,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.0749999999999999,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07500000000000001,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1038,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.7833333333333342,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07499999999999957,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07499999999999984,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1039,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.8000000000000009,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07500000000000001,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07499999999999973,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1040,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.8166666666666677,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07499999999999984,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07499999999999968,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1041,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.8333333333333344,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07499999999999996,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07499999999999957,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1042,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.8500000000000011,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.0749999999999999,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07500000000000007,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1043,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.8666666666666678,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07499999999999968,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07500000000000023,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1044,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.8833333333333345,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07499999999999973,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07499999999999957,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1045,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.9000000000000012,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.0749999999999999,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07500000000000001,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1046,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.916666666666668,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07500000000000018,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07499999999999934,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1047,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.46666666865348816,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07500000000000012,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07499999999999996,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1048,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.4833333353201548,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07499999999999946,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.07500000000000046,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  },
+  {
+    "step": 1049,
+    "pos": [
+      10.854970537969033,
+      0,
+      -5.364751684253213
+    ],
+    "velocity": [
+      0,
+      0,
+      0
+    ],
+    "clip": "CMU_127_04",
+    "time": 0.5000000019868215,
+    "feet": [
+      {
+        "side": "l",
+        "position": [
+          10.708525983620218,
+          0.07500000000000029,
+          -5.535998849813394
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.708525983620218,
+            0.075,
+            -5.535998849813394
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      },
+      {
+        "side": "r",
+        "position": [
+          10.697795639345465,
+          0.0749999999999999,
+          -5.262693028741367
+        ],
+        "lock": {
+          "weight": 1,
+          "anchor": [
+            10.697795639345465,
+            0.075,
+            -5.262693028741367
+          ],
+          "releaseGoal": null,
+          "normal": [
+            0,
+            1,
+            0
+          ]
+        },
+        "probe": {
+          "height": 0,
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "count": 3,
+          "rawHeight": 0
+        }
+      }
+    ],
+    "contact": [
+      true,
+      true
+    ]
+  }
+]

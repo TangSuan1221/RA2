@@ -1,0 +1,35 @@
+[
+  {
+    "mode": "rejected",
+    "entered": {
+      "step": 27,
+      "paused": false,
+      "hint": "当前浏览器未允许鼠标锁定：按住右键拖动视角 · Esc 暂停",
+      "locked": false
+    },
+    "escapePauses": true,
+    "errors": []
+  },
+  {
+    "mode": "missing",
+    "entered": {
+      "step": 28,
+      "paused": false,
+      "hint": "当前浏览器未允许鼠标锁定：按住右键拖动视角 · Esc 暂停",
+      "locked": false
+    },
+    "escapePauses": true,
+    "errors": []
+  },
+  {
+    "mode": "normal",
+    "entered": {
+      "step": 27,
+      "paused": false,
+      "hint": "",
+      "locked": true
+    },
+    "escapePauses": true,
+    "errors": []
+  }
+]

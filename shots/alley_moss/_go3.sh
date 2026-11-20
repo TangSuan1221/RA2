@@ -1,0 +1,10 @@
+#!/bin/sh
+# 用法：_go3.sh 标签   （第三轮截图 + 统计）
+cd "/c/Users/Lenovo/Desktop/the last rule"
+echo '[{"url":"http://localhost:5173/?scene=alley_moss&shot=hero","out":"shots/alley_moss/r3_'$1'_hero.jpg"},{"url":"http://localhost:5173/?scene=alley_moss&shot=top","out":"shots/alley_moss/r3_'$1'_top.jpg"}]' > shots/alley_moss/_plan.json
+node tools/shot.mjs --batch shots/alley_moss/_plan.json --w 1600 --h 900 --wait 6000 | python -I -c "
+import json,sys
+for r in json.load(sys.stdin): print(r['out'], r.get('failed'), r.get('error'), {k:(round(v,2) if isinstance(v,(int,float)) else v) for k,v in (r.get('stats') or {}).items()}, r['logs'][:8])"
+python -I tools/small.py shots/alley_moss/r3_$1_hero.jpg shots/alley_moss/r3_$1_hero_view.jpg 26000
+python -I tools/small.py shots/alley_moss/r3_$1_top.jpg shots/alley_moss/r3_$1_top_view.jpg 26000
+python -I shots/alley_moss/_stats.py shots/alley_moss/r3_$1_hero.jpg shots/alley_moss/r3_$1_top.jpg docs/reference/ref5.jpg docs/reference/ref1.jpg

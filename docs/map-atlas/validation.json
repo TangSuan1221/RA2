@@ -1,0 +1,25 @@
+{
+  "sheetCount": 33,
+  "coveredCells": 64,
+  "t1": 4,
+  "t2": 9,
+  "c1": 5,
+  "c2": 12,
+  "c3": 60,
+  "t3ServiceClusters": 47,
+  "t4": 240,
+  "bridges": 10,
+  "nodes": 6,
+  "c1MinPairDistanceM": 804,
+  "c1MinT1CenterDistanceM": 1145,
+  "spawnMinT1CenterDistanceM": 1251,
+  "notValidated": [
+    "car / motorcycle connectivity",
+    "300m service coverage for every camp",
+    "door gaps and collision",
+    "road-water intersections except designed bridges",
+    "T1 full vehicle exclusion buffer",
+    "walk and drive travel times",
+    "tide and bridge dynamic states"
+  ]
+}

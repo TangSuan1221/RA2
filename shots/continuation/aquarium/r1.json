@@ -1,0 +1,16 @@
+[
+  {
+    "out": "shots/continuation/aquarium/r1.jpg",
+    "ms": 13942,
+    "error": null,
+    "stats": {
+      "fps": 59.57108816591553,
+      "ms": 16.78666666646799,
+      "gpu": 1.0964800000000001,
+      "drawCalls": 873,
+      "triangles": 4643728,
+      "mem": 395606616
+    },
+    "logs": []
+  }
+]

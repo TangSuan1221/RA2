@@ -1,0 +1,478 @@
+[
+  {
+    "id": "CMU_07_01",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.5273803925569729
+  },
+  {
+    "id": "CMU_02_01",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.2939290457107746
+  },
+  {
+    "id": "CMU_02_02",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.7880949005239002
+  },
+  {
+    "id": "CMU_02_03",
+    "description": "run/jog",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 2.835441489037967
+  },
+  {
+    "id": "CMU_03_01",
+    "description": "walk on uneven terrain",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 0.6714778520399237
+  },
+  {
+    "id": "CMU_03_02",
+    "description": "walk on uneven terrain",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 0.8876213944559067
+  },
+  {
+    "id": "CMU_03_03",
+    "description": "walk on uneven terrain",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 0.6965973644144253
+  },
+  {
+    "id": "CMU_03_04",
+    "description": "walk on uneven terrain",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 0.7191759946068674
+  },
+  {
+    "id": "CMU_05_01",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 0.9792442873333175
+  },
+  {
+    "id": "CMU_06_01",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.1019775227712654
+  },
+  {
+    "id": "CMU_07_02",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.4871834234208745
+  },
+  {
+    "id": "CMU_07_03",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.1453971290175895
+  },
+  {
+    "id": "CMU_07_04",
+    "description": "slow walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.0474525005512634
+  },
+  {
+    "id": "CMU_07_05",
+    "description": "slow walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.0884514220643384
+  },
+  {
+    "id": "CMU_07_06",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.3874091168284706
+  },
+  {
+    "id": "CMU_07_07",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.4908602414478884
+  },
+  {
+    "id": "CMU_07_08",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.5375508490261487
+  },
+  {
+    "id": "CMU_07_09",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.6916964224419753
+  },
+  {
+    "id": "CMU_07_10",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.811252146124217
+  },
+  {
+    "id": "CMU_07_11",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.866386864575803
+  },
+  {
+    "id": "CMU_07_12_segment0",
+    "description": "brisk walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 2.142079048103947
+  },
+  {
+    "id": "CMU_08_01",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.809082178399367
+  },
+  {
+    "id": "CMU_08_02",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.744078885166538
+  },
+  {
+    "id": "CMU_08_03",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.7253793897659118
+  },
+  {
+    "id": "CMU_08_04",
+    "description": "slow walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.1912906646296633
+  },
+  {
+    "id": "CMU_08_05",
+    "description": "walk/stride",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.8206427778617849
+  },
+  {
+    "id": "CMU_08_06",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.9576052579466117
+  },
+  {
+    "id": "CMU_08_07",
+    "description": "walk, exaggerated stride",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.942952332563357
+  },
+  {
+    "id": "CMU_08_08",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.985804445781097
+  },
+  {
+    "id": "CMU_08_09",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.9676628507427862
+  },
+  {
+    "id": "CMU_08_10",
+    "description": "walk",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.8307823858804644
+  },
+  {
+    "id": "CMU_08_11",
+    "description": "slow walk/stride",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.3910459966545792
+  },
+  {
+    "id": "CMU_09_01",
+    "description": "run",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.8293958089507774
+  },
+  {
+    "id": "CMU_09_02",
+    "description": "run",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.791544283499501
+  },
+  {
+    "id": "CMU_09_03",
+    "description": "run",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.756860739213027
+  },
+  {
+    "id": "CMU_09_04",
+    "description": "run",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.863342207999481
+  },
+  {
+    "id": "CMU_09_05",
+    "description": "run",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.724298482206651
+  },
+  {
+    "id": "CMU_09_06",
+    "description": "run",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.891525328682288
+  },
+  {
+    "id": "CMU_09_07",
+    "description": "run",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.6786396323809734
+  },
+  {
+    "id": "CMU_09_08",
+    "description": "run",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.7096636221167536
+  },
+  {
+    "id": "CMU_09_09",
+    "description": "run",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.7368658638352055
+  },
+  {
+    "id": "CMU_09_10_segment0",
+    "description": "run",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.8104685782943575
+  },
+  {
+    "id": "CMU_09_11",
+    "description": "run",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.7572197430349
+  },
+  {
+    "id": "CMU_09_12",
+    "description": "navigate - walk forward, backward, sideways",
+    "tag": 1,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.0450177397698335
+  },
+  {
+    "id": "CMU_127_03",
+    "description": "Run",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 1.6382773886668804
+  },
+  {
+    "id": "CMU_127_04",
+    "description": "Walk to Run",
+    "tag": "per-frame",
+    "method": "instantaneous-transition-provisional",
+    "meanSpeed": 1.3572095728740006
+  },
+  {
+    "id": "CMU_127_05",
+    "description": "Run to Quick Stop",
+    "tag": "per-frame",
+    "method": "instantaneous-transition-provisional",
+    "meanSpeed": 1.6106181590812307
+  },
+  {
+    "id": "CMU_127_06",
+    "description": "Run",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 4.017271335152137
+  },
+  {
+    "id": "CMU_127_07",
+    "description": "Run",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 4.462547046713094
+  },
+  {
+    "id": "CMU_127_08",
+    "description": "Run",
+    "tag": 3,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 4.741811357979254
+  },
+  {
+    "id": "CMU_127_09",
+    "description": "Run Right",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.5190848530151873
+  },
+  {
+    "id": "CMU_127_10",
+    "description": "Run Right",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.9537340410705335
+  },
+  {
+    "id": "CMU_127_11",
+    "description": "Run Left",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.298818827611247
+  },
+  {
+    "id": "CMU_127_12",
+    "description": "Run Left",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.7936999931846334
+  },
+  {
+    "id": "CMU_127_13",
+    "description": "Run Side Step Left",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.5023362156534636
+  },
+  {
+    "id": "CMU_127_14",
+    "description": "Run Side Step Right",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.8469322825738503
+  },
+  {
+    "id": "CMU_127_15",
+    "description": "Run Turn Left",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 3.466810399416462
+  },
+  {
+    "id": "CMU_127_16",
+    "description": "Run Turn Right",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 2.656147870315612
+  },
+  {
+    "id": "CMU_127_17",
+    "description": "Run Stop Run",
+    "tag": "per-frame",
+    "method": "instantaneous-transition-provisional",
+    "meanSpeed": 1.4797900252247753
+  },
+  {
+    "id": "CMU_127_18",
+    "description": "Run Stop Run",
+    "tag": "per-frame",
+    "method": "instantaneous-transition-provisional",
+    "meanSpeed": 1.6742569420186808
+  },
+  {
+    "id": "CMU_127_19",
+    "description": "Run Quick Stop Run",
+    "tag": "per-frame",
+    "method": "instantaneous-transition-provisional",
+    "meanSpeed": 1.5278152224287007
+  },
+  {
+    "id": "CMU_127_20",
+    "description": "Run Quick Stop Run",
+    "tag": "per-frame",
+    "method": "instantaneous-transition-provisional",
+    "meanSpeed": 1.8681373797744438
+  },
+  {
+    "id": "CMU_128_02",
+    "description": "Run Left",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 4.135598391746282
+  },
+  {
+    "id": "CMU_128_03",
+    "description": "Run Right",
+    "tag": 2,
+    "method": "source-semantics-and-path-mean-speed",
+    "meanSpeed": 4.061274683403726
+  },
+  {
+    "id": "CMU_128_05",
+    "description": "Run Stop Run",
+    "tag": "per-frame",
+    "method": "instantaneous-transition-provisional",
+    "meanSpeed": 1.6742833929288052
+  },
+  {
+    "id": "CMU_128_06",
+    "description": "Run Stop Run",
+    "tag": "per-frame",
+    "method": "instantaneous-transition-provisional",
+    "meanSpeed": 1.8151914531063567
+  },
+  {
+    "id": "CMU_128_07",
+    "description": "Run Stop Run",
+    "tag": "per-frame",
+    "method": "instantaneous-transition-provisional",
+    "meanSpeed": 1.1228626201586644
+  },
+  {
+    "id": "CMU_128_08",
+    "description": "Run Stop Run",
+    "tag": "per-frame",
+    "method": "instantaneous-transition-provisional",
+    "meanSpeed": 0.8107959280035807
+  }
+]

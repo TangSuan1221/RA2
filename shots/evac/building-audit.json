@@ -1,0 +1,17 @@
+{
+  "audit": {
+    "combinations": 32,
+    "legs": 160,
+    "failures": []
+  },
+  "frame": {
+    "medianFrameMs": 16.69999999999891,
+    "p95FrameMs": 16.80000000000109
+  },
+  "errors": [],
+  "scene": {
+    "drawCalls": 638,
+    "triangles": 1568016,
+    "environmentReady": true
+  }
+}

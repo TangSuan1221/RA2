@@ -1,0 +1,37 @@
+{
+  "started": "2026-11-20T10:07:44.933Z",
+  "sourceHash": "8aad91be6b63d01b9f490cf68182d55ed6e879720ff04bb058fcd945757c2e17",
+  "wallSeconds": 600.656,
+  "scenario": "10-minute real headless-browser repeated combat; test harness replenishes dead actors and scripts circular movement; no fast-forward",
+  "environment": {
+    "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5080 (0x00002C02) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "resolution": [
+      1280,
+      800
+    ],
+    "devicePixelRatio": 1
+  },
+  "render": {
+    "elapsed": 600.5500999998658,
+    "frames": 36029,
+    "step": 36033,
+    "overrun": 0,
+    "p50": 16.699999999982538,
+    "p95": 16.79999999998836,
+    "p99": 16.800000000046566,
+    "max": 45.59999999997672
+  },
+  "logical": {
+    "count": 36033,
+    "p50": 1.300000011920929,
+    "p95": 2.100000023841858,
+    "p99": 2.899999976158142,
+    "max": 17.19999998807907
+  },
+  "resets": 9,
+  "maxTokens": 2,
+  "invalidPose": false,
+  "heap": 110777018,
+  "errors": []
+}

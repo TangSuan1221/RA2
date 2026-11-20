@@ -1,0 +1,8 @@
+Garden lane and cedar shingles are derived from bundled Poly Haven CC0 diffuse maps (road_damaged, aerial_grass_rock, brown_mud_leaves_01, weathered_brown_planks). See ../LICENSES.md. Composition and processing in src/demo/art/bake-surfaces.py.
+ash-branch.webp is derived from ash_color.png in @dgreenheck/ez-tree v1.1.0. Its MIT license accompanies this folder.
+
+The surfaces directory contains full-resolution WebP encodings of Poly Haven CC0 maps. Source map names are listed in src/demo/art/surface-files.json; the reproducible encoder is compress-textures.py. Wheel rut and yard water masks are generated in bake-surfaces.py.
+store-finishes contains cropped sign faces, fabric and ribbed metal sampled from the user-supplied scene 19 concept. These finishes are project reference derivatives and have no implied CC0 license.
+The home-cedar, home-window-glass and home-gravel surfaces sample only material patches from the supplied scene 08 concept; these project-specific images have no implied CC0 license.
+The station-tar-membrane and station-annex-roof surfaces sample roofing from the supplied scene 07 concept and are project-specific reference derivatives.
+The salvage-sash and salvage-shopfront surfaces are project-specific window and transom samples from scene 07.

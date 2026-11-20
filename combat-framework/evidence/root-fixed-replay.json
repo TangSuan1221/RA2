@@ -1,0 +1,28 @@
+{
+  "inputHash": "3f2e6403363806793a9e00ce793750475889966e7ba81434b2baa8c6e4fed0ac",
+  "inputFiles": 212,
+  "hashScope": "src, render, package-lock, combat.html, all public/data/combat files, character-female.glb",
+  "inputUnchanged": true,
+  "scope": "10s deterministic fixed-clock replay; 8 AI, real ANIM/MMDB/FK/IK/root arbitration, empty collision fixture; not performance evidence",
+  "results": [
+    {
+      "hz": 30,
+      "steps": 600,
+      "overrun": 0,
+      "hash": "db8979d4eff4a58ad10473b19ac0e7273a8d6e3e7fa45963778b098e9eab18a7"
+    },
+    {
+      "hz": 60,
+      "steps": 600,
+      "overrun": 0,
+      "hash": "db8979d4eff4a58ad10473b19ac0e7273a8d6e3e7fa45963778b098e9eab18a7"
+    },
+    {
+      "hz": 144,
+      "steps": 600,
+      "overrun": 0,
+      "hash": "db8979d4eff4a58ad10473b19ac0e7273a8d6e3e7fa45963778b098e9eab18a7"
+    }
+  ],
+  "pass": true
+}

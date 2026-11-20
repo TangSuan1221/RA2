@@ -1,0 +1,74 @@
+{
+  "inputHash": "3b8fbef785e8d2af2e13d8d22e2ae7e7e11efacedb6a67f889b5e3ff8a0dc611",
+  "inputFiles": 208,
+  "hashScope": "src, render, package-lock, combat.html, all public/data/combat files, character-female.glb",
+  "scope": "Runtime lock/protection/terminal state only. Single-character animation placeholders do not certify paired contact alignment.",
+  "locked": {
+    "pair": {
+      "id": "player:execution:0",
+      "attackerId": "player",
+      "targetId": "enemy-0",
+      "start": 0,
+      "end": 72,
+      "snapshots": {
+        "attacker": {
+          "pos": [
+            0,
+            0.005,
+            -6
+          ],
+          "yaw": 0,
+          "hp": 100,
+          "poise": 60,
+          "staggerUntil": -1
+        },
+        "target": {
+          "pos": [
+            0,
+            0.005,
+            -4.9
+          ],
+          "yaw": 3.141592653589793,
+          "hp": 20,
+          "poise": 60,
+          "staggerUntil": -1
+        }
+      }
+    },
+    "player": "locked",
+    "target": "locked"
+  },
+  "protectedState": {
+    "hp": 20,
+    "hits": [
+      {
+        "step": 13,
+        "type": "hit",
+        "actorId": "grenade",
+        "target": "player",
+        "damage": 0,
+        "blocked": true,
+        "reason": "execLock",
+        "part": null
+      },
+      {
+        "step": 13,
+        "type": "hit",
+        "actorId": "grenade",
+        "target": "enemy-0",
+        "damage": 0,
+        "blocked": true,
+        "reason": "execLock",
+        "part": null
+      }
+    ]
+  },
+  "end": {
+    "pair": null,
+    "hp": 0,
+    "clip": "Death01",
+    "player": "idle"
+  },
+  "errors": [],
+  "pass": true
+}

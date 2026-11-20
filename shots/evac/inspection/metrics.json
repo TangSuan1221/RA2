@@ -1,0 +1,142 @@
+[
+  {
+    "id": "01",
+    "key": "overview",
+    "errors": [],
+    "metrics": {
+      "drawCalls": 214,
+      "triangles": 782810,
+      "environmentReady": true
+    }
+  },
+  {
+    "id": "06",
+    "key": "fort",
+    "errors": [],
+    "metrics": {
+      "drawCalls": 246,
+      "triangles": 783467,
+      "environmentReady": true
+    }
+  },
+  {
+    "id": "07",
+    "key": "fire",
+    "errors": [],
+    "metrics": {
+      "drawCalls": 506,
+      "triangles": 2175856,
+      "environmentReady": true
+    }
+  },
+  {
+    "id": "08",
+    "key": "home",
+    "errors": [],
+    "metrics": {
+      "drawCalls": 636,
+      "triangles": 1548936,
+      "environmentReady": true
+    }
+  },
+  {
+    "id": "09",
+    "key": "tower",
+    "errors": [],
+    "metrics": {
+      "drawCalls": 358,
+      "triangles": 1542826,
+      "environmentReady": true
+    }
+  },
+  {
+    "id": "13",
+    "key": "underground",
+    "errors": [],
+    "metrics": {
+      "drawCalls": 478,
+      "triangles": 1821818,
+      "environmentReady": true
+    }
+  },
+  {
+    "id": "14",
+    "key": "conservatory",
+    "errors": [],
+    "metrics": {
+      "drawCalls": 126,
+      "triangles": 1308353,
+      "environmentReady": true
+    }
+  },
+  {
+    "id": "15",
+    "key": "rail",
+    "errors": [],
+    "metrics": {
+      "drawCalls": 398,
+      "triangles": 1781118,
+      "environmentReady": true
+    }
+  },
+  {
+    "id": "16",
+    "key": "dock",
+    "errors": [],
+    "metrics": {
+      "drawCalls": 439,
+      "triangles": 1313442,
+      "environmentReady": true
+    }
+  },
+  {
+    "id": "17",
+    "key": "radio",
+    "errors": [],
+    "metrics": {
+      "drawCalls": 165,
+      "triangles": 426635,
+      "environmentReady": true
+    }
+  },
+  {
+    "id": "18",
+    "key": "power",
+    "errors": [],
+    "metrics": {
+      "drawCalls": 242,
+      "triangles": 861226,
+      "environmentReady": true
+    }
+  },
+  {
+    "id": "19",
+    "key": "shops",
+    "errors": [],
+    "metrics": {
+      "drawCalls": 530,
+      "triangles": 2081818,
+      "environmentReady": true
+    }
+  },
+  {
+    "id": "20",
+    "key": "tunnel",
+    "errors": [],
+    "metrics": {
+      "drawCalls": 252,
+      "triangles": 592561,
+      "environmentReady": true
+    }
+  },
+  {
+    "id": "21",
+    "key": "corridor",
+    "errors": [],
+    "metrics": {
+      "drawCalls": 783,
+      "triangles": 1803970,
+      "environmentReady": true
+    }
+  }
+]

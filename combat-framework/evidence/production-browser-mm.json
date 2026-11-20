@@ -1,0 +1,15 @@
+{
+  "steps": 1500,
+  "scope": "Production browser assets, model scale/offset, BVH ground and capsule, ANIM/FK/inertial/IK; isolated enemy-free fixture",
+  "modelScale": 1.0067463938255965,
+  "modelYOffset": 0.026609626219324795,
+  "switches": 66,
+  "switchRate": 0.044,
+  "hardViolations": 0,
+  "fallbacks": 105,
+  "fallbackRate": 0.07,
+  "searches": 757,
+  "maxCandidates": 32,
+  "wallMs": 194.69999998807907,
+  "pass": true
+}
