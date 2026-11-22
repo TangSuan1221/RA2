@@ -1,0 +1,2911 @@
+{
+  "station": {
+    "site": {
+      "profile": "structural",
+      "transform": {
+        "x": 0,
+        "y": -0.26,
+        "z": 4,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/site"
+    },
+    "wall/x/-10.5/-21/-16.8/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -18.9,
+        "y": 0,
+        "z": -10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-10.5/-21/-16.8/0/3.5"
+    },
+    "wall/x/-10.5/-16.8/-15.2/0/0.75": {
+      "profile": "structural",
+      "transform": {
+        "x": -16,
+        "y": 0,
+        "z": -10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-10.5/-16.8/-15.2/0/0.75"
+    },
+    "wall/x/-10.5/-16.8/-15.2/2.6/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -16,
+        "y": 2.6,
+        "z": -10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-10.5/-16.8/-15.2/2.6/3.5"
+    },
+    "wall/x/-10.5/-15.2/-8.3/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -11.75,
+        "y": 0,
+        "z": -10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-10.5/-15.2/-8.3/0/3.5"
+    },
+    "wall/x/-10.5/-8.3/-6.7/0/0.75": {
+      "profile": "structural",
+      "transform": {
+        "x": -7.5,
+        "y": 0,
+        "z": -10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-10.5/-8.3/-6.7/0/0.75"
+    },
+    "wall/x/-10.5/-8.3/-6.7/2.6/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -7.5,
+        "y": 2.6,
+        "z": -10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-10.5/-8.3/-6.7/2.6/3.5"
+    },
+    "wall/x/-10.5/-6.7/-0.5/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -3.6,
+        "y": 0,
+        "z": -10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-10.5/-6.7/-0.5/0/3.5"
+    },
+    "wall/x/-10.5/-0.5/1/2.54/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 0.25,
+        "y": 2.54,
+        "z": -10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-10.5/-0.5/1/2.54/3.5"
+    },
+    "wall/x/-10.5/1/3.2/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 2.1,
+        "y": 0,
+        "z": -10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-10.5/1/3.2/0/3.5"
+    },
+    "wall/x/-10.5/3.2/4.8/0/0.75": {
+      "profile": "structural",
+      "transform": {
+        "x": 4,
+        "y": 0,
+        "z": -10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-10.5/3.2/4.8/0/0.75"
+    },
+    "wall/x/-10.5/3.2/4.8/2.6/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 4,
+        "y": 2.6,
+        "z": -10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-10.5/3.2/4.8/2.6/3.5"
+    },
+    "wall/x/-10.5/4.8/6.6/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 5.699999999999999,
+        "y": 0,
+        "z": -10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-10.5/4.8/6.6/0/3.5"
+    },
+    "wall/x/-10.5/6.6/8.4/2.54/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 7.5,
+        "y": 2.54,
+        "z": -10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-10.5/6.6/8.4/2.54/3.5"
+    },
+    "wall/x/-10.5/8.4/13.2/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 10.8,
+        "y": 0,
+        "z": -10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-10.5/8.4/13.2/0/3.5"
+    },
+    "wall/x/-10.5/13.2/14.8/0/0.75": {
+      "profile": "structural",
+      "transform": {
+        "x": 14,
+        "y": 0,
+        "z": -10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-10.5/13.2/14.8/0/0.75"
+    },
+    "wall/x/-10.5/13.2/14.8/2.6/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 14,
+        "y": 2.6,
+        "z": -10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-10.5/13.2/14.8/2.6/3.5"
+    },
+    "wall/x/-10.5/14.8/18.25/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 16.525,
+        "y": 0,
+        "z": -10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-10.5/14.8/18.25/0/3.5"
+    },
+    "wall/z/-21/-10.5/-7.8/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -21,
+        "y": 0,
+        "z": -9.15,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-21/-10.5/-7.8/0/3.5"
+    },
+    "wall/z/-21/-7.8/-6.2/0/0.75": {
+      "profile": "structural",
+      "transform": {
+        "x": -21,
+        "y": 0,
+        "z": -7,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-21/-7.8/-6.2/0/0.75"
+    },
+    "wall/z/-21/-7.8/-6.2/2.6/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -21,
+        "y": 2.6,
+        "z": -7,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-21/-7.8/-6.2/2.6/3.5"
+    },
+    "wall/z/-21/-6.2/-3.75/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -21,
+        "y": 0,
+        "z": -4.975,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-21/-6.2/-3.75/0/3.5"
+    },
+    "wall/z/-21/-3.75/-0.8/0/6.2": {
+      "profile": "structural",
+      "transform": {
+        "x": -21,
+        "y": 0,
+        "z": -2.275,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-21/-3.75/-0.8/0/6.2"
+    },
+    "wall/z/-21/-0.8/0.8/0/0.75": {
+      "profile": "structural",
+      "transform": {
+        "x": -21,
+        "y": 0,
+        "z": 0,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-21/-0.8/0.8/0/0.75"
+    },
+    "wall/z/-21/-0.8/0.8/2.6/6.2": {
+      "profile": "structural",
+      "transform": {
+        "x": -21,
+        "y": 2.6,
+        "z": 0,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-21/-0.8/0.8/2.6/6.2"
+    },
+    "wall/z/-21/0.8/6.2/0/6.2": {
+      "profile": "structural",
+      "transform": {
+        "x": -21,
+        "y": 0,
+        "z": 3.5,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-21/0.8/6.2/0/6.2"
+    },
+    "wall/z/-21/6.2/7.8/0/0.75": {
+      "profile": "structural",
+      "transform": {
+        "x": -21,
+        "y": 0,
+        "z": 7,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-21/6.2/7.8/0/0.75"
+    },
+    "wall/z/-21/6.2/7.8/2.6/6.2": {
+      "profile": "structural",
+      "transform": {
+        "x": -21,
+        "y": 2.6,
+        "z": 7,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-21/6.2/7.8/2.6/6.2"
+    },
+    "wall/z/-21/7.8/10.5/0/6.2": {
+      "profile": "structural",
+      "transform": {
+        "x": -21,
+        "y": 0,
+        "z": 9.15,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-21/7.8/10.5/0/6.2"
+    },
+    "wall/x/-3.75/-21/-19.9/0/6.2": {
+      "profile": "structural",
+      "transform": {
+        "x": -20.45,
+        "y": 0,
+        "z": -3.75,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-3.75/-21/-19.9/0/6.2"
+    },
+    "wall/x/-3.75/-19.9/-18.1/2.54/6.2": {
+      "profile": "structural",
+      "transform": {
+        "x": -19,
+        "y": 2.54,
+        "z": -3.75,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-3.75/-19.9/-18.1/2.54/6.2"
+    },
+    "wall/x/-3.75/-18.1/-14.1/0/6.2": {
+      "profile": "structural",
+      "transform": {
+        "x": -16.1,
+        "y": 0,
+        "z": -3.75,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-3.75/-18.1/-14.1/0/6.2"
+    },
+    "wall/x/-3.75/-14.1/-11.9/2.54/6.2": {
+      "profile": "structural",
+      "transform": {
+        "x": -13,
+        "y": 2.54,
+        "z": -3.75,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-3.75/-14.1/-11.9/2.54/6.2"
+    },
+    "wall/x/-3.75/-11.9/-6/0/6.2": {
+      "profile": "structural",
+      "transform": {
+        "x": -8.95,
+        "y": 0,
+        "z": -3.75,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-3.75/-11.9/-6/0/6.2"
+    },
+    "wall/x/10.5/-21/-19/0/6.2": {
+      "profile": "structural",
+      "transform": {
+        "x": -20,
+        "y": 0,
+        "z": 10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/10.5/-21/-19/0/6.2"
+    },
+    "wall/x/10.5/-19/-7/4.5/6.2": {
+      "profile": "structural",
+      "transform": {
+        "x": -13,
+        "y": 4.5,
+        "z": 10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/10.5/-19/-7/4.5/6.2"
+    },
+    "wall/x/10.5/-7/-6/0/6.2": {
+      "profile": "structural",
+      "transform": {
+        "x": -6.5,
+        "y": 0,
+        "z": 10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/10.5/-7/-6/0/6.2"
+    },
+    "wall/z/-6/-10.5/-3.75/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -6,
+        "y": 0,
+        "z": -7.125,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-6/-10.5/-3.75/0/3.5"
+    },
+    "wall/z/-6/-3.75/2.1/0/6.2": {
+      "profile": "structural",
+      "transform": {
+        "x": -6,
+        "y": 0,
+        "z": -0.825,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-6/-3.75/2.1/0/6.2"
+    },
+    "wall/z/-6/2.1/3.9/2.54/6.2": {
+      "profile": "structural",
+      "transform": {
+        "x": -6,
+        "y": 2.54,
+        "z": 3,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-6/2.1/3.9/2.54/6.2"
+    },
+    "wall/z/-6/3.9/10.5/0/6.2": {
+      "profile": "structural",
+      "transform": {
+        "x": -6,
+        "y": 0,
+        "z": 7.2,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-6/3.9/10.5/0/6.2"
+    },
+    "wall/z/-1/-10.5/-9.1/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -1,
+        "y": 0,
+        "z": -9.8,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-1/-10.5/-9.1/0/3.5"
+    },
+    "wall/z/-1/-9.1/-7.299999999999999/2.54/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -1,
+        "y": 2.54,
+        "z": -8.2,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-1/-9.1/-7.299999999999999/2.54/3.5"
+    },
+    "wall/z/-1/-7.299999999999999/-5.9/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -1,
+        "y": 0,
+        "z": -6.6,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-1/-7.299999999999999/-5.9/0/3.5"
+    },
+    "wall/z/-1/-5.9/-4.1/2.54/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -1,
+        "y": 2.54,
+        "z": -5,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-1/-5.9/-4.1/2.54/3.5"
+    },
+    "wall/z/-1/-4.1/1.1/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -1,
+        "y": 0,
+        "z": -1.4999999999999998,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-1/-4.1/1.1/0/3.5"
+    },
+    "wall/z/-1/1.1/2.9/2.54/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -1,
+        "y": 2.54,
+        "z": 2,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-1/1.1/2.9/2.54/3.5"
+    },
+    "wall/z/-1/2.9/6.699999999999999/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -1,
+        "y": 0,
+        "z": 4.8,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-1/2.9/6.699999999999999/0/3.5"
+    },
+    "wall/z/-1/6.699999999999999/8.5/2.54/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -1,
+        "y": 2.54,
+        "z": 7.6,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-1/6.699999999999999/8.5/2.54/3.5"
+    },
+    "wall/z/-1/8.5/10.5/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -1,
+        "y": 0,
+        "z": 9.5,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/-1/8.5/10.5/0/3.5"
+    },
+    "wall/x/-6.25/-6/-1/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -3.5,
+        "y": 0,
+        "z": -6.25,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-6.25/-6/-1/0/3.5"
+    },
+    "wall/x/0.75/-6/-1/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -3.5,
+        "y": 0,
+        "z": 0.75,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/0.75/-6/-1/0/3.5"
+    },
+    "wall/x/10.5/-6/-4.3/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -5.15,
+        "y": 0,
+        "z": 10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/10.5/-6/-4.3/0/3.5"
+    },
+    "wall/x/10.5/-4.3/-2.7/0/0.75": {
+      "profile": "structural",
+      "transform": {
+        "x": -3.5,
+        "y": 0,
+        "z": 10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/10.5/-4.3/-2.7/0/0.75"
+    },
+    "wall/x/10.5/-4.3/-2.7/2.6/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -3.5,
+        "y": 2.6,
+        "z": 10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/10.5/-4.3/-2.7/2.6/3.5"
+    },
+    "wall/x/10.5/-2.7/-0.5/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": -1.6,
+        "y": 0,
+        "z": 10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/10.5/-2.7/-0.5/0/3.5"
+    },
+    "wall/x/10.5/-0.5/1/2.54/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 0.25,
+        "y": 2.54,
+        "z": 10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/10.5/-0.5/1/2.54/3.5"
+    },
+    "wall/x/10.5/1/4.2/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 2.6,
+        "y": 0,
+        "z": 10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/10.5/1/4.2/0/3.5"
+    },
+    "wall/x/10.5/4.2/5.8/0/0.75": {
+      "profile": "structural",
+      "transform": {
+        "x": 5,
+        "y": 0,
+        "z": 10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/10.5/4.2/5.8/0/0.75"
+    },
+    "wall/x/10.5/4.2/5.8/2.6/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 5,
+        "y": 2.6,
+        "z": 10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/10.5/4.2/5.8/2.6/3.5"
+    },
+    "wall/x/10.5/5.8/10/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 7.9,
+        "y": 0,
+        "z": 10.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/10.5/5.8/10/0/3.5"
+    },
+    "wall/z/1.5/-10.5/-5.9/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 1.5,
+        "y": 0,
+        "z": -8.2,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/1.5/-10.5/-5.9/0/3.5"
+    },
+    "wall/z/1.5/-5.9/-4.1/2.54/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 1.5,
+        "y": 2.54,
+        "z": -5,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/1.5/-5.9/-4.1/2.54/3.5"
+    },
+    "wall/z/1.5/-4.1/-2.6/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 1.5,
+        "y": 0,
+        "z": -3.3499999999999996,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/1.5/-4.1/-2.6/0/3.5"
+    },
+    "wall/z/1.5/-2.6/-0.7999999999999999/2.54/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 1.5,
+        "y": 2.54,
+        "z": -1.7,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/1.5/-2.6/-0.7999999999999999/2.54/3.5"
+    },
+    "wall/z/1.5/-0.7999999999999999/2.1/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 1.5,
+        "y": 0,
+        "z": 0.6500000000000001,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/1.5/-0.7999999999999999/2.1/0/3.5"
+    },
+    "wall/z/1.5/2.1/3.9/2.54/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 1.5,
+        "y": 2.54,
+        "z": 3,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/1.5/2.1/3.9/2.54/3.5"
+    },
+    "wall/z/1.5/3.9/5.5/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 1.5,
+        "y": 0,
+        "z": 4.7,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/1.5/3.9/5.5/0/3.5"
+    },
+    "wall/z/1.5/5.5/7.300000000000001/2.54/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 1.5,
+        "y": 2.54,
+        "z": 6.4,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/1.5/5.5/7.300000000000001/2.54/3.5"
+    },
+    "wall/z/1.5/7.300000000000001/10.5/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 1.5,
+        "y": 0,
+        "z": 8.9,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/1.5/7.300000000000001/10.5/0/3.5"
+    },
+    "wall/x/-3.75/1.5/10.6/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 6.05,
+        "y": 0,
+        "z": -3.75,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-3.75/1.5/10.6/0/3.5"
+    },
+    "wall/x/-3.75/10.6/12.4/2.54/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 11.5,
+        "y": 2.54,
+        "z": -3.75,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-3.75/10.6/12.4/2.54/3.5"
+    },
+    "wall/x/-3.75/12.4/18.25/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 15.325,
+        "y": 0,
+        "z": -3.75,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-3.75/12.4/18.25/0/3.5"
+    },
+    "wall/z/10/-10.5/-8.6/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 10,
+        "y": 0,
+        "z": -9.55,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/10/-10.5/-8.6/0/3.5"
+    },
+    "wall/z/10/-8.6/-8.1/0/0.65": {
+      "profile": "structural",
+      "transform": {
+        "x": 10,
+        "y": 0,
+        "z": -8.35,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/10/-8.6/-8.1/0/0.65"
+    },
+    "wall/z/10/-8.6/-8.1/2.2/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 10,
+        "y": 2.2,
+        "z": -8.35,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/10/-8.6/-8.1/2.2/3.5"
+    },
+    "wall/z/10/-8.1/-5.7/2.7/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 10,
+        "y": 2.7,
+        "z": -6.9,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/10/-8.1/-5.7/2.7/3.5"
+    },
+    "wall/z/10/-5.7/-5.2/0/0.9": {
+      "profile": "structural",
+      "transform": {
+        "x": 10,
+        "y": 0,
+        "z": -5.45,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/10/-5.7/-5.2/0/0.9"
+    },
+    "wall/z/10/-5.7/-5.2/2.2/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 10,
+        "y": 2.2,
+        "z": -5.45,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/10/-5.7/-5.2/2.2/3.5"
+    },
+    "wall/z/10/-5.2/-3.75/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 10,
+        "y": 0,
+        "z": -4.475,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/10/-5.2/-3.75/0/3.5"
+    },
+    "wall/z/18.25/-10.5/-7.3/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 18.25,
+        "y": 0,
+        "z": -8.9,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/18.25/-10.5/-7.3/0/3.5"
+    },
+    "wall/z/18.25/-7.3/-5.7/0/0.75": {
+      "profile": "structural",
+      "transform": {
+        "x": 18.25,
+        "y": 0,
+        "z": -6.5,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/18.25/-7.3/-5.7/0/0.75"
+    },
+    "wall/z/18.25/-7.3/-5.7/2.6/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 18.25,
+        "y": 2.6,
+        "z": -6.5,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/18.25/-7.3/-5.7/2.6/3.5"
+    },
+    "wall/z/18.25/-5.7/-3.75/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 18.25,
+        "y": 0,
+        "z": -4.725,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/18.25/-5.7/-3.75/0/3.5"
+    },
+    "wall/x/-3.75/18.25/20.75/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 19.5,
+        "y": 0,
+        "z": -3.75,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/-3.75/18.25/20.75/0/3.5"
+    },
+    "wall/z/20.75/-3.75/-0.8/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 20.75,
+        "y": 0,
+        "z": -2.275,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/20.75/-3.75/-0.8/0/3.5"
+    },
+    "wall/z/20.75/-0.8/0.8/0/0.75": {
+      "profile": "structural",
+      "transform": {
+        "x": 20.75,
+        "y": 0,
+        "z": 0,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/20.75/-0.8/0.8/0/0.75"
+    },
+    "wall/z/20.75/-0.8/0.8/2.6/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 20.75,
+        "y": 2.6,
+        "z": 0,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/20.75/-0.8/0.8/2.6/3.5"
+    },
+    "wall/z/20.75/0.8/5.2/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 20.75,
+        "y": 0,
+        "z": 3,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/20.75/0.8/5.2/0/3.5"
+    },
+    "wall/z/20.75/5.2/6.8/0/0.75": {
+      "profile": "structural",
+      "transform": {
+        "x": 20.75,
+        "y": 0,
+        "z": 6,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/20.75/5.2/6.8/0/0.75"
+    },
+    "wall/z/20.75/5.2/6.8/2.6/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 20.75,
+        "y": 2.6,
+        "z": 6,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/20.75/5.2/6.8/2.6/3.5"
+    },
+    "wall/z/20.75/6.8/8.5/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 20.75,
+        "y": 0,
+        "z": 7.65,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/20.75/6.8/8.5/0/3.5"
+    },
+    "wall/z/12.75/-3.75/-2.9/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 12.75,
+        "y": 0,
+        "z": -3.325,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/12.75/-3.75/-2.9/0/3.5"
+    },
+    "wall/z/12.75/-2.9/-1.1/2.54/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 12.75,
+        "y": 2.54,
+        "z": -2,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/12.75/-2.9/-1.1/2.54/3.5"
+    },
+    "wall/z/12.75/-1.1/1.4/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 12.75,
+        "y": 0,
+        "z": 0.1499999999999999,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/12.75/-1.1/1.4/0/3.5"
+    },
+    "wall/x/1.4/12.75/20.75/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 16.75,
+        "y": 0,
+        "z": 1.4,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/1.4/12.75/20.75/0/3.5"
+    },
+    "wall/x/0.75/1.5/10/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 5.75,
+        "y": 0,
+        "z": 0.75,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/0.75/1.5/10/0/3.5"
+    },
+    "wall/x/4.25/1.5/10/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 5.75,
+        "y": 0,
+        "z": 4.25,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/4.25/1.5/10/0/3.5"
+    },
+    "wall/z/10/-3.75/1.4/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 10,
+        "y": 0,
+        "z": -1.175,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/10/-3.75/1.4/0/3.5"
+    },
+    "wall/z/10/1.4/3.1999999999999997/2.54/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 10,
+        "y": 2.54,
+        "z": 2.3,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/10/1.4/3.1999999999999997/2.54/3.5"
+    },
+    "wall/z/10/3.1999999999999997/5.5/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 10,
+        "y": 0,
+        "z": 4.35,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/10/3.1999999999999997/5.5/0/3.5"
+    },
+    "wall/z/10/5.5/7.300000000000001/2.54/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 10,
+        "y": 2.54,
+        "z": 6.4,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/10/5.5/7.300000000000001/2.54/3.5"
+    },
+    "wall/z/10/7.300000000000001/10.5/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 10,
+        "y": 0,
+        "z": 8.9,
+        "yaw": 90
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/z/10/7.300000000000001/10.5/0/3.5"
+    },
+    "wall/x/8.5/10/12.8/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 11.4,
+        "y": 0,
+        "z": 8.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/8.5/10/12.8/0/3.5"
+    },
+    "wall/x/8.5/12.8/15.2/2.84/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 14,
+        "y": 2.84,
+        "z": 8.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/8.5/12.8/15.2/2.84/3.5"
+    },
+    "wall/x/8.5/15.2/18/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 16.6,
+        "y": 0,
+        "z": 8.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/8.5/15.2/18/0/3.5"
+    },
+    "wall/x/8.5/18/19.6/0/0.75": {
+      "profile": "structural",
+      "transform": {
+        "x": 18.8,
+        "y": 0,
+        "z": 8.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/8.5/18/19.6/0/0.75"
+    },
+    "wall/x/8.5/18/19.6/2.6/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 18.8,
+        "y": 2.6,
+        "z": 8.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/8.5/18/19.6/2.6/3.5"
+    },
+    "wall/x/8.5/19.6/20.75/0/3.5": {
+      "profile": "structural",
+      "transform": {
+        "x": 20.175,
+        "y": 0,
+        "z": 8.5,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/wall/x/8.5/19.6/20.75/0/3.5"
+    },
+    "roof-garage": {
+      "profile": "structural",
+      "transform": {
+        "x": -13.5,
+        "y": 6.2,
+        "z": 3.375,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/roof-garage"
+    },
+    "roof-workshop": {
+      "profile": "structural",
+      "transform": {
+        "x": -13.5,
+        "y": 3.5,
+        "z": -7.125,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/roof-workshop"
+    },
+    "roof-middle": {
+      "profile": "structural",
+      "transform": {
+        "x": 2,
+        "y": 3.5,
+        "z": 0,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/roof-middle"
+    },
+    "roof-living": {
+      "profile": "structural",
+      "transform": {
+        "x": 14.125,
+        "y": 3.5,
+        "z": -7.125,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/roof-living"
+    },
+    "roof-front": {
+      "profile": "structural",
+      "transform": {
+        "x": 15.375,
+        "y": 3.5,
+        "z": 2.375,
+        "yaw": 0
+      },
+      "parent": "datum",
+      "anchorId": "datum/roof-front"
+    },
+    "truck": {
+      "profile": "prop",
+      "transform": {
+        "x": -17,
+        "y": 0,
+        "z": 5,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "cab": {
+      "profile": "semantic",
+      "transform": {
+        "x": -17,
+        "y": 2.7,
+        "z": 7.4,
+        "yaw": 0
+      },
+      "parent": "truck",
+      "anchorId": "truck/cab"
+    },
+    "ambulance": {
+      "profile": "prop",
+      "transform": {
+        "x": -11.8,
+        "y": 0,
+        "z": 5.5,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "car": {
+      "profile": "prop",
+      "transform": {
+        "x": -13,
+        "y": 0,
+        "z": 18,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "trunk": {
+      "profile": "semantic",
+      "transform": {
+        "x": -13,
+        "y": 0.65,
+        "z": 20.1,
+        "yaw": 0
+      },
+      "parent": "car",
+      "anchorId": "car/trunk"
+    },
+    "bench": {
+      "profile": "prop",
+      "transform": {
+        "x": -9.4,
+        "y": 0,
+        "z": -5.050000000000001,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "pump": {
+      "profile": "semantic",
+      "transform": {
+        "x": -9.85,
+        "y": 0.9,
+        "z": -5.050000000000001,
+        "yaw": 0
+      },
+      "parent": "bench",
+      "anchorId": "bench/pump"
+    },
+    "faulty": {
+      "profile": "semantic",
+      "transform": {
+        "x": -9,
+        "y": 0.9,
+        "z": -5.050000000000001,
+        "yaw": 0
+      },
+      "parent": "bench",
+      "anchorId": "bench/faulty"
+    },
+    "gauge": {
+      "profile": "semantic",
+      "transform": {
+        "x": -8.9,
+        "y": 1.28,
+        "z": -5.050000000000001,
+        "yaw": 0
+      },
+      "parent": "bench",
+      "anchorId": "bench/gauge"
+    },
+    "cart": {
+      "profile": "prop",
+      "transform": {
+        "x": -8,
+        "y": 0,
+        "z": 4,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "gate": {
+      "profile": "semantic",
+      "transform": {
+        "x": -13,
+        "y": 1.25,
+        "z": 10.5,
+        "yaw": 0
+      },
+      "parent": "wall/x/10.5/-19/-7/4.5/6.2",
+      "anchorId": "wall/x/10.5/-19/-7/4.5/6.2/gate"
+    },
+    "chain": {
+      "profile": "semantic",
+      "transform": {
+        "x": -6.85,
+        "y": 1,
+        "z": 10.28,
+        "yaw": 0
+      },
+      "parent": "wall/x/10.5/-19/-7/4.5/6.2",
+      "anchorId": "wall/x/10.5/-19/-7/4.5/6.2/chain"
+    },
+    "reception": {
+      "profile": "prop",
+      "transform": {
+        "x": 19,
+        "y": 0,
+        "z": 5.5,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "board": {
+      "profile": "semantic",
+      "transform": {
+        "x": 19,
+        "y": 1,
+        "z": 5.5,
+        "yaw": 0
+      },
+      "parent": "reception",
+      "anchorId": "reception/board"
+    },
+    "crate": {
+      "profile": "prop",
+      "transform": {
+        "x": -5,
+        "y": 0,
+        "z": -9,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "shelf": {
+      "profile": "prop",
+      "transform": {
+        "x": -4,
+        "y": 0,
+        "z": -10,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "lockers": {
+      "profile": "prop",
+      "transform": {
+        "x": -3,
+        "y": 0,
+        "z": -0.09999999999999964,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "sink": {
+      "profile": "prop",
+      "transform": {
+        "x": -2.3,
+        "y": 0,
+        "z": 9.6,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "wash": {
+      "profile": "prop",
+      "transform": {
+        "x": -5,
+        "y": 0,
+        "z": 6,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "kitchen": {
+      "profile": "prop",
+      "transform": {
+        "x": 4,
+        "y": 0,
+        "z": -9.8,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "table": {
+      "profile": "prop",
+      "transform": {
+        "x": 6,
+        "y": 0,
+        "z": -6.199999999999999,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "sofa": {
+      "profile": "prop",
+      "transform": {
+        "x": 15,
+        "y": 0,
+        "z": -9.8,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "bed1": {
+      "profile": "prop",
+      "transform": {
+        "x": 4,
+        "y": 0,
+        "z": -0.15000000000000036,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "bed2": {
+      "profile": "prop",
+      "transform": {
+        "x": 9,
+        "y": 0,
+        "z": -1.5,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "basin": {
+      "profile": "prop",
+      "transform": {
+        "x": 8.5,
+        "y": 0,
+        "z": 3.6,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "shower": {
+      "profile": "prop",
+      "transform": {
+        "x": 4.5,
+        "y": 0,
+        "z": 2.8,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "conference": {
+      "profile": "prop",
+      "transform": {
+        "x": 6,
+        "y": 0,
+        "z": 8,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "desk": {
+      "profile": "prop",
+      "transform": {
+        "x": 17,
+        "y": 0,
+        "z": -1.5,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "worktable": {
+      "profile": "prop",
+      "transform": {
+        "x": -16,
+        "y": 0,
+        "z": -6.800000000000001,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/workshop/vise-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -16.61,
+        "y": 0.9,
+        "z": -6.800000000000001,
+        "yaw": 0
+      },
+      "parent": "worktable",
+      "anchorId": "worktable/room/workshop/vise-1"
+    },
+    "room/workshop/parts-pan-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -15.53,
+        "y": 0.9,
+        "z": -6.780000000000001,
+        "yaw": 0
+      },
+      "parent": "worktable",
+      "anchorId": "worktable/room/workshop/parts-pan-1"
+    },
+    "room/workshop/wrench-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -15.91,
+        "y": 0.9,
+        "z": -6.69,
+        "yaw": 0
+      },
+      "parent": "worktable",
+      "anchorId": "worktable/room/workshop/wrench-1"
+    },
+    "room/workshop/toolbox-cart-1": {
+      "profile": "prop",
+      "transform": {
+        "x": -20.35,
+        "y": 0,
+        "z": -9.73,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/workshop/parts-rack-1": {
+      "profile": "prop",
+      "transform": {
+        "x": -12.8,
+        "y": 0,
+        "z": -9.99,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/workshop/scrap-bin-1": {
+      "profile": "prop",
+      "transform": {
+        "x": -7.2,
+        "y": 0,
+        "z": -9.82,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/workshop/pegboard-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -18.3,
+        "y": 1.3,
+        "z": -10.3555,
+        "yaw": 0
+      },
+      "parent": "wall/x/-10.5/-21/-16.8/0/3.5",
+      "anchorId": "wall/x/-10.5/-21/-16.8/0/3.5/room/workshop/pegboard-1"
+    },
+    "room/garage/hose-rack-1": {
+      "profile": "prop",
+      "transform": {
+        "x": -20.49,
+        "y": 0,
+        "z": 3.4,
+        "yaw": 90
+      },
+      "parent": "site"
+    },
+    "room/garage/cylinder-cart-1": {
+      "profile": "prop",
+      "transform": {
+        "x": -20.25,
+        "y": 0,
+        "z": -2.55,
+        "yaw": 90
+      },
+      "parent": "site"
+    },
+    "room/garage/wash-reel-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -20.553,
+        "y": 1.05,
+        "z": 4.8,
+        "yaw": 90
+      },
+      "parent": "wall/z/-21/0.8/6.2/0/6.2",
+      "anchorId": "wall/z/-21/0.8/6.2/0/6.2/room/garage/wash-reel-1"
+    },
+    "room/garage/extinguisher-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -6.1908,
+        "y": 1,
+        "z": 7.3,
+        "yaw": -90
+      },
+      "parent": "wall/z/-6/3.9/10.5/0/6.2",
+      "anchorId": "wall/z/-6/3.9/10.5/0/6.2/room/garage/extinguisher-1"
+    },
+    "room/storage/tote-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -4.25,
+        "y": 0.133,
+        "z": -10,
+        "yaw": 0
+      },
+      "parent": "shelf",
+      "anchorId": "shelf/room/storage/tote-1"
+    },
+    "room/storage/medical-box-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -3.7199999999999998,
+        "y": 0.703,
+        "z": -10,
+        "yaw": 0
+      },
+      "parent": "shelf",
+      "anchorId": "shelf/room/storage/medical-box-1"
+    },
+    "room/storage/parts-rack-2": {
+      "profile": "prop",
+      "transform": {
+        "x": -3.25,
+        "y": 0,
+        "z": -6.719999999999999,
+        "yaw": 180
+      },
+      "parent": "site"
+    },
+    "room/storage/ems-bag-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -3.05,
+        "y": 0.703,
+        "z": -6.72,
+        "yaw": 180
+      },
+      "parent": "room/storage/parts-rack-2",
+      "anchorId": "room/storage/parts-rack-2/room/storage/ems-bag-1"
+    },
+    "room/storage/dressing-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -3.62,
+        "y": 0.739,
+        "z": -6.739999999999999,
+        "yaw": 180
+      },
+      "parent": "room/storage/parts-rack-2",
+      "anchorId": "room/storage/parts-rack-2/room/storage/dressing-1"
+    },
+    "room/storage/carton-2": {
+      "profile": "prop",
+      "transform": {
+        "x": -5.51,
+        "y": 0,
+        "z": -7.1,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/storage/parts-label-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -3.3,
+        "y": 1.9,
+        "z": -6.3727,
+        "yaw": 180
+      },
+      "parent": "wall/x/-6.25/-6/-1/0/3.5",
+      "anchorId": "wall/x/-6.25/-6/-1/0/3.5/room/storage/parts-label-1"
+    },
+    "room/gear/locker-ready-1": {
+      "profile": "prop",
+      "transform": {
+        "x": -5.5,
+        "y": 0,
+        "z": -5.48,
+        "yaw": 90
+      },
+      "parent": "site"
+    },
+    "room/gear/locker-used-1": {
+      "profile": "prop",
+      "transform": {
+        "x": -5.5,
+        "y": 0,
+        "z": -4.640000000000001,
+        "yaw": 90
+      },
+      "parent": "site"
+    },
+    "room/gear/locker-ready-2": {
+      "profile": "prop",
+      "transform": {
+        "x": -5.5,
+        "y": 0,
+        "z": -3.8,
+        "yaw": 90
+      },
+      "parent": "site"
+    },
+    "room/gear/locker-personal-1": {
+      "profile": "prop",
+      "transform": {
+        "x": -5.5,
+        "y": 0,
+        "z": -2.96,
+        "yaw": 90
+      },
+      "parent": "site"
+    },
+    "room/gear/locker-ready-3": {
+      "profile": "prop",
+      "transform": {
+        "x": -5.5,
+        "y": 0,
+        "z": -2.12,
+        "yaw": 90
+      },
+      "parent": "site"
+    },
+    "room/gear/shoes-1": {
+      "profile": "prop",
+      "transform": {
+        "x": -1.62,
+        "y": 0,
+        "z": -2.8499999999999996,
+        "yaw": -90
+      },
+      "parent": "site"
+    },
+    "room/gear/zone-sign-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -3.55,
+        "y": 1.55,
+        "z": -6.1229,
+        "yaw": 0
+      },
+      "parent": "wall/x/-6.25/-6/-1/0/3.5",
+      "anchorId": "wall/x/-6.25/-6/-1/0/3.5/room/gear/zone-sign-1"
+    },
+    "room/decon/dirty-bin-1": {
+      "profile": "prop",
+      "transform": {
+        "x": -5.48,
+        "y": 0,
+        "z": 1.4699999999999998,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/decon/extractor-washer-1": {
+      "profile": "prop",
+      "transform": {
+        "x": -5.29,
+        "y": 0,
+        "z": 4.69,
+        "yaw": 90
+      },
+      "parent": "site"
+    },
+    "room/decon/drying-cabinet-1": {
+      "profile": "prop",
+      "transform": {
+        "x": -5.35,
+        "y": 0,
+        "z": 8.15,
+        "yaw": 90
+      },
+      "parent": "site"
+    },
+    "room/decon/laundry-cart-1": {
+      "profile": "prop",
+      "transform": {
+        "x": -4.91,
+        "y": 0,
+        "z": 9.55,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/decon/glove-box-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -5.833,
+        "y": 1.45,
+        "z": 5.95,
+        "yaw": 90
+      },
+      "parent": "wall/z/-6/3.9/10.5/0/6.2",
+      "anchorId": "wall/z/-6/3.9/10.5/0/6.2/room/decon/glove-box-1"
+    },
+    "room/decon/wet-clock-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -1.14965,
+        "y": 1.95,
+        "z": 5.5,
+        "yaw": -90
+      },
+      "parent": "wall/z/-1/2.9/6.699999999999999/0/3.5",
+      "anchorId": "wall/z/-1/2.9/6.699999999999999/0/3.5/room/decon/wet-clock-1"
+    },
+    "room/passage/wayfinding-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -0.8729,
+        "y": 1.72,
+        "z": -1.7,
+        "yaw": 90
+      },
+      "parent": "wall/z/-1/-4.1/1.1/0/3.5",
+      "anchorId": "wall/z/-1/-4.1/1.1/0/3.5/room/passage/wayfinding-1"
+    },
+    "room/passage/room-id-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 1.3729,
+        "y": 1.62,
+        "z": 0.050000000000000044,
+        "yaw": -90
+      },
+      "parent": "wall/z/1.5/-0.7999999999999999/2.1/0/3.5",
+      "anchorId": "wall/z/1.5/-0.7999999999999999/2.1/0/3.5/room/passage/room-id-1"
+    },
+    "room/passage/emergency-light-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -0.8198,
+        "y": 2.53,
+        "z": 4.9,
+        "yaw": 90
+      },
+      "parent": "wall/z/-1/2.9/6.699999999999999/0/3.5",
+      "anchorId": "wall/z/-1/2.9/6.699999999999999/0/3.5/room/passage/emergency-light-1"
+    },
+    "room/kitchen/cutting-board-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 3.66,
+        "y": 0.91,
+        "z": -9.760000000000002,
+        "yaw": 0
+      },
+      "parent": "kitchen",
+      "anchorId": "kitchen/room/kitchen/cutting-board-1"
+    },
+    "room/kitchen/knife-block-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 4.52,
+        "y": 0.91,
+        "z": -9.850000000000001,
+        "yaw": 0
+      },
+      "parent": "kitchen",
+      "anchorId": "kitchen/room/kitchen/knife-block-1"
+    },
+    "room/kitchen/napkins-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 6,
+        "y": 0.76,
+        "z": -6.199999999999999,
+        "yaw": 0
+      },
+      "parent": "table",
+      "anchorId": "table/room/kitchen/napkins-1"
+    },
+    "room/kitchen/mug-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 5.38,
+        "y": 0.76,
+        "z": -5.989999999999999,
+        "yaw": 0
+      },
+      "parent": "table",
+      "anchorId": "table/room/kitchen/mug-1"
+    },
+    "room/kitchen/bowl-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 6.65,
+        "y": 0.76,
+        "z": -6.379999999999999,
+        "yaw": 0
+      },
+      "parent": "table",
+      "anchorId": "table/room/kitchen/bowl-1"
+    },
+    "room/kitchen/dining-chair-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 5.32,
+        "y": 0,
+        "z": -7.08,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/kitchen/dining-chair-2": {
+      "profile": "prop",
+      "transform": {
+        "x": 5.32,
+        "y": 0,
+        "z": -5.32,
+        "yaw": 180
+      },
+      "parent": "site"
+    },
+    "room/kitchen/dining-chair-3": {
+      "profile": "prop",
+      "transform": {
+        "x": 6.68,
+        "y": 0,
+        "z": -7.08,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/kitchen/dining-chair-4": {
+      "profile": "prop",
+      "transform": {
+        "x": 6.68,
+        "y": 0,
+        "z": -5.32,
+        "yaw": 180
+      },
+      "parent": "site"
+    },
+    "room/kitchen/fridge-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 2.3,
+        "y": 0,
+        "z": -9.81,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/kitchen/stove-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 5.46,
+        "y": 0,
+        "z": -9.79,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/kitchen/pantry-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 9.43,
+        "y": 0,
+        "z": -9.73,
+        "yaw": -90
+      },
+      "parent": "site"
+    },
+    "room/kitchen/recycling-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 9.43,
+        "y": 0,
+        "z": -4.42,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/lounge/recliner-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 17.34,
+        "y": 0,
+        "z": -8.55,
+        "yaw": -90
+      },
+      "parent": "site"
+    },
+    "room/lounge/coffee-table-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 15,
+        "y": 0,
+        "z": -8.28,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/lounge/magazine-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 14.78,
+        "y": 0.42,
+        "z": -8.25,
+        "yaw": 0
+      },
+      "parent": "room/lounge/coffee-table-1",
+      "anchorId": "room/lounge/coffee-table-1/room/lounge/magazine-1"
+    },
+    "room/lounge/remote-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 15.45,
+        "y": 0.42,
+        "z": -8.129999999999999,
+        "yaw": 0
+      },
+      "parent": "room/lounge/coffee-table-1",
+      "anchorId": "room/lounge/coffee-table-1/room/lounge/remote-1"
+    },
+    "room/lounge/bookcase-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 17.62,
+        "y": 0,
+        "z": -4.629999999999999,
+        "yaw": -90
+      },
+      "parent": "site"
+    },
+    "room/lounge/end-table-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 13.52,
+        "y": 0,
+        "z": -9.67,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/lounge/mug-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 13.52,
+        "y": 0.54,
+        "z": -9.67,
+        "yaw": 0
+      },
+      "parent": "room/lounge/end-table-1",
+      "anchorId": "room/lounge/end-table-1/room/lounge/mug-1"
+    },
+    "room/lounge/floor-lamp-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 16.73,
+        "y": 0,
+        "z": -9.96,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/dorm/nightstand-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 2.65,
+        "y": 0,
+        "z": -0.17999999999999972,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/dorm/alarm-clock-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 2.65,
+        "y": 0.55,
+        "z": -0.18,
+        "yaw": 0
+      },
+      "parent": "room/dorm/nightstand-1",
+      "anchorId": "room/dorm/nightstand-1/room/dorm/alarm-clock-1"
+    },
+    "room/dorm/nightstand-2": {
+      "profile": "prop",
+      "transform": {
+        "x": 8.14,
+        "y": 0,
+        "z": -2.25,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/dorm/book-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 8.14,
+        "y": 0.55,
+        "z": -2.25,
+        "yaw": 0
+      },
+      "parent": "room/dorm/nightstand-2",
+      "anchorId": "room/dorm/nightstand-2/room/dorm/book-1"
+    },
+    "room/dorm/wardrobe-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 4.1,
+        "y": 0,
+        "z": -3.29,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/dorm/wardrobe-2": {
+      "profile": "prop",
+      "transform": {
+        "x": 4.83,
+        "y": 0,
+        "z": -3.29,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/bath/basin-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 8.5,
+        "y": 0.65,
+        "z": 3.898,
+        "yaw": 180
+      },
+      "parent": "wall/x/4.25/1.5/10/0/3.5",
+      "anchorId": "wall/x/4.25/1.5/10/0/3.5/room/bath/basin-1"
+    },
+    "room/bath/toilet-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 2.93,
+        "y": 0,
+        "z": 1.46,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/bath/mirror-cab-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 8.5,
+        "y": 1.23,
+        "z": 4.068,
+        "yaw": 180
+      },
+      "parent": "wall/x/4.25/1.5/10/0/3.5",
+      "anchorId": "wall/x/4.25/1.5/10/0/3.5/room/bath/mirror-cab-1"
+    },
+    "room/bath/towels-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 9.23,
+        "y": 1.22,
+        "z": 4.07105,
+        "yaw": 180
+      },
+      "parent": "wall/x/4.25/1.5/10/0/3.5",
+      "anchorId": "wall/x/4.25/1.5/10/0/3.5/room/bath/towels-1"
+    },
+    "room/bath/shower-head-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 4.88,
+        "y": 1.91,
+        "z": 0.8963,
+        "yaw": 0
+      },
+      "parent": "wall/x/0.75/1.5/10/0/3.5",
+      "anchorId": "wall/x/0.75/1.5/10/0/3.5/room/bath/shower-head-1"
+    },
+    "room/bath/bath-mat-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 5.07,
+        "y": 0,
+        "z": 1.65,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/bath/safety-bar-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 3.78,
+        "y": 0.84,
+        "z": 0.9185,
+        "yaw": 0
+      },
+      "parent": "wall/x/0.75/1.5/10/0/3.5",
+      "anchorId": "wall/x/0.75/1.5/10/0/3.5/room/bath/safety-bar-1"
+    },
+    "room/meeting/binder-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 5.53,
+        "y": 0.74,
+        "z": 8,
+        "yaw": 0
+      },
+      "parent": "conference",
+      "anchorId": "conference/room/meeting/binder-1"
+    },
+    "room/meeting/pen-cup-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 6.49,
+        "y": 0.74,
+        "z": 8,
+        "yaw": 0
+      },
+      "parent": "conference",
+      "anchorId": "conference/room/meeting/pen-cup-1"
+    },
+    "room/meeting/folding-chair-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 5.52,
+        "y": 0,
+        "z": 7.22,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/meeting/folding-chair-2": {
+      "profile": "prop",
+      "transform": {
+        "x": 5.52,
+        "y": 0,
+        "z": 8.78,
+        "yaw": 180
+      },
+      "parent": "site"
+    },
+    "room/meeting/folding-chair-3": {
+      "profile": "prop",
+      "transform": {
+        "x": 6.48,
+        "y": 0,
+        "z": 7.22,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/meeting/folding-chair-4": {
+      "profile": "prop",
+      "transform": {
+        "x": 6.48,
+        "y": 0,
+        "z": 8.78,
+        "yaw": 180
+      },
+      "parent": "site"
+    },
+    "room/meeting/whiteboard-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 5.8,
+        "y": 1.22,
+        "z": 4.3864,
+        "yaw": 0
+      },
+      "parent": "wall/x/4.25/1.5/10/0/3.5",
+      "anchorId": "wall/x/4.25/1.5/10/0/3.5/room/meeting/whiteboard-1"
+    },
+    "room/meeting/files-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 9.35,
+        "y": 0,
+        "z": 9.55,
+        "yaw": -90
+      },
+      "parent": "site"
+    },
+    "room/meeting/lectern-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 2.18,
+        "y": 0,
+        "z": 4.95,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/watch/display-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 16.7,
+        "y": 0.75,
+        "z": -1.65,
+        "yaw": 0
+      },
+      "parent": "desk",
+      "anchorId": "desk/room/watch/display-1"
+    },
+    "room/watch/keyboard-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 16.7,
+        "y": 0.75,
+        "z": -1.31,
+        "yaw": 0
+      },
+      "parent": "desk",
+      "anchorId": "desk/room/watch/keyboard-1"
+    },
+    "room/watch/telephone-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 17.48,
+        "y": 0.75,
+        "z": -1.5,
+        "yaw": 0
+      },
+      "parent": "desk",
+      "anchorId": "desk/room/watch/telephone-1"
+    },
+    "room/watch/office-chair-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 17,
+        "y": 0,
+        "z": -0.54,
+        "yaw": 180
+      },
+      "parent": "site"
+    },
+    "room/watch/files-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 20.1,
+        "y": 0,
+        "z": -2.62,
+        "yaw": -90
+      },
+      "parent": "site"
+    },
+    "room/watch/pedestal-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 18.32,
+        "y": 0,
+        "z": -1.5499999999999998,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/watch/roster-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 16,
+        "y": 1.46,
+        "z": 1.277,
+        "yaw": 180
+      },
+      "parent": "wall/x/1.4/12.75/20.75/0/3.5",
+      "anchorId": "wall/x/1.4/12.75/20.75/0/3.5/room/watch/roster-1"
+    },
+    "room/foyer/waiting-chair-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 20.11,
+        "y": 0,
+        "z": 3.42,
+        "yaw": -90
+      },
+      "parent": "site"
+    },
+    "room/foyer/waiting-chair-2": {
+      "profile": "prop",
+      "transform": {
+        "x": 20.11,
+        "y": 0,
+        "z": 4.15,
+        "yaw": -90
+      },
+      "parent": "site"
+    },
+    "room/foyer/literature-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 18.03,
+        "y": 0,
+        "z": 7.92,
+        "yaw": 180
+      },
+      "parent": "site"
+    },
+    "room/foyer/entry-mat-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 14,
+        "y": 0,
+        "z": 7.44,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/foyer/bulletin-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 18.28,
+        "y": 1.22,
+        "z": 1.5439999999999998,
+        "yaw": 0
+      },
+      "parent": "wall/x/1.4/12.75/20.75/0/3.5",
+      "anchorId": "wall/x/1.4/12.75/20.75/0/3.5/room/foyer/bulletin-1"
+    },
+    "room/foyer/crest-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 16.61,
+        "y": 1.63,
+        "z": 8.36785,
+        "yaw": 180
+      },
+      "parent": "wall/x/8.5/15.2/18/0/3.5",
+      "anchorId": "wall/x/8.5/15.2/18/0/3.5/room/foyer/crest-1"
+    },
+    "room/workshop/pump-test-bench-1": {
+      "profile": "prop",
+      "transform": {
+        "x": -11.5,
+        "y": 0,
+        "z": -5.050000000000001,
+        "yaw": 180
+      },
+      "parent": "site"
+    },
+    "room/workshop/sockets-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -15.91,
+        "y": 0.9,
+        "z": -7.000000000000001,
+        "yaw": 0
+      },
+      "parent": "worktable",
+      "anchorId": "worktable/room/workshop/sockets-1"
+    },
+    "room/workshop/rag-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -16.32,
+        "y": 0.9,
+        "z": -6.5600000000000005,
+        "yaw": 0
+      },
+      "parent": "worktable",
+      "anchorId": "worktable/room/workshop/rag-1"
+    },
+    "room/workshop/seal-box-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -20.35,
+        "y": 0.84,
+        "z": -9.73,
+        "yaw": 0
+      },
+      "parent": "room/workshop/toolbox-cart-1",
+      "anchorId": "room/workshop/toolbox-cart-1/room/workshop/seal-box-1"
+    },
+    "room/storage/food-bag-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -3.65,
+        "y": 1.273,
+        "z": -9.99,
+        "yaw": 0
+      },
+      "parent": "shelf",
+      "anchorId": "shelf/room/storage/food-bag-1"
+    },
+    "room/storage/masks-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -3.54,
+        "y": 1.273,
+        "z": -6.739999999999999,
+        "yaw": 180
+      },
+      "parent": "room/storage/parts-rack-2",
+      "anchorId": "room/storage/parts-rack-2/room/storage/masks-1"
+    },
+    "room/storage/glove-box-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -2.99,
+        "y": 1.273,
+        "z": -6.7299999999999995,
+        "yaw": 180
+      },
+      "parent": "room/storage/parts-rack-2",
+      "anchorId": "room/storage/parts-rack-2/room/storage/glove-box-1"
+    },
+    "room/garage/packed-hose-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -20.49,
+        "y": 0.1155,
+        "z": 3.4,
+        "yaw": 90
+      },
+      "parent": "room/garage/hose-rack-1",
+      "anchorId": "room/garage/hose-rack-1/room/garage/packed-hose-1"
+    },
+    "room/garage/packed-hose-2": {
+      "profile": "semantic",
+      "transform": {
+        "x": -20.49,
+        "y": 0.6105,
+        "z": 3.4,
+        "yaw": 90
+      },
+      "parent": "room/garage/hose-rack-1",
+      "anchorId": "room/garage/hose-rack-1/room/garage/packed-hose-2"
+    },
+    "room/gear/work-gloves-pair-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -2.51,
+        "y": 0.45,
+        "z": -0.09999999999999964,
+        "yaw": 0
+      },
+      "parent": "lockers",
+      "anchorId": "lockers/room/gear/work-gloves-pair-1"
+    },
+    "room/gear/name-strip-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -3.86,
+        "y": 1.63,
+        "z": 0.62665,
+        "yaw": 180
+      },
+      "parent": "wall/x/0.75/-6/-1/0/3.5",
+      "anchorId": "wall/x/0.75/-6/-1/0/3.5/room/gear/name-strip-1"
+    },
+    "room/decon/disinfect-tray-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -2.52,
+        "y": 0.88,
+        "z": 9.6,
+        "yaw": 180
+      },
+      "parent": "sink",
+      "anchorId": "sink/room/decon/disinfect-tray-1"
+    },
+    "room/decon/detergent-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -1.9099999999999997,
+        "y": 0.88,
+        "z": 9.75,
+        "yaw": 180
+      },
+      "parent": "sink",
+      "anchorId": "sink/room/decon/detergent-1"
+    },
+    "room/decon/chemical-label-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": -1.1227,
+        "y": 1.45,
+        "z": 5.23,
+        "yaw": -90
+      },
+      "parent": "wall/z/-1/2.9/6.699999999999999/0/3.5",
+      "anchorId": "wall/z/-1/2.9/6.699999999999999/0/3.5/room/decon/chemical-label-1"
+    },
+    "room/kitchen/base-cab-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 6.28,
+        "y": 0,
+        "z": -9.79,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/kitchen/coffee-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 6.16,
+        "y": 0.9,
+        "z": -9.79,
+        "yaw": 0
+      },
+      "parent": "room/kitchen/base-cab-1",
+      "anchorId": "room/kitchen/base-cab-1/room/kitchen/coffee-1"
+    },
+    "room/kitchen/seasoning-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 6.5200000000000005,
+        "y": 0.9,
+        "z": -9.739999999999998,
+        "yaw": 0
+      },
+      "parent": "room/kitchen/base-cab-1",
+      "anchorId": "room/kitchen/base-cab-1/room/kitchen/seasoning-1"
+    },
+    "room/kitchen/upper-cab-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 5.57,
+        "y": 1.6,
+        "z": -10.208,
+        "yaw": 0
+      },
+      "parent": "wall/x/-10.5/4.8/6.6/0/3.5",
+      "anchorId": "wall/x/-10.5/4.8/6.6/0/3.5/room/kitchen/upper-cab-1"
+    },
+    "room/kitchen/chores-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 7.6,
+        "y": 1.52,
+        "z": -3.873,
+        "yaw": 180
+      },
+      "parent": "wall/x/-3.75/1.5/10.6/0/3.5",
+      "anchorId": "wall/x/-3.75/1.5/10.6/0/3.5/room/kitchen/chores-1"
+    },
+    "room/kitchen/lunch-box-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 6.55,
+        "y": 0.76,
+        "z": -5.969999999999999,
+        "yaw": 0
+      },
+      "parent": "table",
+      "anchorId": "table/room/kitchen/lunch-box-1"
+    },
+    "room/kitchen/mug-2": {
+      "profile": "semantic",
+      "transform": {
+        "x": 5.55,
+        "y": 0.76,
+        "z": -6.43,
+        "yaw": 0
+      },
+      "parent": "table",
+      "anchorId": "table/room/kitchen/mug-2"
+    },
+    "room/lounge/game-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 17.62,
+        "y": 0.633,
+        "z": -4.81,
+        "yaw": -90
+      },
+      "parent": "room/lounge/bookcase-1",
+      "anchorId": "room/lounge/bookcase-1/room/lounge/game-1"
+    },
+    "room/lounge/book-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 17.62,
+        "y": 0.633,
+        "z": -4.41,
+        "yaw": -90
+      },
+      "parent": "room/lounge/bookcase-1",
+      "anchorId": "room/lounge/bookcase-1/room/lounge/book-1"
+    },
+    "room/lounge/game-2": {
+      "profile": "semantic",
+      "transform": {
+        "x": 15.25,
+        "y": 0.42,
+        "z": -8.36,
+        "yaw": 0
+      },
+      "parent": "room/lounge/coffee-table-1",
+      "anchorId": "room/lounge/coffee-table-1/room/lounge/game-2"
+    },
+    "room/lounge/photo-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 16.71,
+        "y": 1.48,
+        "z": -10.366,
+        "yaw": 0
+      },
+      "parent": "wall/x/-10.5/14.8/18.25/0/3.5",
+      "anchorId": "wall/x/-10.5/14.8/18.25/0/3.5/room/lounge/photo-1"
+    },
+    "room/dorm/cup-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 8.280000000000001,
+        "y": 0.55,
+        "z": -2.36,
+        "yaw": 0
+      },
+      "parent": "room/dorm/nightstand-2",
+      "anchorId": "room/dorm/nightstand-2/room/dorm/cup-1"
+    },
+    "room/dorm/coat-hook-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 6.07,
+        "y": 1.52,
+        "z": -3.59315,
+        "yaw": 0
+      },
+      "parent": "wall/x/-3.75/1.5/10.6/0/3.5",
+      "anchorId": "wall/x/-3.75/1.5/10.6/0/3.5/room/dorm/coat-hook-1"
+    },
+    "room/dorm/linen-bag-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 6.87,
+        "y": 0,
+        "z": -3.1799999999999997,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/bath/soap-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 8.08,
+        "y": 1.11,
+        "z": 4.0847999999999995,
+        "yaw": 180
+      },
+      "parent": "wall/x/4.25/1.5/10/0/3.5",
+      "anchorId": "wall/x/4.25/1.5/10/0/3.5/room/bath/soap-1"
+    },
+    "room/bath/toilet-roll-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 2.47,
+        "y": 0.6,
+        "z": 0.942,
+        "yaw": 0
+      },
+      "parent": "wall/x/0.75/1.5/10/0/3.5",
+      "anchorId": "wall/x/0.75/1.5/10/0/3.5/room/bath/toilet-roll-1"
+    },
+    "room/bath/bath-bin-1": {
+      "profile": "prop",
+      "transform": {
+        "x": 2.14,
+        "y": 0,
+        "z": 1.2599999999999998,
+        "yaw": 0
+      },
+      "parent": "site"
+    },
+    "room/meeting/book-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 6.17,
+        "y": 0.74,
+        "z": 8.04,
+        "yaw": 0
+      },
+      "parent": "conference",
+      "anchorId": "conference/room/meeting/book-1"
+    },
+    "room/meeting/clock-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 7.23,
+        "y": 1.75,
+        "z": 4.39115,
+        "yaw": 0
+      },
+      "parent": "wall/x/4.25/1.5/10/0/3.5",
+      "anchorId": "wall/x/4.25/1.5/10/0/3.5/room/meeting/clock-1"
+    },
+    "room/watch/mouse-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 17.06,
+        "y": 0.75,
+        "z": -1.32,
+        "yaw": 0
+      },
+      "parent": "desk",
+      "anchorId": "desk/room/watch/mouse-1"
+    },
+    "room/watch/printer-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 18.32,
+        "y": 0.61,
+        "z": -1.55,
+        "yaw": 0
+      },
+      "parent": "room/watch/pedestal-1",
+      "anchorId": "room/watch/pedestal-1/room/watch/printer-1"
+    },
+    "room/foyer/plaque-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 19.81,
+        "y": 1.51,
+        "z": 1.532,
+        "yaw": 0
+      },
+      "parent": "wall/x/1.4/12.75/20.75/0/3.5",
+      "anchorId": "wall/x/1.4/12.75/20.75/0/3.5/room/foyer/plaque-1"
+    },
+    "room/foyer/poster-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 17.15,
+        "y": 1.45,
+        "z": 1.523,
+        "yaw": 0
+      },
+      "parent": "wall/x/1.4/12.75/20.75/0/3.5",
+      "anchorId": "wall/x/1.4/12.75/20.75/0/3.5/room/foyer/poster-1"
+    },
+    "room/foyer/clock-1": {
+      "profile": "semantic",
+      "transform": {
+        "x": 15.69,
+        "y": 1.91,
+        "z": 1.54115,
+        "yaw": 0
+      },
+      "parent": "wall/x/1.4/12.75/20.75/0/3.5",
+      "anchorId": "wall/x/1.4/12.75/20.75/0/3.5/room/foyer/clock-1"
+    }
+  }
+}

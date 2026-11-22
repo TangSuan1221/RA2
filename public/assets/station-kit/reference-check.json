@@ -1,0 +1,62 @@
+[
+  {
+    "id": "watch-desk",
+    "view": "front",
+    "framedMaskIoU": 0.968
+  },
+  {
+    "id": "watch-desk",
+    "view": "side",
+    "framedMaskIoU": 0.92
+  },
+  {
+    "id": "watch-desk",
+    "view": "top",
+    "framedMaskIoU": 0.889
+  },
+  {
+    "id": "pump-test-bench",
+    "view": "front",
+    "framedMaskIoU": 0.618
+  },
+  {
+    "id": "pump-test-bench",
+    "view": "side",
+    "framedMaskIoU": 0.51
+  },
+  {
+    "id": "pump-test-bench",
+    "view": "top",
+    "framedMaskIoU": 0.965
+  },
+  {
+    "id": "hose-cart",
+    "view": "front",
+    "framedMaskIoU": 0.641
+  },
+  {
+    "id": "hose-cart",
+    "view": "side",
+    "framedMaskIoU": 0.831
+  },
+  {
+    "id": "hose-cart",
+    "view": "top",
+    "framedMaskIoU": 0.64
+  },
+  {
+    "id": "south-shutter",
+    "view": "front",
+    "framedMaskIoU": 0.949
+  },
+  {
+    "id": "south-shutter",
+    "view": "side",
+    "framedMaskIoU": 0.676
+  },
+  {
+    "id": "south-shutter",
+    "view": "top",
+    "framedMaskIoU": 0.591
+  }
+]

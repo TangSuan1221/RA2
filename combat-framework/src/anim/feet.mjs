@@ -23,7 +23,7 @@ export function applyFootIK(actor,bones,obstacles,dt,clip){
   const toWorld=v=>[actor.pos[0]+s*(v[0]*co+v[2]*si),actor.pos[1]+s*v[1]+offset,actor.pos[2]+s*(-v[0]*si+v[2]*co)];
   const toLocal=v=>{const x=(v[0]-actor.pos[0])/s,z=(v[2]-actor.pos[2])/s;return [x*co-z*si,(v[1]-actor.pos[1]-offset)/s,x*si+z*co];};
   const probes={};let lowest=0;
-  for(const side of ['l','r']){const foot=bones.findIndex(b=>b.name==='foot_'+side),world=toWorld(actor.boneWorld.positions[foot]),lock=actor.footLocks[side],center=lock?.anchor?[lock.anchor[0],world[1],lock.anchor[2]]:world,probe=footGroundProbe(actor,center,obstacles),contact=clip?.contactOfFrame?.[Math.min(clip.frames-1,Math.floor(actor.clipTime*30))]?.[side==='l'?0:1];
+  for(const side of ['l','r']){const foot=bones.findIndex(b=>b.name==='foot_'+side),world=toWorld(actor.boneWorld.positions[foot]),lock=actor.footLocks[side],center=lock?.anchor?[lock.anchor[0],world[1],lock.anchor[2]]:world,probe=footGroundProbe(actor,center,obstacles),contact=clip?.contactOfFrame?.[Math.min(clip.frames-1,Math.floor((actor.skeletonPlayer?.baseClock?.time??actor.clipTime)*30))]?.[side==='l'?0:1];
     if(probe.count){const previous=actor.footProbeHeights[side]??probe.height;probe.rawHeight=probe.height;probe.height=previous-probe.height>MM.IK_SNAP_DROP?probe.height:previous+(probe.height-previous)*(1-Math.exp(-dt/MM.IK_FOOT_SMOOTH));actor.footProbeHeights[side]=probe.height;if(contact!==false&&world[1]-probe.height<.17*s)lowest=Math.min(lowest,probe.height-actor.pos[1]);}
     probes[side]=probe;
   }
@@ -35,7 +35,7 @@ export function applyFootIK(actor,bones,obstacles,dt,clip){
     if(hip<0||knee<0||foot<0)throw Error('Missing IK chain');
     const world=toWorld(fk.positions[foot]),probe=probes[side],floor=probe.height??0;
     const ankleHeight=.075*s,above=world[1]-floor,old=actor.footLocks[side]||{weight:0,anchor:null};
-    const contact=clip?.contactOfFrame?.[Math.min(clip.frames-1,Math.floor(actor.clipTime*30))]?.[side==='l'?0:1];
+    const contact=clip?.contactOfFrame?.[Math.min(clip.frames-1,Math.floor((actor.skeletonPlayer?.baseClock?.time??actor.clipTime)*30))]?.[side==='l'?0:1];
     let released=false;
     if(old.anchor&&(!probe.count||contact===false||above>.17*s||Math.hypot(world[0]-old.anchor[0],world[2]-old.anchor[2])>.3*s)){old.releaseGoal=old.anchor;old.anchor=null;released=true;}
     // A release must blend out before a new anchor is acquired. Replacing a

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 730" font-family="Microsoft YaHei, sans-serif">
+<title>围困后的工坊订单 · 消防站机制审查图</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="context-stroke"/></marker></defs>
+<rect width="1100" height="730" fill="#faf8f2"/>
+<g fill="#172d36"><text x="42" y="55" font-size="32" font-weight="bold">消防站 · 围困后的工坊订单</text><text x="42" y="90" font-size="18">值班记录能带回情报；完成试压后，还要决定是否运走整台泵。</text></g>
+<g stroke="#33434a" stroke-width="3">
+<rect x="100" y="176" width="274" height="390" fill="#f2dace"/>
+<rect x="374" y="176" width="155" height="390" fill="#e4dfca"/>
+<rect x="529" y="176" width="58" height="390" fill="#fff1ca"/>
+<rect x="587" y="176" width="193" height="390" fill="#dfebdf"/>
+<path d="M374 278 H529 M374 345 H529 M374 410 H529 M374 473 H529 M587 270H655 m53 0h72 M587 360H780 M587 425H780" fill="none"/>
+<rect x="587" y="425" width="193" height="141" fill="#dbeaf0"/>
+<rect x="780" y="466" width="54" height="69" fill="#e7eff3"/>
+<rect x="624" y="429" width="82" height="34" fill="#b8cace"/>
+</g>
+<g stroke-width="8" fill="none"><path d="M123 176h75m65 0h75M123 566h75m65 0h75" stroke="#faf8f2"/><path d="M374 225v26 M529 228v24 M529 511v26 M374 512v25" stroke="#e4dfca"/><path d="M587 498v24M780 490v26" stroke="#dbeaf0"/></g>
+<g stroke="#faf8f2" stroke-width="7"><path d="M834 490L834 517"/><path d="M730 176L751 176"/><path d="M374 294L374 316"/><path d="M435 345L459 345"/><path d="M435 410L459 410"/><path d="M529 436L529 457"/><path d="M587 205L587 226"/><path d="M587 318L587 339"/><path d="M587 378L587 399"/><path d="M780 332L780 354"/><path d="M529 259L529 274"/><path d="M529 195L529 214"/><path d="M529 485L529 505"/><path d="M587 437L587 459"/><path d="M742 425L761 425"/><path d="M742 360L761 360"/></g>
+<path d="M519 260h-30m30 3h-30m30 3h-30m30 3h-30m30 3h-30" stroke="#7a6950" stroke-width="1"/>
+<path d="M706 460h35v-94" fill="none" stroke="#33434a" stroke-width="2"/><g stroke="#74999d" stroke-width="2"><path d="M706 438v12m-120-222v12m-57-21v6"/></g>
+<g stroke="#33434a" stroke-width="2"><rect x="135" y="289" width="64" height="159" rx="7" fill="#b96555"/><rect x="249" y="308" width="57" height="126" rx="6" fill="#f5f5ef"/><path d="M144 410h46v20h-46z M255 402h45v17h-45z" fill="#698087"/><rect x="395" y="199" width="85" height="27" fill="#a9b9b9"/><rect x="330" y="262" width="30" height="44" fill="#bba480"/></g>
+<g fill="#23363d" font-size="17" text-anchor="middle"><text x="235" y="148">北侧归队后场</text><text x="232" y="235">室内贯通车厅</text><text x="232" y="479">消防车　　救护车</text><text x="452" y="254">② 双泵试验台</text><text x="290" y="280">③ 推车</text><text x="448" y="317">污装卸收</text><text x="448" y="385">洗消</text><text x="448" y="447">清洁更衣</text><text x="448" y="526">战备穿戴</text><text x="558" y="365" style="writing-mode:tb">员工走廊</text><text x="677" y="222">厨房餐厅</text><text x="677" y="307">起居室</text><text x="680" y="346" font-size="14">共墙破口可通行</text><text x="680" y="399">宿舍</text><text x="665" y="452" font-size="13">① 值班警报台</text><text x="685" y="511">公共前厅</text><text x="807" y="508" font-size="14">门斗</text><text x="225" y="596">④ 南卷门 · 出车坪</text></g>
+<g fill="none" stroke-width="5" marker-end="url(#arrow)"><path d="M908 500H831" stroke="#267097"/><path d="M430 234H353V248" stroke="#b45a26"/><path d="M346 313V544H312V625" stroke="#b45a26"/><path d="M681 262V242M740 202V143" stroke="#42836c"/></g>
+<g fill="none" stroke-width="3.5" stroke-linejoin="round" opacity=".88" marker-end="url(#arrow)">
+<path stroke="#17795a" stroke-dasharray="7 4" d="M854 507H750V340H684V211H550V205H472"/>
+<path stroke="#855793" stroke-dasharray="3 4" d="M854 500V343H752L720 330H552V265H502L468 242"/>
+<path stroke="#a36330" stroke-dasharray="10 4" d="M854 514V615H324V548H350V236H404"/>
+</g><g font-size="16" fill="#32464c"><text x="855" y="483">东侧人行入口</text><text x="706" y="128">北侧人员出口</text><text x="328" y="633">南坪交货，运单待结算</text>
+<text x="34" y="350" style="writing-mode:tb">西侧回场道</text></g>
+<path d="M100 659H1040" stroke="#a6a8a1"/><text x="100" y="694" font-size="17" fill="#253b44">两条线均须接街区步行撤离段　｜　分区与货运关系示意，节点和状态以机制清单为准</text>
+<g fill="#243b43" font-size="15"><text x="838" y="212" font-weight="bold">泵台的三个接近方向</text><text x="838" y="247" fill="#17795a">生活翼 → 北交接通道</text><text x="838" y="278" fill="#855793">侧门 → 局部维修平台</text><text x="838" y="309" fill="#a36330">出车坪 → 车厅步行带</text><text x="838" y="371" font-weight="bold">归队洁污顺序</text><text x="838" y="400">车厅 → 卸收 → 洗消</text><text x="838" y="428">→ 更衣 → 员工走廊</text></g>
+</svg>

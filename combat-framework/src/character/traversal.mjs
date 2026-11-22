@@ -33,14 +33,15 @@ export function probeTraversal(actor,obstacles){
 }
 export function updateTraversalCandidate(actor,obstacles,step,intent){
   if(!intent||step<(actor.traversalCooldown||0)||step<actor.busyUntil){actor.traversalCandidate=null;return;}
-  if(step%2)return;
   const candidate=probeTraversal(actor,obstacles),old=actor.traversalCandidate;
   actor.traversalCandidate=candidate?{...candidate,since:old?.id===candidate.id?old.since:step}:null;
 }
 export function beginTraversal(actor,step,obstacles){
-  const cached=actor.traversalCandidate;if(!cached||step-cached.since<Math.ceil(CB.CTX_PICK_MS/1000/DT))return false;
+  const cached=actor.traversalCandidate;if(!cached)return false;
+  const runningVault=cached.type==='vault' && Math.hypot(actor.vel[0],actor.vel[2])>=CC.SPD_JOG;
+  if(!runningVault && step-cached.since<Math.ceil(CB.CTX_PICK_MS/1000/DT))return false;
   const c=probeTraversal(actor,obstacles);if(!c||c.id!==cached.id)return false;
-  actor.traversal={...c,elapsed:0};actor.traversalCandidate=null;actor.state=c.type;actor.busyUntil=Infinity;actor.vel=[0,0,0];actor.height=c.height;actor.posture=c.posture;actor.clip=c.type==='vault'?'Safety_Vault':'ClimbUp_2m';actor.clipTime=0;actor.grounded=false;return true;
+  actor.traversal={...c,duration:c.type==='vault'?c.duration/(actor.rateFor?.('Safety_Vault')??1):c.duration,elapsed:0};actor.traversalCandidate=null;actor.state=c.type;actor.busyUntil=Infinity;actor.vel=[0,0,0];actor.height=c.height;actor.posture=c.posture;actor.clip=c.type==='vault'?'Safety_Vault':'ClimbUp_2m';actor.clipTime=0;actor.grounded=false;return true;
 }
 export function advanceTraversal(actor,dt,obstacles,step){
   const t=actor.traversal;if(!t)return false;

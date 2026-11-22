@@ -16,12 +16,15 @@ import {slerp,forwardKinematics,rotate} from './anim/skeleton.mjs';
 import {navigationGoal} from './ai/navigation.mjs';
 import {updateTraversalCandidate,beginTraversal,advanceTraversal,probeTraversal} from './character/traversal.mjs';
 
+import {diveId,diveTravel,diveDuration} from './anim/dive.mjs';
+import {pairIds} from './combat/execution-tools.mjs';
+import {executionEligibility} from './combat/execution-eligibility.mjs';
 const distance=(a,b)=>Math.hypot(a.pos[0]-b.pos[0],a.pos[2]-b.pos[2]);
 const direction=(a,b)=>Math.atan2(b.pos[0]-a.pos[0],b.pos[2]-a.pos[2]);
 function actor(id,pos){return {...createFighter(id,{pos}),prev:[...pos],radius:CC.CAP_RADIUS,height:CC.STAND_H,vel:[0,0,0],posture:'stand',grounded:true,attack:null,actionTime:0,clip:'Idle_Loop',clipTime:0,busyUntil:0,awareness:0,lastKnown:null};}
 export class World {
-  constructor({enemyCount=CFG.enemyCount,obstacles=CFG.obstacles}={}) {
-    this.step=0;this.obstacles=structuredClone(obstacles);this.player=actor('player',[...CFG.playerSpawn]);
+  constructor({enemyCount=CFG.enemyCount,obstacles=CFG.obstacles,flatGroundPractice=false}={}) {
+    this.flatGroundPractice=flatGroundPractice;this.step=0;this.obstacles=structuredClone(obstacles);this.player=actor('player',[...CFG.playerSpawn]);
     this.enemies=Array.from({length:enemyCount},(_,i)=>actor('enemy-'+i,[Math.sin(i*2.399)*7,0,Math.cos(i*2.399)*7+5]));
     for(const e of this.enemies){const original=[...e.pos];for(let j=0;!fits(e.pos,e.radius,e.height,this.obstacles)&&j<128;j++)e.pos=[original[0]+Math.sin(j*2.399)*(.4+j*.03),0,original[2]+Math.cos(j*2.399)*(.4+j*.03)];e.prev=[...e.pos];}
     this.table=createTable();this.buffer=new InputBuffer();this.events=[];this.projectiles=[];this.history=[];this.noises=[];
@@ -34,6 +37,43 @@ export class World {
   setSkeletonAnimations(bones,clips){this.bones=bones;for(const a of [this.player,...this.enemies]){a.skeletonPlayer=new SkeletonPlayer(bones,clips);a.rootAnimation={clips,metadata:this.animationClips};}}
   selectLocomotion(a,dt){
     if(a.motionSelectedStep===this.step||!a.matcher||a.state!=='idle'||a.posture==='prone'||this.step<a.hitstopUntil)return;
+    // Free turning on the empty floor uses one authored gait throughout a turn.
+    // A change of heading must not reselect terrain captures or reset the stride.
+    if(this.flatGroundPractice && a===this.player && a.posture==='stand' && a.grounded){
+      const request=a.motionIntent?.request ?? {};
+      const speed=Math.hypot(a.vel[0],a.vel[2]);
+      const moving=speed>.08 || Math.hypot(request.x||0,request.z||0)>.01;
+      let clip='Idle_Loop', nominal=1;
+      if(moving){
+        clip='Walk_Loop'; nominal=CC.SPD_WALK;
+        if(request.sprint && !request.aim && speed>2.45){
+          clip=speed>4.48?'Sprint_Loop':'Jog_Fwd_Loop';
+          nominal=clip==='Sprint_Loop'?CC.SPD_SPRINT:CC.SPD_JOG;
+        }
+      }
+      if(a.weapon){
+        let gait=moving?(request.sprint?'Run':'Walk'):'Idle';
+        if(moving && a.aim){
+          const x=request.x||0,z=request.z||0;
+          const side=x*Math.cos(a.yaw)-z*Math.sin(a.yaw),front=x*Math.sin(a.yaw)+z*Math.cos(a.yaw);
+          gait=request.backpedal?'Strafe_Back':Math.abs(side)>Math.abs(front)?(side>0?'Strafe_Left':'Strafe_Right'):(front<0?'Strafe_Back':'Strafe_Forward');
+        }
+        clip=request.aim?'TPS_LongGun_'+gait:'Unv_Rifle_'+gait;
+      }
+      const duration=this.animationClips.get(clip).duration;
+      const last=a.selectedMotion;
+      let time=0;
+      if(last && a.motionSelectedStep===this.step-1 && last.flatGround){
+        if(last.clip===clip)time=last.time;
+        else if(last.clip!=='Idle_Loop' && moving)time=last.time/this.animationClips.get(last.clip).duration*duration;
+      }
+      const rate=moving?Math.max(.35,Math.min(1.12,speed/nominal)):1;
+      const reverse=request.backpedal && !(a.weapon && request.aim);
+      time=(time+(reverse?-1:1)*dt*rate+duration)%duration;
+      a.selectedMotion={clip,time,frame:null,flatGround:true};
+      a.clip=clip;a.clipTime=time;a.motionSelectedStep=this.step;
+      return;
+    }
     const allow=(this.tickSearches??0)<MM.SEARCH_ACTORS&&(a===this.player||Number(a.id.split('-')[1])%2===this.step%2),pose=a.matcher.update(a,dt,this.step,allow);
     if(a.matcher.lastDecision)this.tickSearches=(this.tickSearches??0)+1;
     a.motionSelectedStep=this.step;a.selectedMotion=pose;
@@ -43,6 +83,13 @@ export class World {
   bonePosition(a,name){const i=this.bones.findIndex(b=>b.name===name);if(i<0)throw Error('Missing hit bone '+name);const v=a.boneWorld.positions[i],scale=a.modelScale??1,c=Math.cos(a.yaw),s=Math.sin(a.yaw);return [a.pos[0]+scale*(v[0]*c+v[2]*s),a.pos[1]+scale*v[1]+(a.modelYOffset??0),a.pos[2]+scale*(-v[0]*s+v[2]*c)];}
   startAttack(a,heavy=false,move=null){a.attack=beginAttack(a,move||(heavy?CFG.moves.heavy:CFG.moves.light),this.step);a.actionTime=0;a.state='attack';a.clip=a.attack.move.clip;a.clipTime=0;a.previousHitbox=null;this.emit('tell',a.id,{hitAt:this.step+a.attack.windup});if(a===this.player)freezeTargetTokens(this.table,'player',this.step);}
   visible(a,b){const o=[a.pos[0],a.pos[1]+a.height*.85,a.pos[2]],t=[b.pos[0],b.pos[1]+b.height*.7,b.pos[2]],d=t.map((v,i)=>v-o[i]),len=Math.hypot(...d);return !trace(o,d.map(v=>v/Math.max(len,.001)),len,this.obstacles).object;}
+  executionContext(){
+    const p=this.player;
+    return {pairSpacing:this.flatGroundPractice ? .72 : .39,pairedDuration:Math.max(...pairIds(p.executionTool).map(id=>this.animationClips?.get(id)?.duration??0))||undefined,step:this.step,actors:[p,...this.enemies],visible:(a,b)=>this.visible(a,b),clearPath:anchor=>{
+      for(let n=1;n<=12;n++)if(!fitsBody(p,p.pos.map((v,i)=>v+(anchor[i]-v)*n/12),p.height,this.obstacles))return false;
+      return true;
+    }};
+  }
   nearest(){return this.enemies.filter(e=>e.hp>0).sort((a,b)=>distance(this.player,a)-distance(this.player,b))[0];}
   update(input={},dt=DT){
     if(this.paused)return;
@@ -69,24 +116,44 @@ export class World {
   }
   playerInput(i,dt){const p=this.player,s=this.step;if(p.execLock||s<p.stunUntil)return;
     if(p.traversal){if(s<p.staggerUntil){p.traversal=null;p.busyUntil=s;}else {if(s>=p.hitstopUntil)advanceTraversal(p,dt,this.obstacles,s);return;}}
+    if(p.state==='dive'){
+      if(s<p.hitstopUntil)return;
+      const next=Math.min(diveDuration,p.clipTime+dt*(p.rateFor?.(diveId)??1));
+      const travel=diveTravel(next)-diveTravel(p.clipTime);
+      moveCapsule(p,[Math.sin(p.yaw)*travel,0,Math.cos(p.yaw)*travel],this.obstacles,0);
+      p.clipTime=next;
+      if(next<diveDuration)return;
+      p.state='idle';
+    }
+    if(this.buffer.consume('dive',s)&&this.animationClips?.has(diveId)&&p.state==='idle'&&p.grounded&&p.posture!=='prone'&&s>=p.busyUntil){
+      const yaw=Math.hypot(i.x||0,i.z||0)>.1?Math.atan2(i.x,i.z):i.yaw??p.yaw;
+      if(fitsBody({...p,posture:'prone',yaw},p.pos,CFG.proneHeight,this.obstacles)){
+        Object.assign(p,{state:'dive',posture:'prone',height:CFG.proneHeight,heightTransition:null,yaw,
+          clip:diveId,clipTime:0,vel:[0,0,0],upperClip:null,aim:false,traversalCandidate:null});
+        return;
+      }
+    }
     if(p.postureAction){
       if(s<p.staggerUntil){p.postureAction=null;p.posture='crouch';p.busyUntil=s;}
-      else {const action=p.postureAction;p.vel=[0,0,0];if(s<p.hitstopUntil)return;action.elapsed+=dt;p.clip='Crouch_To_Prone';p.clipTime=action.enter?1.5+action.elapsed:4-action.elapsed;motor(p,{x:0,z:0,scale:0},dt,this.obstacles);if(action.elapsed>=2.5){p.postureAction=null;p.busyUntil=s;p.state='idle';p.posture=action.enter?'prone':fits(p.pos,p.radius,CC.STAND_H,this.obstacles)?'stand':'crouch';if(action.enter){p.height=CFG.proneHeight;p.heightTransition=null;}}return;}
+      else {const action=p.postureAction;p.vel=[0,0,0];if(s<p.hitstopUntil)return;action.elapsed=Math.min(2.5,action.elapsed+dt*(p.rateFor?.(action.enter?'Crouch_To_Prone':'@proneExit')??2));p.clip='Crouch_To_Prone';p.clipTime=action.enter?1.5+action.elapsed:4-action.elapsed;motor(p,{x:0,z:0,scale:0},dt,this.obstacles);if(action.elapsed>=2.5){p.postureAction=null;p.busyUntil=s;p.state='idle';p.posture=action.enter?'prone':fits(p.pos,p.radius,CC.STAND_H,this.obstacles)?'stand':'crouch';if(action.enter){p.height=CFG.proneHeight;p.heightTransition=null;}}return;}
     }
     p.aim=!!i.aim;p.aimPitch=i.pitch??0;
     updateTraversalCandidate(p,this.obstacles,s,Math.hypot(i.x||0,i.z||0)>.1||!!this.buffer.peek('execute',s));
-    if(i.commands?.includes('execute')){let target=null,attempt={ok:false,reason:'no_target'};const candidates=this.enemies.filter(e=>e.hp>0).sort((a,b)=>distance(p,a)-distance(p,b)||(a.id<b.id?-1:1));for(const candidate of candidates){const result=beginExecutionPair(p,candidate,{step:s,actors:[p,...this.enemies],visible:(a,b)=>this.visible(a,b)},CFG.executionSteps*DT);if(result.ok){target=candidate;attempt=result;break;}if(attempt.reason==='no_target')attempt=result;}
-      if(attempt.ok){this.buffer.consume('execute',s,0);this.exec=attempt.pair;p.clip='Sword_Attack';target.clip='Hit_Knockback';p.clipTime=target.clipTime=0;p.aim=target.aim=false;freezeTargetTokens(this.table,'player',s);releaseSlot(this.table,target.id,s,'execution');this.table.freezeUntil.set('player',this.exec.end);this.emit('execution_start',p.id,{target:target.id});return;}
+    p.executionHint=p.posture==='crouch'&&this.enemies.some(e=>executionEligibility(p,e,this.executionContext()).stealth);
+    if(i.commands?.includes('execute')){let target=null,attempt={ok:false,reason:'no_target'};const candidates=this.enemies.filter(e=>e.hp>0).sort((a,b)=>distance(p,a)-distance(p,b)||(a.id<b.id?-1:1));for(const candidate of candidates){const context=this.executionContext();const timing=context.pairedDuration&&this.executionTiming?.(pairIds(p.executionTool)[0],context.pairedDuration);if(timing)context.pairedDuration=timing.duration;const result=beginExecutionPair(p,candidate,context,CFG.executionSteps*DT);if(result.ok&&result.pair.stealth&&timing)result.pair.sampleTime=timing.sample;if(result.ok){target=candidate;attempt=result;break;}if(attempt.reason==='no_target')attempt=result;}
+      if(attempt.ok){this.buffer.consume('execute',s,0);this.exec=attempt.pair;const [performer,victim]=pairIds(p.executionTool);const paired=attempt.pair.stealth&&this.animationClips?.has(performer)&&this.animationClips.has(victim);p.clip=paired?performer:'Sword_Attack';target.clip=paired?victim:'Hit_Knockback';p.clipTime=target.clipTime=0;p.aim=target.aim=false;freezeTargetTokens(this.table,'player',s);releaseSlot(this.table,target.id,s,'execution');this.table.freezeUntil.set('player',this.exec.end);this.emit('execution_start',p.id,{target:target.id});return;}
       const traversal=probeTraversal(p,this.obstacles);
       if(!traversal&&candidates.some(e=>distance(p,e)<=CB.EXEC_RANGE))this.emit('execution_rejected',p.id,{reason:attempt.reason});
       // A failed execution never retries from the buffer. E may still represent
       // an independently validated traversal intent awaiting its stable window.
-      if(!traversal)this.buffer.consume('execute',s,0);
+      // While approaching, keep this press for the short input-buffer window.
+      // Execution itself is still attempted only on the original keydown.
+      if(!traversal && !(i.sprint && Math.hypot(i.x||0,i.z||0)>.1))this.buffer.consume('execute',s,0);
     }
     if(this.buffer.consume('crouch',s))p.posture=p.posture==='crouch'?'stand':'crouch';
     if(this.buffer.consume('prone',s)){p.traversalCandidate=null;const enter=p.posture!=='prone',clear=enter?fitsBody({...p,posture:'prone'},p.pos,CFG.proneHeight,this.obstacles):fits(p.pos,p.radius,CC.CROUCH_H,this.obstacles);
       if(clear&&!p.attack&&!p.execLock&&s>=p.busyUntil&&s>=p.staggerUntil&&s>=p.hitstopUntil){
-        if(this.animationClips?.has('Crouch_To_Prone')){p.postureAction={enter,elapsed:0};p.state=enter?'prone_enter':'prone_exit';p.posture='crouch';p.busyUntil=s+150;p.clip='Crouch_To_Prone';p.clipTime=enter?1.5:4;p.upperClip=null;p.aim=false;p.vel=[0,0,0];return;}
+        if(this.animationClips?.has('Crouch_To_Prone')){p.postureAction={enter,elapsed:0};p.state=enter?'prone_enter':'prone_exit';p.posture='crouch';p.busyUntil=s+Math.ceil(2.5/(DT*(p.rateFor?.(enter?'Crouch_To_Prone':'@proneExit')??2)));p.clip='Crouch_To_Prone';p.clipTime=enter?1.5:4;p.upperClip=null;p.aim=false;p.vel=[0,0,0];return;}
         p.posture=enter?'prone':'stand';
       }
     }
@@ -102,7 +169,7 @@ export class World {
       else if(this.buffer.peek('execute',s)&&beginTraversal(p,s,this.obstacles)){this.buffer.consume('execute',s);this.emit('traversal_start',p.id,{kind:p.state});return;}
       else if(this.buffer.consume('heavy',s))this.startAttack(p,true);
       else if(this.buffer.consume('light',s))this.startAttack(p);
-      else if(this.buffer.consume('reload',s)&&this.ammo<CFG.weapon.magazine&&this.reserve){p.state='reload';p.busyUntil=s+CFG.weapon.reloadSteps;p.clip='Pistol_Reload';p.clipTime=0;}
+      else if(this.buffer.consume('reload',s)&&this.ammo<CFG.weapon.magazine&&this.reserve){p.state='reload';p.reloadStart=s;p.busyUntil=s+(CFG.weapon.reloadByWeapon[p.weapon]??CFG.weapon.reloadSteps);p.clip=p.weapon?'Unv_Rifle_Reload':'Pistol_Reload';p.clipTime=0;}
       else if(this.buffer.consume('heal',s)&&this.medkits&&p.hp<p.maxHp){p.state='heal';p.busyUntil=s+CFG.medkit.steps;p.clip='Fixing_Kneeling';p.clipTime=0;}
       else if(this.buffer.consume('throw',s)&&this.grenades){this.grenades--;this.projectiles.push({pos:[p.pos[0],p.pos[1]+1.3,p.pos[2]],vel:[Math.sin(i.yaw??p.yaw)*8,5,Math.cos(i.yaw??p.yaw)*8],explode:s+CFG.throwable.fuseSteps});this.noise(p.pos,6);}
       if(i.fire&&i.aim&&!p.attack&&!p.execLock&&s>=p.busyUntil&&s>=this.nextShot&&this.ammo){this.ammo--;this.nextShot=s+CFG.weapon.intervalSteps;this.shoot(i);}
@@ -122,9 +189,9 @@ export class World {
     // the weapon origin so a visible target cannot be shot through nearby cover.
     const {best,target,part}=this.shotQuery(origin,dir,Math.min(length+.001,CFG.weapon.range));
     if(target){const attack=beginAttack(p,{id:'shot',windupMs:0,activeMs:1,recoveryMs:0},this.step);const hit=applyHit(p,target,attack,{damage:CFG.weapon.damage,poiseDamage:25,hitstopMs:0},this.step,{part});this.reportHit(p,target,hit);this.emit('shot_hit',p.id,{target:target.id,damage:hit.damage,part});}
-    this.shot={from:origin,to:origin.map((v,j)=>v+dir[j]*best)};this.noise(p.pos,AI.HEAR.gunshot);this.emit('shot',p.id);p.upperClip='Pistol_Shoot';p.upperTime=0;p.upperUntil=this.step+CFG.weapon.intervalSteps;
+    this.shot={from:origin,to:origin.map((v,j)=>v+dir[j]*best)};this.noise(p.pos,AI.HEAR.gunshot);this.emit('shot',p.id);p.upperClip=p.weapon?'Unv_Rifle_Fire':'Pistol_Shoot';p.upperTime=0;p.upperUntil=this.step+CFG.weapon.intervalSteps;
   }
-  enemy(e,dt){const s=this.step,p=this.player;if(e.hp<=0||p.hp<=0){releaseSlot(this.table,e.id,s,'dead');return;}
+  enemy(e,dt){if(e.practiceSentry)return;const s=this.step,p=this.player;if(e.hp<=0||p.hp<=0){releaseSlot(this.table,e.id,s,'dead');return;}
     if(s%10===0){const d=distance(e,p),seen=d<AI.VIEW_DIST&&Math.abs(wrap(direction(e,p)-e.yaw))<AI.VIEW_FOV*Math.PI/360&&this.visible(e,p);if(seen){e.awareness=Math.min(1,e.awareness+10*DT/AI.NOTICE_T);e.lastKnown=[...p.pos];e.lastSeen=s;}else{e.awareness=Math.max(0,e.awareness-.03);for(const n of this.noises)if(Math.hypot(...e.pos.map((v,j)=>v-n.pos[j]))<n.radius){e.awareness=Math.min(1,e.awareness+AI.HEAR_AWARE_BURST);e.lastKnown=[...n.pos];}}
       if(e.awareness>=1&&!e.shouted){e.shouted=s+Math.round(AI.SHARE_DELAY_MS/1000/DT);this.emit('alert',e.id);}
       if(e.shouted&&s>=e.shouted)for(const other of this.enemies)if(other!==e&&distance(e,other)<AI.SHARE_RADIUS){other.lastKnown=[...e.lastKnown];other.awareness=Math.max(other.awareness,.7);}
@@ -140,13 +207,19 @@ export class World {
     goal=navigationGoal(e,goal,this.obstacles,s);
     const x=goal[0]-e.pos[0],z=goal[2]-e.pos[2],d=Math.hypot(x,z);motor(e,{x:d>.3?x/d:0,z:d>.3?z/d:0,walk:true},dt,this.obstacles);
   }
-  advanceActor(a,dt){const s=this.step;if(a.hp<=0){if(a.state!=='dead'||a.clip!=='Death01'){a.state='dead';a.clip='Death01';a.clipTime=0;a.attack=null;a.postureAction=null;a.traversal=null;a.traversalCandidate=null;a.busyUntil=s;this.emit('death',a.id);}a.clipTime+=dt;return;}
+  advanceActor(a,dt){const s=this.step;if(a.hp<=0){if(a.clip.startsWith('Enemy_StealthVictim')&&a.state==='dead'){a.clipTime=this.animationClips.get(a.clip).duration;return;}if(a.state!=='dead'||a.clip!=='Death01'){a.state='dead';a.clip='Death01';a.clipTime=0;a.attack=null;a.postureAction=null;a.traversal=null;a.traversalCandidate=null;a.busyUntil=s;this.emit('death',a.id);}a.clipTime+=dt;return;}
     if(s<a.hitstopUntil){if(a.attack){a.attack.startStep++;a.attack.endStep++;}return;}
-    if(a.traversal||a.postureAction)return;
+    if(a.state==='dive'||a.traversal||a.postureAction)return;
     if(a.hitReaction){a.hitReaction.elapsed+=dt;if(a.hitReaction.elapsed>1)a.hitReaction=null;}
-    a.clipTime+=dt;
+    if(a.execLock&&this.exec?.stealth){
+      const elapsed=(s-this.exec.start)*DT;
+      a.clipTime=Math.min(this.exec.sampleTime?.(elapsed)??elapsed,this.animationClips?.get(a.clip)?.duration??elapsed);
+      return;
+    }
+    const reloadDuration=a.state==='reload'?this.animationClips?.get(a.clip)?.duration:0;
+    a.clipTime+=reloadDuration?dt*reloadDuration/((a.busyUntil-a.reloadStart)*DT):dt;
     a.upperTime=(a.upperTime??0)+dt;
-    if(s>=(a.upperUntil??0)){a.upperClip=a.aim?'Pistol_Aim_Neutral':null;a.upperTime=0;}
+    if(s>=(a.upperUntil??0)){a.upperClip=a.aim?(a.weapon?'TPS_LongGun_Aim_Center':'Pistol_Aim_Neutral'):null;a.upperTime=0;}
     if(a.execLock)return;
     if(s<a.stunUntil){a.attack=null;if(a.state!=='stun'){a.state='stun';a.clip='Hit_Head';a.clipTime=0;}return;}
     if(a.knockback){moveCapsule(a,a.knockback.map(v=>v*dt),this.obstacles,0);a.knockback=a.knockback.map(v=>v*Math.exp(-12*dt));}
@@ -170,9 +243,21 @@ export class World {
     a.state='idle';if(s-a.lastHitStep>60)a.poise=Math.min(CB.POISE_MAX,a.poise+CB.POISE_REGEN*dt);
     if(a.posture==='prone'&&this.animationClips?.has('Prone_Crawl_Forward')){
       const speed=Math.hypot(a.vel[0],a.vel[2]),back=a.vel[0]*Math.sin(a.yaw)+a.vel[2]*Math.cos(a.yaw)<-.02,clip=back?'Prone_Crawl_Backward':'Prone_Crawl_Forward';
-      if(!a.clip.startsWith('Prone_Crawl_')||speed>.02&&a.clip!==clip){a.clip=clip;a.clipTime=2;}
-      else {a.clipTime-=dt;if(speed>.02){const duration=this.animationClips.get(a.clip).duration,end=duration-1;a.clipTime+=dt*Math.min(1.12,speed/.15);if(a.clipTime>=end)a.clipTime=2+(a.clipTime-end);}}
-      a.upperClip=null;return;
+      const changing=!a.clip.startsWith('Prone_Crawl_') || speed>.02 && a.clip!==clip;
+      if(changing)a.clip=clip;
+      const meta=this.animationClips.get(a.clip);
+      const path=meta.rootPath;
+      // Trim the capture's stationary lead-in and tail. Match one loop to
+      // the horizontal travel measured over that same source interval.
+      const start=3, end=Math.min(meta.duration,a.clip==='Prone_Crawl_Forward'?17:20);
+      const first=path?.[Math.round(start*30)],last=path?.[Math.round(end*30)];
+      const meters=first&&last?Math.hypot(last[0]-first[0],last[2]-first[2])*(a.modelScale??1):0;
+      const captureSpeed=meters>0?meters/(end-start):.16;
+      const traveled=Math.hypot(a.pos[0]-a.prev[0],a.pos[2]-a.prev[2]);
+      const previous=changing?start:a.clipTime-dt;
+      a.clipTime=start+((previous-start+traveled/captureSpeed)%(end-start)+(end-start))%(end-start);
+      if(!a.aim)a.upperClip=null;
+      return;
     }
     const speed=Math.hypot(a.vel[0],a.vel[2]);const clip=a.posture==='prone'?'Crouch_Idle_Loop':a.posture==='crouch'?(speed>.1?'Crouch_Fwd_Loop':'Crouch_Idle_Loop'):speed>4.48?'Sprint_Loop':speed>2.45?'Jog_Fwd_Loop':speed>.1?'Walk_Loop':'Idle_Loop';if(a.clip!==clip){a.clip=clip;a.clipTime=0;}
   }

@@ -1,3 +1,4 @@
+import {placed} from '../world/placements/read.js';
 import {cellarWater,cellarSilt,greenhouseGlass,greenhouseLeaves,oxidizedTowerGlass,tidalTimber} from './waterfront-materials.js';
 import {southDistrict} from './south-district.js';
 import {northLandmarks,northSurfaces} from './north-landmarks.js';
@@ -6,8 +7,8 @@ import {corridorSidewalks} from './corridor-sidewalks.js';
 import {cellarWater as standingWater} from './waterfront-materials.js';
 import {addVerges} from './verges.js';
 import {addCityBlocks} from './city-blocks.js';
-import {addEngineCompanyStreet} from './engine-company-street.js';
-import {firehouseShop} from './firehouse-shop.js';
+import {buildStation as candidateStation} from './station-candidate.js';
+const released = import.meta.glob('./released/station.js',{eager:true});
 import {pioneerFloor} from './pioneer-floor.js';
 import {edges as drivableLayout} from './network.js';
 import {weatheredWindows} from './windows.js';
@@ -219,9 +220,6 @@ export async function buildEnvironment(scene,layout){
  for(let z of [1818.5,1819.1]){for(let [a,b] of [[209,247],[247,309]]){beam(a,7.93,z,(a+b)*.5,7.5,z,.035,'iron');beam((a+b)*.5,7.5,z,b,7.93,z,.035,'iron');}}
  for(let [x,z,h] of [[205,1806,13],[219,1794,10],[228,1828,11],[259,1835,12],[274,1786,10],[291,1819,9],[199,1822,12],[217,1775,15]])tree(x,z,h);
  // C2: old brick firehouse, an apparatus floor with twin shuttered bays, working tower.
- buildings.push([424.44,1198.65,16.10,15.74]);
- box(424.44,3.47,1197.65,16.04,6.94,13.70,'stationBrick');
- prop('utility_box_01',434,0,1204,.9);lamp(438,1207);
  // C1 garrison: keep gates open to the depot and the hike out.
  block(464,566,34,13,1);block(408,574,15,12,1);
  block(484,565,6,8,1,'wall');sign(464,2.9,572.72,'FORT LAWTON',11,1.12);
@@ -245,8 +243,8 @@ export async function buildEnvironment(scene,layout){
   const xx=1148+(i%15)*9,zz=i<15?768:866;if(canGrow(xx,zz,3)){prop('covered_car',xx,.02,zz,.86+(i%3)*.05,.95+(i%5)*.12);}
  }
  northLandmarks({box,beam,block,windows,prop,tree,canGrow,addGeo});
- addEngineCompanyStreet({box,beam,block,canGrow,materials,texture,sizes});
- firehouseShop({box,addGeo,prop,materials,texture});
+ const preview = window.parent !== window && new URL(document.referrer || location.href).pathname.endsWith('/review.html') && new URLSearchParams(location.search).get('candidate')==='station';
+ (preview ? candidateStation : released['./released/station.js']?.buildStation)?.({box,beam,block,canGrow,materials,texture,sizes,addGeo,prop,lamp,buildings});
  // Conservatory: thin ribbed steel half domes with missing grey-blue glazing.
  materials.greenhouseGlass=greenhouseGlass();
  materials.towerGlass=oxidizedTowerGlass();materials.dockDeck=tidalTimber(texture);sizes.dockDeck=sizes.wood;
@@ -418,7 +416,10 @@ export async function buildEnvironment(scene,layout){
   beam(xx,7.35,1251,xx,7.35,1259,.17,'iron');
   if(xx<1657)for(const zz of [1251,1255,1259]){beam(xx,7.4,zz,xx+4,7.03,zz,.048,'iron');beam(xx+4,7.03,zz,xx+8,7.4,zz,.048,'iron');}
  }
- prop('utility_box_01',1660,0,1259.2,1.14);prop('barrel_03',1670,0,1259.3,.92);
+ for(const [key,model,x,z,scale] of [['utility','utility_box_01',1660,1259.2,1.14],['barrel','barrel_03',1670,1259.3,.92]]){
+   const t=placed('world',key,{x,y:0,z,yaw:0});
+   prop(model,t.x,t.y,t.z,scale,t.yaw*Math.PI/180);
+ }
  for(let ax of [1645,1653]){box(ax,1.8,1258,4,3.6,4,'iron');for(let k=0;k<5;k++)box(ax-1.75+k*.86,2.0,1260.2,.16,2.6,.42,'iron');for(let k=-1;k<2;k++){cylinder(ax+k*.92,4.1,1258,.18,.24,1.6,'trim');for(let j=0;j<4;j++)cylinder(ax+k*.92,3.9+j*.24,1258,.41,.4,.1,'trim');}}
  // The five-metre service passage shares two junctions with the surface road.
  // Its walls and roof belong to world.js; surface-mounted detail preserves clearance.

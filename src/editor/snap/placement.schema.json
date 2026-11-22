@@ -1,0 +1,12 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["id","prefabId","profile","transform","footprint"],
+  "properties":{
+    "id":{"type":"string","minLength":1},"prefabId":{"type":"string"},
+    "profile":{"enum":["structural","semantic","prop","decor"]},
+    "transform":{"type":"object","required":["x","y","z","yaw"],"additionalProperties":{"type":"number"}},
+    "footprint":{"type":"object","required":["w","d","h"],"additionalProperties":{"type":"number","exclusiveMinimum":0}},
+    "policyOverride":{"type":"object","properties":{"angleStep":{"type":["number","null"],"exclusiveMinimum":0},"allowOffGrid":{"type":"boolean"},"yOffset":{"type":"number"}}}
+  }
+}

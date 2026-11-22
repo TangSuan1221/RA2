@@ -1,5 +1,16 @@
 import { CB, TM, IN } from '../core/constants.mjs';
 
+export function movementInput(forward, side, cameraYaw, actorYaw) {
+  // The rear three sectors of the eight-way stick use the actor's local axes.
+  const backpedal = -forward > Math.abs(side) * Math.tan(Math.PI / 8);
+  const basis = backpedal ? actorYaw : cameraYaw;
+  return {
+    x: Math.sin(basis) * forward - Math.cos(basis) * side,
+    z: Math.cos(basis) * forward + Math.sin(basis) * side,
+    backpedal
+  };
+}
+
 export class InputBuffer {
   constructor() {
     this.maxAge=Math.ceil(CB.INPUT_BUFFER_MS*TM.TICK_HZ/1000);

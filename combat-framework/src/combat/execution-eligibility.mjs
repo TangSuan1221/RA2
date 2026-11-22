@@ -10,7 +10,9 @@ export function executionEligibility(player,target,{step,actors=[],visible=()=>t
  if(Math.abs(Math.atan2(Math.sin(angle),Math.cos(angle)))>CB.EXEC_ANGLE*Math.PI/360)return {ok:false,reason:'wrongAngle'};
  if(Math.abs(player.pos[1]-target.pos[1])>CC.STEP_UP)return {ok:false,reason:'heightGap'};
  const staggered=target.state==='stagger'&&step<target.staggerUntil;
- if(target.hp>CB.EXEC_HP_PCT*target.maxHp&&!staggered)return {ok:false,reason:'tooHealthy'};
+ const d=horizontal(player,target);
+ const rear=player.posture==='crouch'&&d>.01&&(target.awareness??0)<.5&&((player.pos[0]-target.pos[0])*Math.sin(target.yaw)+(player.pos[2]-target.pos[2])*Math.cos(target.yaw))<-.6*d;
+ if(!rear&&target.hp>CB.EXEC_HP_PCT*target.maxHp&&!staggered)return {ok:false,reason:'tooHealthy'};
  if(!staggered&&step<(target.hitstunUntil??0))return {ok:false,reason:'hitstun'};
  if(step<(target.stunUntil??0))return {ok:false,reason:'stunned'};
  const phase=player.attack?attackInfo(player.attack,step):null,cancellable=phase?.phase==='recovery'&&phase.pct>=CB.CANCEL_POINT;
@@ -21,5 +23,5 @@ export function executionEligibility(player,target,{step,actors=[],visible=()=>t
  if(target.executionImmune||target.aiRole?.executionImmune)return {ok:false,reason:'immune'};
  if(!player.grounded||!target.grounded||player.traversal||target.traversal)return {ok:false,reason:'airborne'};
  if(!visible(player,target))return {ok:false,reason:'occluded'};
- return {ok:true,reason:null};
+ return {ok:true,reason:null,stealth:rear};
 }

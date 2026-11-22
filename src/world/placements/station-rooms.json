@@ -1,0 +1,2888 @@
+{
+  "rooms": [
+    {
+      "id": "workshop",
+      "title": "维护工坊",
+      "bounds": [
+        -21,
+        -10.5,
+        -6,
+        -3.75
+      ],
+      "usage": "试泵台朝向车厅入口；手工具收在侧台，跨房门的维护通道保持连续。",
+      "source": "BD"
+    },
+    {
+      "id": "garage",
+      "title": "车库",
+      "bounds": [
+        -21,
+        -3.75,
+        -6,
+        10.5
+      ],
+      "usage": "两车朝南，水带推车停在东侧地面带；墙边收纳给车身周围留出作业面。",
+      "source": "BC"
+    },
+    {
+      "id": "storage",
+      "title": "储物间",
+      "bounds": [
+        -6,
+        -10.5,
+        -1,
+        -6.25
+      ],
+      "usage": "靠北放深架，南侧为周转与急救补给，员工从东门取用。",
+      "source": "AC"
+    },
+    {
+      "id": "gear",
+      "title": "装备间",
+      "bounds": [
+        -6,
+        -6.25,
+        -1,
+        0.75
+      ],
+      "usage": "出勤柜沿西墙连续排列，长凳居中偏南；装备取用后可直接转入员工通道。",
+      "source": "BC"
+    },
+    {
+      "id": "decon",
+      "title": "洗消间",
+      "bounds": [
+        -6,
+        0.75,
+        -1,
+        10.5
+      ],
+      "usage": "车厅侧接收污装，洗脱、烘干和沥水依次布置；东侧两个门口预留转身空间。",
+      "source": "AD"
+    },
+    {
+      "id": "passage",
+      "title": "员工通道",
+      "bounds": [
+        -1,
+        -10.5,
+        1.5,
+        10.5
+      ],
+      "usage": "贯通南北的 2.5 米带状空间只安装薄型墙件；各房门前留空。",
+      "source": "A"
+    },
+    {
+      "id": "kitchen",
+      "title": "厨房与餐区",
+      "bounds": [
+        1.5,
+        -10.5,
+        10,
+        -3.75
+      ],
+      "usage": "靠北布置备餐线，餐桌四周设座位；西侧员工入口与北门相通。",
+      "source": "AB"
+    },
+    {
+      "id": "lounge",
+      "title": "休闲室",
+      "bounds": [
+        10,
+        -10.5,
+        18.25,
+        -3.75
+      ],
+      "usage": "沙发和休闲椅围绕矮桌，阅读区靠窗；厨房破口和西南方向出入口留空。",
+      "source": "B"
+    },
+    {
+      "id": "dorm",
+      "title": "宿舍",
+      "bounds": [
+        1.5,
+        -3.75,
+        10,
+        0.75
+      ],
+      "usage": "床侧保留上下床空间；个人柜集中在北墙，两张床各配一个床边置物点。",
+      "source": "AB"
+    },
+    {
+      "id": "bath",
+      "title": "卫浴间",
+      "bounds": [
+        1.5,
+        0.75,
+        10,
+        4.25
+      ],
+      "usage": "洁具集中在两端，隔断遮挡淋浴视线；从员工廊到东门留有贯通带。",
+      "source": "AC"
+    },
+    {
+      "id": "meeting",
+      "title": "办公／会议室",
+      "bounds": [
+        1.5,
+        4.25,
+        10,
+        10.5
+      ],
+      "usage": "会议桌两侧对坐，讨论板在北墙；东西门之间的横向通道经过桌北。",
+      "source": "AC"
+    },
+    {
+      "id": "watch",
+      "title": "值守办公室",
+      "bounds": [
+        12.75,
+        -3.75,
+        20.75,
+        1.4
+      ],
+      "usage": "值守桌朝门内布置，交班记录和显示器放在同一工作面；文件柜靠内墙。",
+      "source": "AC"
+    },
+    {
+      "id": "foyer",
+      "title": "门厅",
+      "bounds": [
+        10,
+        1.4,
+        20.75,
+        8.5
+      ],
+      "usage": "南门正前留出迎客面；接待台、等候椅和宣传册靠东，沿西边可进入员工区。",
+      "source": "AC"
+    }
+  ],
+  "objects": [
+    {
+      "id": "bench",
+      "asset": "workbench",
+      "name": "工作台",
+      "room": "workshop",
+      "parent": "site",
+      "profile": "prop",
+      "x": -9.4,
+      "y": 0,
+      "z": -5.050000000000001,
+      "yaw": 0,
+      "size": [
+        1.8,
+        0.9,
+        0.8
+      ],
+      "bind": "bench"
+    },
+    {
+      "id": "room/workshop/pump-test-bench-1",
+      "asset": "pump-test-bench",
+      "name": "双表试泵台",
+      "room": "workshop",
+      "parent": "site",
+      "profile": "prop",
+      "x": -11.5,
+      "y": 0,
+      "z": -5.05,
+      "yaw": 180,
+      "size": [
+        1.7969,
+        1.7385,
+        0.8165
+      ]
+    },
+    {
+      "id": "pump",
+      "asset": "pump-a",
+      "name": "可装载泵 A",
+      "room": "workshop",
+      "parent": "bench",
+      "profile": "semantic",
+      "x": -9.85,
+      "y": 0.9,
+      "z": -5.050000000000001,
+      "yaw": 0,
+      "size": [
+        0.56,
+        0.49,
+        0.4302
+      ],
+      "bind": "pump",
+      "solid": false
+    },
+    {
+      "id": "faulty",
+      "asset": "pump-b",
+      "name": "可装载泵 B",
+      "room": "workshop",
+      "parent": "bench",
+      "profile": "semantic",
+      "x": -9,
+      "y": 0.9,
+      "z": -5.050000000000001,
+      "yaw": 0,
+      "size": [
+        0.52,
+        0.48,
+        0.4684
+      ],
+      "bind": "faulty",
+      "solid": false
+    },
+    {
+      "id": "worktable",
+      "asset": "workbench",
+      "name": "工作台",
+      "room": "workshop",
+      "parent": "site",
+      "profile": "prop",
+      "x": -16,
+      "y": 0,
+      "z": -6.800000000000001,
+      "yaw": 0,
+      "size": [
+        1.8,
+        0.9,
+        0.8
+      ],
+      "bind": "worktable"
+    },
+    {
+      "id": "room/workshop/vise-1",
+      "asset": "vise",
+      "name": "台钳",
+      "room": "workshop",
+      "parent": "worktable",
+      "profile": "semantic",
+      "x": -16.61,
+      "y": 0.9,
+      "z": -6.800000000000001,
+      "yaw": 0,
+      "size": [
+        0.2852,
+        0.19,
+        0.1649
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/workshop/parts-pan-1",
+      "asset": "parts-pan",
+      "name": "零件盘",
+      "room": "workshop",
+      "parent": "worktable",
+      "profile": "semantic",
+      "x": -15.53,
+      "y": 0.9,
+      "z": -6.780000000000001,
+      "yaw": 0,
+      "size": [
+        0.34,
+        0.055,
+        0.19
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/workshop/wrench-1",
+      "asset": "wrench",
+      "name": "组合扳手",
+      "room": "workshop",
+      "parent": "worktable",
+      "profile": "semantic",
+      "x": -15.91,
+      "y": 0.9,
+      "z": -6.69,
+      "yaw": 0,
+      "size": [
+        0.0377,
+        0.1852,
+        0.0144
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/workshop/toolbox-cart-1",
+      "asset": "toolbox-cart",
+      "name": "工具柜",
+      "room": "workshop",
+      "parent": "site",
+      "profile": "prop",
+      "x": -20.35,
+      "y": 0,
+      "z": -9.73,
+      "yaw": 0,
+      "size": [
+        0.69,
+        0.84,
+        0.49
+      ]
+    },
+    {
+      "id": "room/workshop/parts-rack-1",
+      "asset": "parts-rack",
+      "name": "备件架",
+      "room": "workshop",
+      "parent": "site",
+      "profile": "prop",
+      "x": -12.8,
+      "y": 0,
+      "z": -9.99,
+      "yaw": 0,
+      "size": [
+        1.3,
+        1.9,
+        0.55
+      ]
+    },
+    {
+      "id": "room/workshop/scrap-bin-1",
+      "asset": "scrap-bin",
+      "name": "废件桶",
+      "room": "workshop",
+      "parent": "site",
+      "profile": "prop",
+      "x": -7.2,
+      "y": 0,
+      "z": -9.82,
+      "yaw": 0,
+      "size": [
+        0.37,
+        0.54,
+        0.383
+      ]
+    },
+    {
+      "id": "room/workshop/pegboard-1",
+      "asset": "pegboard",
+      "name": "工具挂板",
+      "room": "workshop",
+      "parent": "wall/x/-10.5/-21/-16.8/0/3.5",
+      "profile": "semantic",
+      "x": -18.3,
+      "y": 1.3,
+      "z": -10.3555,
+      "yaw": 0,
+      "size": [
+        1.2,
+        0.6402,
+        0.045
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "truck",
+      "asset": "engine",
+      "name": "消防车",
+      "room": "garage",
+      "parent": "site",
+      "profile": "prop",
+      "x": -17,
+      "y": 0,
+      "z": 5,
+      "yaw": 0,
+      "size": [
+        2.8834,
+        3.1488,
+        8.1754
+      ],
+      "bind": "truck"
+    },
+    {
+      "id": "ambulance",
+      "asset": "ambulance",
+      "name": "救护车",
+      "room": "garage",
+      "parent": "site",
+      "profile": "prop",
+      "x": -11.8,
+      "y": 0,
+      "z": 5.5,
+      "yaw": 0,
+      "size": [
+        2.7358,
+        2.699,
+        6.5802
+      ],
+      "bind": "ambulance"
+    },
+    {
+      "id": "cart",
+      "asset": "hose-cart",
+      "name": "制动水带推车",
+      "room": "garage",
+      "parent": "site",
+      "profile": "prop",
+      "x": -8,
+      "y": 0,
+      "z": 4,
+      "yaw": 0,
+      "size": [
+        0.7874,
+        0.8324,
+        0.5887
+      ],
+      "bind": "cart"
+    },
+    {
+      "id": "room/garage/hose-rack-1",
+      "asset": "hose-rack",
+      "name": "水带架",
+      "room": "garage",
+      "parent": "site",
+      "profile": "prop",
+      "x": -20.49,
+      "y": 0,
+      "z": 3.4,
+      "yaw": 90,
+      "size": [
+        1.6,
+        1.65,
+        0.67
+      ]
+    },
+    {
+      "id": "room/garage/cylinder-cart-1",
+      "asset": "cylinder-cart",
+      "name": "气瓶车",
+      "room": "garage",
+      "parent": "site",
+      "profile": "prop",
+      "x": -20.25,
+      "y": 0,
+      "z": -2.55,
+      "yaw": 90,
+      "size": [
+        0.51,
+        1.1,
+        0.65
+      ]
+    },
+    {
+      "id": "room/garage/wash-reel-1",
+      "asset": "wash-reel",
+      "name": "洗车水管盘",
+      "room": "garage",
+      "parent": "wall/z/-21/0.8/6.2/0/6.2",
+      "profile": "semantic",
+      "x": -20.553,
+      "y": 1.05,
+      "z": 4.8,
+      "yaw": 90,
+      "size": [
+        0.3881,
+        0.65,
+        0.65
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/garage/extinguisher-1",
+      "asset": "extinguisher",
+      "name": "灭火器",
+      "room": "garage",
+      "parent": "wall/z/-6/3.9/10.5/0/6.2",
+      "profile": "semantic",
+      "x": -6.1908,
+      "y": 1,
+      "z": 7.3,
+      "yaw": -90,
+      "size": [
+        0.148,
+        0.5457,
+        0.1376
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "gate",
+      "asset": "south-shutter",
+      "name": "南卷门与固定手链",
+      "room": "garage",
+      "parent": "wall/x/10.5/-19/-7/4.5/6.2",
+      "profile": "semantic",
+      "x": -13,
+      "y": 0,
+      "z": 10.5,
+      "yaw": 0,
+      "size": [
+        12,
+        4.5,
+        0.18
+      ],
+      "bind": "gate"
+    },
+    {
+      "id": "shelf",
+      "asset": "parts-rack",
+      "name": "备件架",
+      "room": "storage",
+      "parent": "site",
+      "profile": "prop",
+      "x": -4,
+      "y": 0,
+      "z": -10,
+      "yaw": 0,
+      "size": [
+        1.3,
+        1.9,
+        0.55
+      ],
+      "bind": "shelf"
+    },
+    {
+      "id": "room/storage/tote-1",
+      "asset": "tote",
+      "name": "周转箱",
+      "room": "storage",
+      "parent": "shelf",
+      "profile": "semantic",
+      "x": -4.25,
+      "y": 0.133,
+      "z": -10,
+      "yaw": 0,
+      "size": [
+        0.46,
+        0.28,
+        0.3312
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/storage/medical-box-1",
+      "asset": "medical-box",
+      "name": "密封补给箱",
+      "room": "storage",
+      "parent": "shelf",
+      "profile": "semantic",
+      "x": -3.7199999999999998,
+      "y": 0.703,
+      "z": -10,
+      "yaw": 0,
+      "size": [
+        0.35,
+        0.18,
+        0.2381
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "crate",
+      "asset": "carton",
+      "name": "纸箱",
+      "room": "storage",
+      "parent": "site",
+      "profile": "prop",
+      "x": -5,
+      "y": 0,
+      "z": -9,
+      "yaw": 0,
+      "size": [
+        0.42,
+        0.34,
+        0.35
+      ],
+      "bind": "crate"
+    },
+    {
+      "id": "room/storage/parts-rack-2",
+      "asset": "parts-rack",
+      "name": "备件架",
+      "room": "storage",
+      "parent": "site",
+      "profile": "prop",
+      "x": -3.25,
+      "y": 0,
+      "z": -6.72,
+      "yaw": 180,
+      "size": [
+        1.3,
+        1.9,
+        0.55
+      ]
+    },
+    {
+      "id": "room/storage/ems-bag-1",
+      "asset": "ems-bag",
+      "name": "急救包",
+      "room": "storage",
+      "parent": "room/storage/parts-rack-2",
+      "profile": "semantic",
+      "x": -3.05,
+      "y": 0.703,
+      "z": -6.72,
+      "yaw": 180,
+      "size": [
+        0.53,
+        0.3283,
+        0.31
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/storage/dressing-1",
+      "asset": "dressing",
+      "name": "敷料包",
+      "room": "storage",
+      "parent": "room/storage/parts-rack-2",
+      "profile": "semantic",
+      "x": -3.62,
+      "y": 0.739,
+      "z": -6.739999999999999,
+      "yaw": 180,
+      "size": [
+        0.197,
+        0.0693,
+        0.144
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/storage/carton-2",
+      "asset": "carton",
+      "name": "纸箱",
+      "room": "storage",
+      "parent": "site",
+      "profile": "prop",
+      "x": -5.51,
+      "y": 0,
+      "z": -7.1,
+      "yaw": 0,
+      "size": [
+        0.42,
+        0.34,
+        0.35
+      ]
+    },
+    {
+      "id": "room/storage/parts-label-1",
+      "asset": "parts-label",
+      "name": "备件签",
+      "room": "storage",
+      "parent": "wall/x/-6.25/-6/-1/0/3.5",
+      "profile": "semantic",
+      "x": -3.3,
+      "y": 1.9,
+      "z": -6.3727,
+      "yaw": 180,
+      "size": [
+        0.12,
+        0.05,
+        0.0014
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "lockers",
+      "asset": "locker-bench",
+      "name": "更衣凳",
+      "room": "gear",
+      "parent": "site",
+      "profile": "prop",
+      "x": -3,
+      "y": 0,
+      "z": -0.09999999999999964,
+      "yaw": 0,
+      "size": [
+        1.65,
+        0.45,
+        0.4
+      ],
+      "bind": "lockers"
+    },
+    {
+      "id": "room/gear/locker-ready-1",
+      "asset": "locker-ready",
+      "name": "满装出勤柜",
+      "room": "gear",
+      "parent": "site",
+      "profile": "prop",
+      "x": -5.5,
+      "y": 0,
+      "z": -5.48,
+      "yaw": 90,
+      "size": [
+        0.6,
+        1.9,
+        0.57
+      ]
+    },
+    {
+      "id": "room/gear/locker-used-1",
+      "asset": "locker-used",
+      "name": "取走装备的柜",
+      "room": "gear",
+      "parent": "site",
+      "profile": "prop",
+      "x": -5.5,
+      "y": 0,
+      "z": -4.64,
+      "yaw": 90,
+      "size": [
+        0.6,
+        1.9,
+        0.57
+      ]
+    },
+    {
+      "id": "room/gear/locker-ready-2",
+      "asset": "locker-ready",
+      "name": "满装出勤柜",
+      "room": "gear",
+      "parent": "site",
+      "profile": "prop",
+      "x": -5.5,
+      "y": 0,
+      "z": -3.8,
+      "yaw": 90,
+      "size": [
+        0.6,
+        1.9,
+        0.57
+      ]
+    },
+    {
+      "id": "room/gear/locker-personal-1",
+      "asset": "locker-personal",
+      "name": "私人物品柜",
+      "room": "gear",
+      "parent": "site",
+      "profile": "prop",
+      "x": -5.5,
+      "y": 0,
+      "z": -2.96,
+      "yaw": 90,
+      "size": [
+        0.6,
+        1.9,
+        0.57
+      ]
+    },
+    {
+      "id": "room/gear/locker-ready-3",
+      "asset": "locker-ready",
+      "name": "满装出勤柜",
+      "room": "gear",
+      "parent": "site",
+      "profile": "prop",
+      "x": -5.5,
+      "y": 0,
+      "z": -2.12,
+      "yaw": 90,
+      "size": [
+        0.6,
+        1.9,
+        0.57
+      ]
+    },
+    {
+      "id": "room/gear/shoes-1",
+      "asset": "shoes",
+      "name": "鞋架",
+      "room": "gear",
+      "parent": "site",
+      "profile": "prop",
+      "x": -1.62,
+      "y": 0,
+      "z": -2.85,
+      "yaw": -90,
+      "size": [
+        0.64,
+        0.44,
+        0.29
+      ]
+    },
+    {
+      "id": "room/gear/zone-sign-1",
+      "asset": "zone-sign",
+      "name": "污洁分区牌",
+      "room": "gear",
+      "parent": "wall/x/-6.25/-6/-1/0/3.5",
+      "profile": "semantic",
+      "x": -3.55,
+      "y": 1.55,
+      "z": -6.1229,
+      "yaw": 0,
+      "size": [
+        0.35,
+        0.24,
+        0.0102
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "sink",
+      "asset": "drain-table",
+      "name": "沥水台",
+      "room": "decon",
+      "parent": "site",
+      "profile": "prop",
+      "x": -2.3,
+      "y": 0,
+      "z": 9.6,
+      "yaw": 180,
+      "size": [
+        1.2,
+        0.88,
+        0.69
+      ],
+      "bind": "sink"
+    },
+    {
+      "id": "wash",
+      "asset": "deep-sink",
+      "name": "深洗槽",
+      "room": "decon",
+      "parent": "site",
+      "profile": "prop",
+      "x": -5,
+      "y": 0,
+      "z": 6,
+      "yaw": 90,
+      "size": [
+        0.8,
+        0.8864,
+        0.62
+      ],
+      "bind": "wash"
+    },
+    {
+      "id": "room/decon/dirty-bin-1",
+      "asset": "dirty-bin",
+      "name": "污装桶",
+      "room": "decon",
+      "parent": "site",
+      "profile": "prop",
+      "x": -5.48,
+      "y": 0,
+      "z": 1.47,
+      "yaw": 0,
+      "size": [
+        0.56,
+        0.79,
+        0.5175
+      ]
+    },
+    {
+      "id": "room/decon/extractor-washer-1",
+      "asset": "extractor-washer",
+      "name": "工业洗脱机",
+      "room": "decon",
+      "parent": "site",
+      "profile": "prop",
+      "x": -5.29,
+      "y": 0,
+      "z": 4.69,
+      "yaw": 90,
+      "size": [
+        0.88,
+        1.15,
+        0.9263
+      ]
+    },
+    {
+      "id": "room/decon/drying-cabinet-1",
+      "asset": "drying-cabinet",
+      "name": "装备烘干柜",
+      "room": "decon",
+      "parent": "site",
+      "profile": "prop",
+      "x": -5.35,
+      "y": 0,
+      "z": 8.15,
+      "yaw": 90,
+      "size": [
+        0.91,
+        1.9,
+        0.72
+      ]
+    },
+    {
+      "id": "room/decon/laundry-cart-1",
+      "asset": "laundry-cart",
+      "name": "洗衣周转车",
+      "room": "decon",
+      "parent": "site",
+      "profile": "prop",
+      "x": -4.91,
+      "y": 0,
+      "z": 9.55,
+      "yaw": 0,
+      "size": [
+        0.57,
+        0.84,
+        0.77
+      ]
+    },
+    {
+      "id": "room/decon/glove-box-1",
+      "asset": "glove-box",
+      "name": "手套盒",
+      "room": "decon",
+      "parent": "wall/z/-6/3.9/10.5/0/6.2",
+      "profile": "semantic",
+      "x": -5.833,
+      "y": 1.45,
+      "z": 5.95,
+      "yaw": 90,
+      "size": [
+        0.23,
+        0.1284,
+        0.09
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/decon/wet-clock-1",
+      "asset": "wet-clock",
+      "name": "防水钟",
+      "room": "decon",
+      "parent": "wall/z/-1/2.9/6.699999999999999/0/3.5",
+      "profile": "semantic",
+      "x": -1.14965,
+      "y": 1.95,
+      "z": 5.5,
+      "yaw": -90,
+      "size": [
+        0.28,
+        0.28,
+        0.0553
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/passage/wayfinding-1",
+      "asset": "wayfinding",
+      "name": "方向牌",
+      "room": "passage",
+      "parent": "wall/z/-1/-4.1/1.1/0/3.5",
+      "profile": "semantic",
+      "x": -0.8729,
+      "y": 1.72,
+      "z": -1.7,
+      "yaw": 90,
+      "size": [
+        0.48,
+        0.13,
+        0.0102
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/passage/room-id-1",
+      "asset": "room-id",
+      "name": "房号",
+      "room": "passage",
+      "parent": "wall/z/1.5/-0.7999999999999999/2.1/0/3.5",
+      "profile": "semantic",
+      "x": 1.3729,
+      "y": 1.62,
+      "z": 0.05,
+      "yaw": -90,
+      "size": [
+        0.18,
+        0.1,
+        0.0102
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/passage/emergency-light-1",
+      "asset": "emergency-light",
+      "name": "双头应急灯",
+      "room": "passage",
+      "parent": "wall/z/-1/2.9/6.699999999999999/0/3.5",
+      "profile": "semantic",
+      "x": -0.8198,
+      "y": 2.53,
+      "z": 4.9,
+      "yaw": 90,
+      "size": [
+        0.36,
+        0.1544,
+        0.1164
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "kitchen",
+      "asset": "island",
+      "name": "备餐岛",
+      "room": "kitchen",
+      "parent": "site",
+      "profile": "prop",
+      "x": 4,
+      "y": 0,
+      "z": -9.8,
+      "yaw": 0,
+      "size": [
+        1.65,
+        0.91,
+        0.78
+      ],
+      "bind": "kitchen"
+    },
+    {
+      "id": "room/kitchen/cutting-board-1",
+      "asset": "cutting-board",
+      "name": "砧板",
+      "room": "kitchen",
+      "parent": "kitchen",
+      "profile": "semantic",
+      "x": 3.66,
+      "y": 0.91,
+      "z": -9.760000000000002,
+      "yaw": 0,
+      "size": [
+        0.37,
+        0.023,
+        0.26
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/kitchen/knife-block-1",
+      "asset": "knife-block",
+      "name": "刀座",
+      "room": "kitchen",
+      "parent": "kitchen",
+      "profile": "semantic",
+      "x": 4.52,
+      "y": 0.91,
+      "z": -9.850000000000001,
+      "yaw": 0,
+      "size": [
+        0.15,
+        0.24,
+        0.12
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "table",
+      "asset": "dining-table",
+      "name": "长餐桌",
+      "room": "kitchen",
+      "parent": "site",
+      "profile": "prop",
+      "x": 6,
+      "y": 0,
+      "z": -6.199999999999999,
+      "yaw": 0,
+      "size": [
+        2.4,
+        0.76,
+        1.02
+      ],
+      "bind": "table"
+    },
+    {
+      "id": "room/kitchen/napkins-1",
+      "asset": "napkins",
+      "name": "纸巾座",
+      "room": "kitchen",
+      "parent": "table",
+      "profile": "semantic",
+      "x": 6,
+      "y": 0.76,
+      "z": -6.199999999999999,
+      "yaw": 0,
+      "size": [
+        0.14,
+        0.11,
+        0.06
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/kitchen/mug-1",
+      "asset": "mug",
+      "name": "马克杯",
+      "room": "kitchen",
+      "parent": "table",
+      "profile": "semantic",
+      "x": 5.38,
+      "y": 0.76,
+      "z": -5.989999999999999,
+      "yaw": 0,
+      "size": [
+        0.1235,
+        0.1012,
+        0.095
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/kitchen/bowl-1",
+      "asset": "bowl",
+      "name": "碗",
+      "room": "kitchen",
+      "parent": "table",
+      "profile": "semantic",
+      "x": 6.65,
+      "y": 0.76,
+      "z": -6.379999999999999,
+      "yaw": 0,
+      "size": [
+        0.16,
+        0.0746,
+        0.16
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/kitchen/dining-chair-1",
+      "asset": "dining-chair",
+      "name": "餐椅",
+      "room": "kitchen",
+      "parent": "site",
+      "profile": "prop",
+      "x": 5.32,
+      "y": 0,
+      "z": -7.08,
+      "yaw": 0,
+      "size": [
+        0.4554,
+        0.88,
+        0.48
+      ]
+    },
+    {
+      "id": "room/kitchen/dining-chair-2",
+      "asset": "dining-chair",
+      "name": "餐椅",
+      "room": "kitchen",
+      "parent": "site",
+      "profile": "prop",
+      "x": 5.32,
+      "y": 0,
+      "z": -5.32,
+      "yaw": 180,
+      "size": [
+        0.4554,
+        0.88,
+        0.48
+      ]
+    },
+    {
+      "id": "room/kitchen/dining-chair-3",
+      "asset": "dining-chair",
+      "name": "餐椅",
+      "room": "kitchen",
+      "parent": "site",
+      "profile": "prop",
+      "x": 6.68,
+      "y": 0,
+      "z": -7.08,
+      "yaw": 0,
+      "size": [
+        0.4554,
+        0.88,
+        0.48
+      ]
+    },
+    {
+      "id": "room/kitchen/dining-chair-4",
+      "asset": "dining-chair",
+      "name": "餐椅",
+      "room": "kitchen",
+      "parent": "site",
+      "profile": "prop",
+      "x": 6.68,
+      "y": 0,
+      "z": -5.32,
+      "yaw": 180,
+      "size": [
+        0.4554,
+        0.88,
+        0.48
+      ]
+    },
+    {
+      "id": "room/kitchen/fridge-1",
+      "asset": "fridge",
+      "name": "冰箱",
+      "room": "kitchen",
+      "parent": "site",
+      "profile": "prop",
+      "x": 2.3,
+      "y": 0,
+      "z": -9.81,
+      "yaw": 0,
+      "size": [
+        0.9,
+        1.8,
+        0.7215
+      ]
+    },
+    {
+      "id": "room/kitchen/stove-1",
+      "asset": "stove",
+      "name": "四眼灶台",
+      "room": "kitchen",
+      "parent": "site",
+      "profile": "prop",
+      "x": 5.46,
+      "y": 0,
+      "z": -9.79,
+      "yaw": 0,
+      "size": [
+        0.76,
+        0.9203,
+        0.702
+      ]
+    },
+    {
+      "id": "room/kitchen/pantry-1",
+      "asset": "pantry",
+      "name": "分班食品柜",
+      "room": "kitchen",
+      "parent": "site",
+      "profile": "prop",
+      "x": 9.43,
+      "y": 0,
+      "z": -9.73,
+      "yaw": -90,
+      "size": [
+        0.6,
+        1.82,
+        0.49
+      ]
+    },
+    {
+      "id": "room/kitchen/recycling-1",
+      "asset": "recycling",
+      "name": "回收桶",
+      "room": "kitchen",
+      "parent": "site",
+      "profile": "prop",
+      "x": 9.43,
+      "y": 0,
+      "z": -4.42,
+      "yaw": 0,
+      "size": [
+        0.41,
+        0.76,
+        0.4451
+      ]
+    },
+    {
+      "id": "sofa",
+      "asset": "sofa",
+      "name": "沙发",
+      "room": "lounge",
+      "parent": "site",
+      "profile": "prop",
+      "x": 15,
+      "y": 0,
+      "z": -9.8,
+      "yaw": 0,
+      "size": [
+        2.03,
+        0.85,
+        0.8712
+      ],
+      "bind": "sofa"
+    },
+    {
+      "id": "room/lounge/recliner-1",
+      "asset": "recliner",
+      "name": "躺椅",
+      "room": "lounge",
+      "parent": "site",
+      "profile": "prop",
+      "x": 17.34,
+      "y": 0,
+      "z": -8.55,
+      "yaw": -90,
+      "size": [
+        0.902,
+        0.94,
+        0.8811
+      ]
+    },
+    {
+      "id": "room/lounge/coffee-table-1",
+      "asset": "coffee-table",
+      "name": "茶几",
+      "room": "lounge",
+      "parent": "site",
+      "profile": "prop",
+      "x": 15,
+      "y": 0,
+      "z": -8.28,
+      "yaw": 0,
+      "size": [
+        1.09,
+        0.42,
+        0.59
+      ]
+    },
+    {
+      "id": "room/lounge/magazine-1",
+      "asset": "magazine",
+      "name": "杂志",
+      "room": "lounge",
+      "parent": "room/lounge/coffee-table-1",
+      "profile": "semantic",
+      "x": 14.78,
+      "y": 0.42,
+      "z": -8.25,
+      "yaw": 0,
+      "size": [
+        0.21,
+        0.015,
+        0.28
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/lounge/remote-1",
+      "asset": "remote",
+      "name": "遥控器",
+      "room": "lounge",
+      "parent": "room/lounge/coffee-table-1",
+      "profile": "semantic",
+      "x": 15.45,
+      "y": 0.42,
+      "z": -8.129999999999999,
+      "yaw": 0,
+      "size": [
+        0.053,
+        0.1666,
+        0.017
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/lounge/bookcase-1",
+      "asset": "bookcase",
+      "name": "书架",
+      "room": "lounge",
+      "parent": "site",
+      "profile": "prop",
+      "x": 17.62,
+      "y": 0,
+      "z": -4.63,
+      "yaw": -90,
+      "size": [
+        0.91,
+        1.71,
+        0.32
+      ]
+    },
+    {
+      "id": "room/lounge/end-table-1",
+      "asset": "end-table",
+      "name": "边几",
+      "room": "lounge",
+      "parent": "site",
+      "profile": "prop",
+      "x": 13.52,
+      "y": 0,
+      "z": -9.67,
+      "yaw": 0,
+      "size": [
+        0.46,
+        0.54,
+        0.43
+      ]
+    },
+    {
+      "id": "room/lounge/mug-1",
+      "asset": "mug",
+      "name": "马克杯",
+      "room": "lounge",
+      "parent": "room/lounge/end-table-1",
+      "profile": "semantic",
+      "x": 13.52,
+      "y": 0.54,
+      "z": -9.67,
+      "yaw": 0,
+      "size": [
+        0.1235,
+        0.1012,
+        0.095
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/lounge/floor-lamp-1",
+      "asset": "floor-lamp",
+      "name": "落地灯",
+      "room": "lounge",
+      "parent": "site",
+      "profile": "prop",
+      "x": 16.73,
+      "y": 0,
+      "z": -9.96,
+      "yaw": 0,
+      "size": [
+        0.39,
+        1.53,
+        0.39
+      ]
+    },
+    {
+      "id": "bed1",
+      "asset": "bunk",
+      "name": "单人床",
+      "room": "dorm",
+      "parent": "site",
+      "profile": "prop",
+      "x": 4,
+      "y": 0,
+      "z": -0.15000000000000036,
+      "yaw": 90,
+      "size": [
+        0.99,
+        0.6008,
+        2.03
+      ],
+      "bind": "bed1"
+    },
+    {
+      "id": "bed2",
+      "asset": "bunk",
+      "name": "单人床",
+      "room": "dorm",
+      "parent": "site",
+      "profile": "prop",
+      "x": 9,
+      "y": 0,
+      "z": -1.5,
+      "yaw": 0,
+      "size": [
+        0.99,
+        0.6008,
+        2.03
+      ],
+      "bind": "bed2"
+    },
+    {
+      "id": "room/dorm/nightstand-1",
+      "asset": "nightstand",
+      "name": "床头柜",
+      "room": "dorm",
+      "parent": "site",
+      "profile": "prop",
+      "x": 2.65,
+      "y": 0,
+      "z": -0.18,
+      "yaw": 0,
+      "size": [
+        0.43,
+        0.55,
+        0.39
+      ]
+    },
+    {
+      "id": "room/dorm/alarm-clock-1",
+      "asset": "alarm-clock",
+      "name": "闹钟",
+      "room": "dorm",
+      "parent": "room/dorm/nightstand-1",
+      "profile": "semantic",
+      "x": 2.65,
+      "y": 0.55,
+      "z": -0.18,
+      "yaw": 0,
+      "size": [
+        0.13,
+        0.12,
+        0.0442
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/dorm/nightstand-2",
+      "asset": "nightstand",
+      "name": "床头柜",
+      "room": "dorm",
+      "parent": "site",
+      "profile": "prop",
+      "x": 8.14,
+      "y": 0,
+      "z": -2.25,
+      "yaw": 0,
+      "size": [
+        0.43,
+        0.55,
+        0.39
+      ]
+    },
+    {
+      "id": "room/dorm/book-1",
+      "asset": "book",
+      "name": "书",
+      "room": "dorm",
+      "parent": "room/dorm/nightstand-2",
+      "profile": "semantic",
+      "x": 8.14,
+      "y": 0.55,
+      "z": -2.25,
+      "yaw": 0,
+      "size": [
+        0.16,
+        0.039,
+        0.23
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/dorm/wardrobe-1",
+      "asset": "wardrobe",
+      "name": "个人衣柜",
+      "room": "dorm",
+      "parent": "site",
+      "profile": "prop",
+      "x": 4.1,
+      "y": 0,
+      "z": -3.29,
+      "yaw": 0,
+      "size": [
+        0.52,
+        1.82,
+        0.52
+      ]
+    },
+    {
+      "id": "room/dorm/wardrobe-2",
+      "asset": "wardrobe",
+      "name": "个人衣柜",
+      "room": "dorm",
+      "parent": "site",
+      "profile": "prop",
+      "x": 4.83,
+      "y": 0,
+      "z": -3.29,
+      "yaw": 0,
+      "size": [
+        0.52,
+        1.82,
+        0.52
+      ]
+    },
+    {
+      "id": "room/bath/basin-1",
+      "asset": "basin",
+      "name": "洗手盆",
+      "room": "bath",
+      "parent": "wall/x/4.25/1.5/10/0/3.5",
+      "profile": "semantic",
+      "x": 8.5,
+      "y": 0.65,
+      "z": 3.898,
+      "yaw": 180,
+      "size": [
+        0.57,
+        0.277,
+        0.46
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "shower",
+      "asset": "partition",
+      "name": "隔断",
+      "room": "bath",
+      "parent": "site",
+      "profile": "prop",
+      "x": 4.5,
+      "y": 0,
+      "z": 2.8,
+      "yaw": 90,
+      "size": [
+        0.99,
+        1.79,
+        0.04
+      ],
+      "bind": "shower"
+    },
+    {
+      "id": "room/bath/toilet-1",
+      "asset": "toilet",
+      "name": "坐便器",
+      "room": "bath",
+      "parent": "site",
+      "profile": "prop",
+      "x": 2.93,
+      "y": 0,
+      "z": 1.46,
+      "yaw": 0,
+      "size": [
+        0.41,
+        0.77,
+        0.7029
+      ]
+    },
+    {
+      "id": "room/bath/mirror-cab-1",
+      "asset": "mirror-cab",
+      "name": "镜面柜",
+      "room": "bath",
+      "parent": "wall/x/4.25/1.5/10/0/3.5",
+      "profile": "semantic",
+      "x": 8.5,
+      "y": 1.23,
+      "z": 4.068,
+      "yaw": 180,
+      "size": [
+        0.57,
+        0.68,
+        0.12
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/bath/towels-1",
+      "asset": "towels",
+      "name": "擦手纸盒",
+      "room": "bath",
+      "parent": "wall/x/4.25/1.5/10/0/3.5",
+      "profile": "semantic",
+      "x": 9.23,
+      "y": 1.22,
+      "z": 4.07105,
+      "yaw": 180,
+      "size": [
+        0.29,
+        0.34,
+        0.1139
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/bath/shower-head-1",
+      "asset": "shower-head",
+      "name": "淋浴头",
+      "room": "bath",
+      "parent": "wall/x/0.75/1.5/10/0/3.5",
+      "profile": "semantic",
+      "x": 4.88,
+      "y": 1.91,
+      "z": 0.8963,
+      "yaw": 0,
+      "size": [
+        0.13,
+        0.13,
+        0.0486
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/bath/bath-mat-1",
+      "asset": "bath-mat",
+      "name": "防滑垫",
+      "room": "bath",
+      "parent": "site",
+      "profile": "prop",
+      "x": 5.07,
+      "y": 0,
+      "z": 1.65,
+      "yaw": 0,
+      "size": [
+        0.66,
+        0.015,
+        0.4
+      ],
+      "solid": false
+    },
+    {
+      "id": "room/bath/safety-bar-1",
+      "asset": "safety-bar",
+      "name": "无障碍扶手",
+      "room": "bath",
+      "parent": "wall/x/0.75/1.5/10/0/3.5",
+      "profile": "semantic",
+      "x": 3.78,
+      "y": 0.84,
+      "z": 0.9185,
+      "yaw": 0,
+      "size": [
+        0.6234,
+        0.0688,
+        0.093
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "conference",
+      "asset": "folding-table",
+      "name": "折叠桌",
+      "room": "meeting",
+      "parent": "site",
+      "profile": "prop",
+      "x": 6,
+      "y": 0,
+      "z": 8,
+      "yaw": 0,
+      "size": [
+        1.8,
+        0.74,
+        0.63
+      ],
+      "bind": "conference"
+    },
+    {
+      "id": "room/meeting/binder-1",
+      "asset": "binder",
+      "name": "文件夹",
+      "room": "meeting",
+      "parent": "conference",
+      "profile": "semantic",
+      "x": 5.53,
+      "y": 0.74,
+      "z": 8,
+      "yaw": 0,
+      "size": [
+        0.24,
+        0.043,
+        0.31
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/meeting/pen-cup-1",
+      "asset": "pen-cup",
+      "name": "笔筒",
+      "room": "meeting",
+      "parent": "conference",
+      "profile": "semantic",
+      "x": 6.49,
+      "y": 0.74,
+      "z": 8,
+      "yaw": 0,
+      "size": [
+        0.076,
+        0.1,
+        0.076
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/meeting/folding-chair-1",
+      "asset": "folding-chair",
+      "name": "折椅",
+      "room": "meeting",
+      "parent": "site",
+      "profile": "prop",
+      "x": 5.52,
+      "y": 0,
+      "z": 7.22,
+      "yaw": 0,
+      "size": [
+        0.4455,
+        0.8,
+        0.47
+      ]
+    },
+    {
+      "id": "room/meeting/folding-chair-2",
+      "asset": "folding-chair",
+      "name": "折椅",
+      "room": "meeting",
+      "parent": "site",
+      "profile": "prop",
+      "x": 5.52,
+      "y": 0,
+      "z": 8.78,
+      "yaw": 180,
+      "size": [
+        0.4455,
+        0.8,
+        0.47
+      ]
+    },
+    {
+      "id": "room/meeting/folding-chair-3",
+      "asset": "folding-chair",
+      "name": "折椅",
+      "room": "meeting",
+      "parent": "site",
+      "profile": "prop",
+      "x": 6.48,
+      "y": 0,
+      "z": 7.22,
+      "yaw": 0,
+      "size": [
+        0.4455,
+        0.8,
+        0.47
+      ]
+    },
+    {
+      "id": "room/meeting/folding-chair-4",
+      "asset": "folding-chair",
+      "name": "折椅",
+      "room": "meeting",
+      "parent": "site",
+      "profile": "prop",
+      "x": 6.48,
+      "y": 0,
+      "z": 8.78,
+      "yaw": 180,
+      "size": [
+        0.4455,
+        0.8,
+        0.47
+      ]
+    },
+    {
+      "id": "room/meeting/whiteboard-1",
+      "asset": "whiteboard",
+      "name": "交班板",
+      "room": "meeting",
+      "parent": "wall/x/4.25/1.5/10/0/3.5",
+      "profile": "semantic",
+      "x": 5.8,
+      "y": 1.22,
+      "z": 4.3864,
+      "yaw": 0,
+      "size": [
+        1.2,
+        0.78,
+        0.0288
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/meeting/files-1",
+      "asset": "files",
+      "name": "文件柜",
+      "room": "meeting",
+      "parent": "site",
+      "profile": "prop",
+      "x": 9.35,
+      "y": 0,
+      "z": 9.55,
+      "yaw": -90,
+      "size": [
+        0.49,
+        1.22,
+        0.62
+      ]
+    },
+    {
+      "id": "room/meeting/lectern-1",
+      "asset": "lectern",
+      "name": "讲台",
+      "room": "meeting",
+      "parent": "site",
+      "profile": "prop",
+      "x": 2.18,
+      "y": 0,
+      "z": 4.95,
+      "yaw": 0,
+      "size": [
+        0.62,
+        1.12,
+        0.48
+      ]
+    },
+    {
+      "id": "desk",
+      "asset": "desk",
+      "name": "办公桌",
+      "room": "watch",
+      "parent": "site",
+      "profile": "prop",
+      "x": 17,
+      "y": 0,
+      "z": -1.5,
+      "yaw": 0,
+      "size": [
+        1.5,
+        0.75,
+        0.73
+      ],
+      "bind": "desk"
+    },
+    {
+      "id": "room/watch/display-1",
+      "asset": "display",
+      "name": "显示器",
+      "room": "watch",
+      "parent": "desk",
+      "profile": "semantic",
+      "x": 16.7,
+      "y": 0.75,
+      "z": -1.65,
+      "yaw": 0,
+      "size": [
+        0.53,
+        0.3762,
+        0.1122
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/watch/keyboard-1",
+      "asset": "keyboard",
+      "name": "键盘",
+      "room": "watch",
+      "parent": "desk",
+      "profile": "semantic",
+      "x": 16.7,
+      "y": 0.75,
+      "z": -1.31,
+      "yaw": 0,
+      "size": [
+        0.43,
+        0.025,
+        0.16
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/watch/telephone-1",
+      "asset": "telephone",
+      "name": "电话",
+      "room": "watch",
+      "parent": "desk",
+      "profile": "semantic",
+      "x": 17.48,
+      "y": 0.75,
+      "z": -1.5,
+      "yaw": 0,
+      "size": [
+        0.2068,
+        0.0742,
+        0.1843
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/watch/office-chair-1",
+      "asset": "office-chair",
+      "name": "办公椅",
+      "room": "watch",
+      "parent": "site",
+      "profile": "prop",
+      "x": 17,
+      "y": 0,
+      "z": -0.54,
+      "yaw": 180,
+      "size": [
+        0.5096,
+        0.92,
+        0.5076
+      ]
+    },
+    {
+      "id": "room/watch/files-1",
+      "asset": "files",
+      "name": "文件柜",
+      "room": "watch",
+      "parent": "site",
+      "profile": "prop",
+      "x": 20.1,
+      "y": 0,
+      "z": -2.62,
+      "yaw": -90,
+      "size": [
+        0.49,
+        1.22,
+        0.62
+      ]
+    },
+    {
+      "id": "room/watch/pedestal-1",
+      "asset": "pedestal",
+      "name": "抽屉柜",
+      "room": "watch",
+      "parent": "site",
+      "profile": "prop",
+      "x": 18.32,
+      "y": 0,
+      "z": -1.55,
+      "yaw": 0,
+      "size": [
+        0.44,
+        0.61,
+        0.52
+      ]
+    },
+    {
+      "id": "room/watch/roster-1",
+      "asset": "roster",
+      "name": "交班记录",
+      "room": "watch",
+      "parent": "wall/x/1.4/12.75/20.75/0/3.5",
+      "profile": "semantic",
+      "x": 16,
+      "y": 1.46,
+      "z": 1.277,
+      "yaw": 180,
+      "size": [
+        0.21,
+        0.29,
+        0.002
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "reception",
+      "asset": "watch-desk",
+      "name": "前厅值班台",
+      "room": "foyer",
+      "parent": "site",
+      "profile": "prop",
+      "x": 19,
+      "y": 0,
+      "z": 5.5,
+      "yaw": -90,
+      "size": [
+        1.8,
+        1.5205,
+        0.8602
+      ],
+      "bind": "reception"
+    },
+    {
+      "id": "room/foyer/waiting-chair-1",
+      "asset": "waiting-chair",
+      "name": "等候椅",
+      "room": "foyer",
+      "parent": "site",
+      "profile": "prop",
+      "x": 20.11,
+      "y": 0,
+      "z": 3.42,
+      "yaw": -90,
+      "size": [
+        0.5742,
+        0.82,
+        0.57
+      ]
+    },
+    {
+      "id": "room/foyer/waiting-chair-2",
+      "asset": "waiting-chair",
+      "name": "等候椅",
+      "room": "foyer",
+      "parent": "site",
+      "profile": "prop",
+      "x": 20.11,
+      "y": 0,
+      "z": 4.15,
+      "yaw": -90,
+      "size": [
+        0.5742,
+        0.82,
+        0.57
+      ]
+    },
+    {
+      "id": "room/foyer/literature-1",
+      "asset": "literature",
+      "name": "宣传册架",
+      "room": "foyer",
+      "parent": "site",
+      "profile": "prop",
+      "x": 18.03,
+      "y": 0,
+      "z": 7.92,
+      "yaw": 180,
+      "size": [
+        0.68,
+        1.12,
+        0.29
+      ]
+    },
+    {
+      "id": "room/foyer/entry-mat-1",
+      "asset": "entry-mat",
+      "name": "吸水地垫",
+      "room": "foyer",
+      "parent": "site",
+      "profile": "prop",
+      "x": 14,
+      "y": 0,
+      "z": 7.44,
+      "yaw": 0,
+      "size": [
+        1.2,
+        0.02,
+        0.8
+      ],
+      "solid": false
+    },
+    {
+      "id": "room/foyer/bulletin-1",
+      "asset": "bulletin",
+      "name": "公告栏",
+      "room": "foyer",
+      "parent": "wall/x/1.4/12.75/20.75/0/3.5",
+      "profile": "semantic",
+      "x": 18.28,
+      "y": 1.22,
+      "z": 1.5439999999999998,
+      "yaw": 0,
+      "size": [
+        1.2,
+        0.81,
+        0.044
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/foyer/crest-1",
+      "asset": "crest",
+      "name": "站徽",
+      "room": "foyer",
+      "parent": "wall/x/8.5/15.2/18/0/3.5",
+      "profile": "semantic",
+      "x": 16.61,
+      "y": 1.63,
+      "z": 8.36785,
+      "yaw": 180,
+      "size": [
+        0.34,
+        0.34,
+        0.0203
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/workshop/sockets-1",
+      "asset": "sockets",
+      "name": "套筒盒",
+      "room": "workshop",
+      "parent": "worktable",
+      "profile": "semantic",
+      "x": -15.91,
+      "y": 0.9,
+      "z": -7.000000000000001,
+      "yaw": 0,
+      "size": [
+        0.27,
+        0.065,
+        0.1863
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/workshop/rag-1",
+      "asset": "rag",
+      "name": "擦布",
+      "room": "workshop",
+      "parent": "worktable",
+      "profile": "semantic",
+      "x": -16.32,
+      "y": 0.9,
+      "z": -6.5600000000000005,
+      "yaw": 0,
+      "size": [
+        0.266,
+        0.0396,
+        0.2016
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/workshop/seal-box-1",
+      "asset": "seal-box",
+      "name": "密封圈盒",
+      "room": "workshop",
+      "parent": "room/workshop/toolbox-cart-1",
+      "profile": "semantic",
+      "x": -20.35,
+      "y": 0.84,
+      "z": -9.73,
+      "yaw": 0,
+      "size": [
+        0.17,
+        0.042,
+        0.12
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/storage/food-bag-1",
+      "asset": "food-bag",
+      "name": "食品袋",
+      "room": "storage",
+      "parent": "shelf",
+      "profile": "semantic",
+      "x": -3.65,
+      "y": 1.273,
+      "z": -9.99,
+      "yaw": 0,
+      "size": [
+        0.17,
+        0.2686,
+        0.1
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/storage/masks-1",
+      "asset": "masks",
+      "name": "口罩盒",
+      "room": "storage",
+      "parent": "room/storage/parts-rack-2",
+      "profile": "semantic",
+      "x": -3.54,
+      "y": 1.273,
+      "z": -6.739999999999999,
+      "yaw": 180,
+      "size": [
+        0.19,
+        0.11,
+        0.1035
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/storage/glove-box-1",
+      "asset": "glove-box",
+      "name": "手套盒",
+      "room": "storage",
+      "parent": "room/storage/parts-rack-2",
+      "profile": "semantic",
+      "x": -2.99,
+      "y": 1.273,
+      "z": -6.7299999999999995,
+      "yaw": 180,
+      "size": [
+        0.23,
+        0.1284,
+        0.09
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/garage/packed-hose-1",
+      "asset": "packed-hose",
+      "name": "折叠水带",
+      "room": "garage",
+      "parent": "room/garage/hose-rack-1",
+      "profile": "semantic",
+      "x": -20.49,
+      "y": 0.1155,
+      "z": 3.4,
+      "yaw": 90,
+      "size": [
+        0.7388,
+        0.2376,
+        0.192
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/garage/packed-hose-2",
+      "asset": "packed-hose",
+      "name": "折叠水带",
+      "room": "garage",
+      "parent": "room/garage/hose-rack-1",
+      "profile": "semantic",
+      "x": -20.49,
+      "y": 0.6105,
+      "z": 3.4,
+      "yaw": 90,
+      "size": [
+        0.7388,
+        0.2376,
+        0.192
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/gear/work-gloves-pair-1",
+      "asset": "work-gloves-pair",
+      "name": "工作手套一对",
+      "room": "gear",
+      "parent": "lockers",
+      "profile": "semantic",
+      "x": -2.51,
+      "y": 0.45,
+      "z": -0.09999999999999964,
+      "yaw": 0,
+      "size": [
+        0.26,
+        0.0297,
+        0.1888
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/gear/name-strip-1",
+      "asset": "name-strip",
+      "name": "姓名条",
+      "room": "gear",
+      "parent": "wall/x/0.75/-6/-1/0/3.5",
+      "profile": "semantic",
+      "x": -3.86,
+      "y": 1.63,
+      "z": 0.62665,
+      "yaw": 180,
+      "size": [
+        0.23,
+        0.06,
+        0.0027
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/decon/disinfect-tray-1",
+      "asset": "disinfect-tray",
+      "name": "消毒筐",
+      "room": "decon",
+      "parent": "sink",
+      "profile": "semantic",
+      "x": -2.52,
+      "y": 0.88,
+      "z": 9.6,
+      "yaw": 180,
+      "size": [
+        0.49,
+        0.23,
+        0.36
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/decon/detergent-1",
+      "asset": "detergent",
+      "name": "洗剂桶",
+      "room": "decon",
+      "parent": "sink",
+      "profile": "semantic",
+      "x": -1.9099999999999997,
+      "y": 0.88,
+      "z": 9.75,
+      "yaw": 180,
+      "size": [
+        0.21,
+        0.38,
+        0.15
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/decon/chemical-label-1",
+      "asset": "chemical-label",
+      "name": "洗剂标签",
+      "room": "decon",
+      "parent": "wall/z/-1/2.9/6.699999999999999/0/3.5",
+      "profile": "semantic",
+      "x": -1.1227,
+      "y": 1.45,
+      "z": 5.23,
+      "yaw": -90,
+      "size": [
+        0.1,
+        0.13,
+        0.0014
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/kitchen/base-cab-1",
+      "asset": "base-cab",
+      "name": "地柜",
+      "room": "kitchen",
+      "parent": "site",
+      "profile": "prop",
+      "x": 6.28,
+      "y": 0,
+      "z": -9.79,
+      "yaw": 0,
+      "size": [
+        0.81,
+        0.9,
+        0.6
+      ]
+    },
+    {
+      "id": "room/kitchen/coffee-1",
+      "asset": "coffee",
+      "name": "咖啡机",
+      "room": "kitchen",
+      "parent": "room/kitchen/base-cab-1",
+      "profile": "semantic",
+      "x": 6.16,
+      "y": 0.9,
+      "z": -9.79,
+      "yaw": 0,
+      "size": [
+        0.228,
+        0.3564,
+        0.25
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/kitchen/seasoning-1",
+      "asset": "seasoning",
+      "name": "调料瓶",
+      "room": "kitchen",
+      "parent": "room/kitchen/base-cab-1",
+      "profile": "semantic",
+      "x": 6.5200000000000005,
+      "y": 0.9,
+      "z": -9.739999999999998,
+      "yaw": 0,
+      "size": [
+        0.054,
+        0.13,
+        0.054
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/kitchen/upper-cab-1",
+      "asset": "upper-cab",
+      "name": "吊柜",
+      "room": "kitchen",
+      "parent": "wall/x/-10.5/4.8/6.6/0/3.5",
+      "profile": "semantic",
+      "x": 5.57,
+      "y": 1.6,
+      "z": -10.208,
+      "yaw": 0,
+      "size": [
+        0.8,
+        0.69,
+        0.34
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/kitchen/chores-1",
+      "asset": "chores",
+      "name": "值日表",
+      "room": "kitchen",
+      "parent": "wall/x/-3.75/1.5/10.6/0/3.5",
+      "profile": "semantic",
+      "x": 7.6,
+      "y": 1.52,
+      "z": -3.873,
+      "yaw": 180,
+      "size": [
+        0.21,
+        0.3,
+        0.002
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/kitchen/lunch-box-1",
+      "asset": "lunch-box",
+      "name": "餐盒",
+      "room": "kitchen",
+      "parent": "table",
+      "profile": "semantic",
+      "x": 6.55,
+      "y": 0.76,
+      "z": -5.969999999999999,
+      "yaw": 0,
+      "size": [
+        0.19,
+        0.08,
+        0.1449
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/kitchen/mug-2",
+      "asset": "mug",
+      "name": "马克杯",
+      "room": "kitchen",
+      "parent": "table",
+      "profile": "semantic",
+      "x": 5.55,
+      "y": 0.76,
+      "z": -6.43,
+      "yaw": 0,
+      "size": [
+        0.1235,
+        0.1012,
+        0.095
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/lounge/game-1",
+      "asset": "game",
+      "name": "桌游盒",
+      "room": "lounge",
+      "parent": "room/lounge/bookcase-1",
+      "profile": "semantic",
+      "x": 17.62,
+      "y": 0.633,
+      "z": -4.81,
+      "yaw": -90,
+      "size": [
+        0.29,
+        0.067,
+        0.2898
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/lounge/book-1",
+      "asset": "book",
+      "name": "书",
+      "room": "lounge",
+      "parent": "room/lounge/bookcase-1",
+      "profile": "semantic",
+      "x": 17.62,
+      "y": 0.633,
+      "z": -4.41,
+      "yaw": -90,
+      "size": [
+        0.16,
+        0.039,
+        0.23
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/lounge/game-2",
+      "asset": "game",
+      "name": "桌游盒",
+      "room": "lounge",
+      "parent": "room/lounge/coffee-table-1",
+      "profile": "semantic",
+      "x": 15.25,
+      "y": 0.42,
+      "z": -8.36,
+      "yaw": 0,
+      "size": [
+        0.29,
+        0.067,
+        0.2898
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/lounge/photo-1",
+      "asset": "photo",
+      "name": "历史照片框",
+      "room": "lounge",
+      "parent": "wall/x/-10.5/14.8/18.25/0/3.5",
+      "profile": "semantic",
+      "x": 16.71,
+      "y": 1.48,
+      "z": -10.366,
+      "yaw": 0,
+      "size": [
+        0.34,
+        0.27,
+        0.024
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/dorm/cup-1",
+      "asset": "cup",
+      "name": "床头水杯",
+      "room": "dorm",
+      "parent": "room/dorm/nightstand-2",
+      "profile": "semantic",
+      "x": 8.280000000000001,
+      "y": 0.55,
+      "z": -2.36,
+      "yaw": 0,
+      "size": [
+        0.081,
+        0.115,
+        0.081
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/dorm/coat-hook-1",
+      "asset": "coat-hook",
+      "name": "衣钩",
+      "room": "dorm",
+      "parent": "wall/x/-3.75/1.5/10.6/0/3.5",
+      "profile": "semantic",
+      "x": 6.07,
+      "y": 1.52,
+      "z": -3.59315,
+      "yaw": 0,
+      "size": [
+        0.0315,
+        0.0858,
+        0.0697
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/dorm/linen-bag-1",
+      "asset": "linen-bag",
+      "name": "私人洗衣袋",
+      "room": "dorm",
+      "parent": "site",
+      "profile": "prop",
+      "x": 6.87,
+      "y": 0,
+      "z": -3.18,
+      "yaw": 0,
+      "size": [
+        0.36,
+        0.5273,
+        0.32
+      ]
+    },
+    {
+      "id": "room/bath/soap-1",
+      "asset": "soap",
+      "name": "皂液器",
+      "room": "bath",
+      "parent": "wall/x/4.25/1.5/10/0/3.5",
+      "profile": "semantic",
+      "x": 8.08,
+      "y": 1.11,
+      "z": 4.0847999999999995,
+      "yaw": 180,
+      "size": [
+        0.1001,
+        0.23,
+        0.0864
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/bath/toilet-roll-1",
+      "asset": "toilet-roll",
+      "name": "卷纸器",
+      "room": "bath",
+      "parent": "wall/x/0.75/1.5/10/0/3.5",
+      "profile": "semantic",
+      "x": 2.47,
+      "y": 0.6,
+      "z": 0.942,
+      "yaw": 0,
+      "size": [
+        0.1293,
+        0.14,
+        0.14
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/bath/bath-bin-1",
+      "asset": "bath-bin",
+      "name": "卫生桶",
+      "room": "bath",
+      "parent": "site",
+      "profile": "prop",
+      "x": 2.14,
+      "y": 0,
+      "z": 1.26,
+      "yaw": 0,
+      "size": [
+        0.22,
+        0.29,
+        0.2277
+      ]
+    },
+    {
+      "id": "room/meeting/book-1",
+      "asset": "book",
+      "name": "书",
+      "room": "meeting",
+      "parent": "conference",
+      "profile": "semantic",
+      "x": 6.17,
+      "y": 0.74,
+      "z": 8.04,
+      "yaw": 0,
+      "size": [
+        0.16,
+        0.039,
+        0.23
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/meeting/clock-1",
+      "asset": "clock",
+      "name": "壁钟",
+      "room": "meeting",
+      "parent": "wall/x/4.25/1.5/10/0/3.5",
+      "profile": "semantic",
+      "x": 7.23,
+      "y": 1.75,
+      "z": 4.39115,
+      "yaw": 0,
+      "size": [
+        0.31,
+        0.31,
+        0.0383
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/watch/mouse-1",
+      "asset": "mouse",
+      "name": "鼠标",
+      "room": "watch",
+      "parent": "desk",
+      "profile": "semantic",
+      "x": 17.06,
+      "y": 0.75,
+      "z": -1.32,
+      "yaw": 0,
+      "size": [
+        0.063,
+        0.0357,
+        0.11
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/watch/printer-1",
+      "asset": "printer",
+      "name": "打印机",
+      "room": "watch",
+      "parent": "room/watch/pedestal-1",
+      "profile": "semantic",
+      "x": 18.32,
+      "y": 0.61,
+      "z": -1.55,
+      "yaw": 0,
+      "size": [
+        0.43,
+        0.25,
+        0.3705
+      ],
+      "socket": "支撑面",
+      "solid": false
+    },
+    {
+      "id": "room/foyer/plaque-1",
+      "asset": "plaque",
+      "name": "纪念铭牌",
+      "room": "foyer",
+      "parent": "wall/x/1.4/12.75/20.75/0/3.5",
+      "profile": "semantic",
+      "x": 19.81,
+      "y": 1.51,
+      "z": 1.532,
+      "yaw": 0,
+      "size": [
+        0.39,
+        0.26,
+        0.02
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/foyer/poster-1",
+      "asset": "poster",
+      "name": "社区海报",
+      "room": "foyer",
+      "parent": "wall/x/1.4/12.75/20.75/0/3.5",
+      "profile": "semantic",
+      "x": 17.15,
+      "y": 1.45,
+      "z": 1.523,
+      "yaw": 0,
+      "size": [
+        0.42,
+        0.59,
+        0.002
+      ],
+      "socket": "墙面",
+      "solid": false
+    },
+    {
+      "id": "room/foyer/clock-1",
+      "asset": "clock",
+      "name": "壁钟",
+      "room": "foyer",
+      "parent": "wall/x/1.4/12.75/20.75/0/3.5",
+      "profile": "semantic",
+      "x": 15.69,
+      "y": 1.91,
+      "z": 1.54115,
+      "yaw": 0,
+      "size": [
+        0.31,
+        0.31,
+        0.0383
+      ],
+      "socket": "墙面",
+      "solid": false
+    }
+  ]
+}

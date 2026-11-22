@@ -1,0 +1,1257 @@
+{
+  "schemaVersion": 1,
+  "levelId": "fire_station",
+  "layer": "L3",
+  "brief": "查明消防泵去向，决定是否试泵运回营地",
+  "theme": "查到能走，验泵才值得搬，搬走就要承担声响。",
+  "scope": "消防站 POI；站外虚线段仅约定街区接口，街区现有三个撤离点的两个候选接入此委托。",
+  "inception": {
+    "location": "虚构的西雅图社区消防站，单层双贯通车位。",
+    "premise": "查到能走，验泵才值得搬，搬走就要承担声响。",
+    "majorGoals": "核号出情报，或在闭路试验台确认可用泵、装车交货。",
+    "affectsGameplay": "站内跨层仅一座局部维修平台；静默核对、带声测试、可中止装运。",
+    "introduction": "用消防泵试验台辨认真正合格的回收货。",
+    "exotic": "失电的值班台留下两份相冲突的交接标记。"
+  },
+  "goals": {
+    "narrative": "同一批泵两张工单和不同检修印记承载围困中断交接的信息。",
+    "experience": "先在安全门厅辨认线索，再决定要不要用噪声换确定性，允许独行退出。",
+    "function": "试泵（读表后中止或确认）。"
+  },
+  "arc": [
+    {
+      "act": 1,
+      "intent": "setup",
+      "tempo": 0.24,
+      "durationS": [
+        120,
+        240
+      ],
+      "mechanismIds": [
+        "handoff_clues",
+        "quiet_alert",
+        "safe_lobby"
+      ],
+      "tempoRef": "LV-新增-FS-ACT-1-TEMPO",
+      "durationRef": "LV-新增-FS-ACT-1-DURATION"
+    },
+    {
+      "act": 2,
+      "intent": "develop",
+      "tempo": 0.6,
+      "durationS": [
+        360,
+        480
+      ],
+      "mechanismIds": [
+        "breach_loop",
+        "platform_view",
+        "pump_test",
+        "cart_choice"
+      ],
+      "tempoRef": "LV-新增-FS-ACT-2-TEMPO",
+      "durationRef": "LV-新增-FS-ACT-2-DURATION"
+    },
+    {
+      "act": 3,
+      "intent": "turn",
+      "tempo": 0.85,
+      "durationS": [
+        420,
+        480
+      ],
+      "mechanismIds": [
+        "south_shutter",
+        "extract_order"
+      ],
+      "endTempo": 0.3,
+      "tempoRef": "LV-新增-FS-ACT-3-TEMPO",
+      "durationRef": "LV-新增-FS-ACT-3-DURATION",
+      "endTempoRef": "LV-新增-FS-RESOLUTION-TEMPO"
+    }
+  ],
+  "mechanisms": [
+    {
+      "id": "handoff_clues",
+      "family": "lure",
+      "verb": "核对",
+      "cost": {
+        "type": "time",
+        "ref": "LV-新增-FS-READ-S",
+        "value": 5,
+        "unit": "s"
+      },
+      "read": {
+        "channel": "silhouette",
+        "telegraph": "交班册缺角、连续的轮印和双泵架上匹配的轮廓组成目视链；工单编号作文字冗余。",
+        "noUi": true
+      },
+      "space": {
+        "node": "quiet",
+        "prefab": "IN-01"
+      },
+      "params": {
+        "clueIds": [
+          "sheet",
+          "tracks",
+          "tags"
+        ],
+        "requiresPower": false
+      },
+      "acceptance": [
+        "任意顺序发现三条线索后均能回到泵架，自己核对两泵，生成一次普通位置情报。"
+      ],
+      "act": 1
+    },
+    {
+      "id": "quiet_alert",
+      "family": "lure",
+      "verb": "复电读取",
+      "cost": {
+        "type": "resource",
+        "ref": "LV-新增-FS-CRANK-TOOL",
+        "value": 1,
+        "unit": "件随身工具（占用，归还）"
+      },
+      "read": {
+        "channel": "light",
+        "telegraph": "手摇发电机插座与熄灭的复核灯在接待台同侧；恢复后故障记号闪亮。",
+        "noUi": true
+      },
+      "space": {
+        "node": "quiet",
+        "prefab": "IN-03"
+      },
+      "params": {
+        "requiresPower": true,
+        "grant": "末次检修记录",
+        "tool": "手摇发电机"
+      },
+      "acceptance": [
+        "携带手摇发电机可取得末次检修记录；徒手读取交接单仍可完成侦察订单。"
+      ],
+      "act": 1
+    },
+    {
+      "id": "safe_lobby",
+      "family": "empty_threat",
+      "verb": "试探",
+      "cost": {
+        "type": "time",
+        "ref": "LV-新增-FS-CAUTION-S",
+        "value": 5,
+        "unit": "s"
+      },
+      "read": {
+        "channel": "cover_density",
+        "telegraph": "隔离入口段的破窗、弹壳、血迹、可破坏箱和多组实体端板构成战斗痕迹。外侧雨棚与接待侧门均能退回。",
+        "noUi": true
+      },
+      "space": {
+        "node": "east",
+        "prefab": "CB-01"
+      },
+      "params": {
+        "aiCount": 0,
+        "coverClusters": 4,
+        "areaM2": 160,
+        "combatGrammar": "full",
+        "escapeHatches": [
+          "quiet",
+          "apron"
+        ],
+        "refuge": "仅进入个人/同步队伍前置门厅隔离态；其他队伍无碰撞、伤害、投掷、跨界追击或封门。离开后进入共享区；撤离端不复用。",
+        "reentry": "共享态回门厅保持共享；安全段不提供战斗中重置。",
+        "refs": {
+          "areaM2": "LV-新增-FS-SAFE-AREA",
+          "coverClusters": "LV-新增-FS-SAFE-GROUPS"
+        }
+      },
+      "acceptance": [
+        "初次门厅无AI及其他队伍伤害；初见安全段的无提示警戒率达到 LV-EMPTY-CROUCH。"
+      ],
+      "act": 1
+    },
+    {
+      "id": "breach_loop",
+      "family": "traversal",
+      "verb": "穿过",
+      "cost": {
+        "type": "time",
+        "ref": "LV-新增-FS-QUIET-DET-S",
+        "value": 10,
+        "unit": "s"
+      },
+      "read": {
+        "channel": "texture_wear",
+        "telegraph": "碎砌块聚在断墙两侧，中间连续露出厨房地砖；回头能看见起居室旧门。",
+        "noUi": true
+      },
+      "space": {
+        "node": "breach",
+        "prefab": "CB-01",
+        "prefabUse": "断墙的原型为既有 CB-01 半身掩体分类，沿墙基两侧组合；中部通行净宽另校核。"
+      },
+      "params": {
+        "clearW": 2.4,
+        "landingDepth": 1.2,
+        "clearWRef": "LV-新增-FS-BREACH-W",
+        "landingDepthRef": "LV-CLEAR-W",
+        "wheelRule": "破口宽度本身可容车；北侧人员出口短阶没有可供重载推车连续滚动的平面。"
+      },
+      "acceptance": [
+        "落地净宽≥LV-CLEAR-W；厨房和起居室原门均能回员工走廊；人物以步行穿越。"
+      ],
+      "act": 2
+    },
+    {
+      "id": "platform_view",
+      "family": "vertical",
+      "verb": "登台观察",
+      "cost": {
+        "type": "exposure",
+        "ref": "LV-新增-FS-OBSERVE-S",
+        "value": 3,
+        "unit": "s"
+      },
+      "read": {
+        "channel": "height_band",
+        "telegraph": "维护平台的双向踏步和黄色边沿只引向维修间，灯下可看见试验架；隔窗能辨接驳方向。",
+        "noUi": true
+      },
+      "space": {
+        "node": "platform",
+        "prefab": "TR-01"
+      },
+      "params": {
+        "deltaY": "LV-新增-FS-PLATFORM-Y",
+        "return": "原踏步可逆，另可经维修台西侧地面返回。"
+      },
+      "acceptance": [
+        "登台可见泵架标记；双向踏步可逆且全程无强制跳落。"
+      ],
+      "act": 2
+    },
+    {
+      "id": "pump_test",
+      "family": "pacing",
+      "verb": "试泵",
+      "cost": {
+        "type": "noise",
+        "ref": "LV-新增-FS-PUMP-PULSE",
+        "value": 1,
+        "unit": "次可听事件/完成一次试验"
+      },
+      "read": {
+        "channel": "sound",
+        "telegraph": "接台后试验表指针响应，保压与回落用两种指针轨迹区分；声源挂在试验台。",
+        "noUi": true
+      },
+      "space": {
+        "node": "bench",
+        "prefab": "IN-04"
+      },
+      "params": {
+        "variation": "每局恰一合格泵；先后顺序不影响检测；中止不生成合格货，已产生的声音不会被撤回。",
+        "failure": "坏泵淘汰当前序号，可测试另一台或改交情报。"
+      },
+      "acceptance": [
+        "中止或坏泵不签发合格标记；一轮完整的合格读数只签发绑定实例的标记一次，重复读表不增产。"
+      ],
+      "act": 2
+    },
+    {
+      "id": "cart_choice",
+      "family": "cover",
+      "verb": "制动或装运",
+      "cost": {
+        "type": "exposure",
+        "ref": "LV-新增-FS-BRAKE-S",
+        "value": 2,
+        "unit": "s"
+      },
+      "read": {
+        "channel": "silhouette",
+        "telegraph": "带轮水带架的钢端板能挡，卷带缝隙通透；松闸后端板与车一起移动。",
+        "noUi": true
+      },
+      "space": {
+        "node": "cart",
+        "prefab": "MV-02"
+      },
+      "params": {
+        "heightM": 0.98,
+        "heightRef": "LV-新增-FS-CART-SHIELD-H",
+        "cargoHeightRef": "LV-新增-FS-CART-LOAD-H",
+        "dropCargo": "停驻可松手；重货禁止进入背包、安全箱。"
+      },
+      "acceptance": [
+        "制动插销与车速联动，移动、停驻端板都与射线碰撞一致；货物不重复装载。"
+      ],
+      "act": 2
+    },
+    {
+      "id": "south_shutter",
+      "family": "gate",
+      "verb": "升门",
+      "cost": {
+        "type": "noise",
+        "ref": "LV-新增-FS-SHUTTER-SOUND",
+        "value": 1,
+        "unit": "次开启声事件/启动"
+      },
+      "read": {
+        "channel": "door_state",
+        "telegraph": "分段卷帘、侧框手链和接驳车货台指示搬运路径。人在门内外均可操作。",
+        "noUi": true
+      },
+      "space": {
+        "node": "bay",
+        "prefab": "DR-08"
+      },
+      "params": {
+        "halfGapRef": "LV-新增-FS-SHUTTER-HALF-H",
+        "fullGapRef": "LV-新增-FS-SHUTTER-FULL-H",
+        "pedestrian": "门旁独立人员通口始终双向，半开时仅蹲姿过卷门。宽门全开后可推车。",
+        "noise": "开始上升发一次声事件；停住可续，不删除既有噪声。",
+        "dock": "对应南侧接驳货台正对这一扇门。只有该扇全开的机械状态才能放下装载桥并登记卸货。其他车门按真实净空通行，长路绕行仍能抵达停车区，但不能越过收起的装载桥结算。"
+      },
+      "acceptance": [
+        "半开时蹲姿可过且载货推车被挡；全开后载货推车可过，门下占位时不得压住角色或货物。",
+        "玩家经其他贯通门推货到南坪时能走到接驳车；装载桥收起时无法卸货，开启指定卷门并放下桥后允许卸货。"
+      ],
+      "act": 3
+    },
+    {
+      "id": "extract_order",
+      "family": "extraction",
+      "verb": "交付并步行撤离",
+      "cost": {
+        "type": "irreversibility",
+        "ref": "LV-新增-FS-HANDOFF",
+        "value": 1,
+        "unit": "份带唯一货号的寄存单"
+      },
+      "read": {
+        "channel": "silhouette",
+        "telegraph": "南侧接驳货台有与推车相齐的挡轮槽，空位与已装状态可辨；北侧足迹和出口方向标指向步道。",
+        "noUi": true
+      },
+      "space": {
+        "node": "handover",
+        "prefab": "SY-03"
+      },
+      "params": {
+        "outcome": "南侧交货仅待结算，玩家徒步从街区已配置的候选点离区才确认；北侧可交侦察。回营实际安装合格泵才记工程贡献。",
+        "failure": "失去货物仍能走侦察线；死亡服从 GDD §3.2；关键物和凭据不进安全箱。"
+      },
+      "acceptance": [
+        "同一契约货号的接驳、撤离、安装各至多入账一次；未撤离无法取得工程贡献。"
+      ],
+      "act": 3
+    }
+  ],
+  "graph": {
+    "entry": "east",
+    "focus": "bench",
+    "nodes": [
+      {
+        "id": "east",
+        "label": "东侧入口分流"
+      },
+      {
+        "id": "quiet",
+        "label": "前厅至员工廊"
+      },
+      {
+        "id": "breach",
+        "label": "厨房起居室断墙"
+      },
+      {
+        "id": "bench",
+        "label": "维修间泵台"
+      },
+      {
+        "id": "landing",
+        "label": "侧向人员门"
+      },
+      {
+        "id": "platform",
+        "label": "维修平台"
+      },
+      {
+        "id": "apron",
+        "label": "南侧出车坪"
+      },
+      {
+        "id": "bay",
+        "label": "车库步行带"
+      },
+      {
+        "id": "cart",
+        "label": "推车泊位"
+      },
+      {
+        "id": "handover",
+        "label": "南侧接驳货台"
+      },
+      {
+        "id": "north",
+        "label": "北侧人员门"
+      },
+      {
+        "id": "alleyN",
+        "label": "北向步行街段"
+      },
+      {
+        "id": "alleyS",
+        "label": "南向步行街段"
+      },
+      {
+        "id": "exitN",
+        "label": "街区撤离候选北"
+      },
+      {
+        "id": "exitS",
+        "label": "街区撤离候选南"
+      }
+    ],
+    "edges": [
+      {
+        "a": "east",
+        "b": "quiet",
+        "lengthM": 10,
+        "kind": "walk",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-east-quiet"
+      },
+      {
+        "a": "quiet",
+        "b": "breach",
+        "lengthM": 20,
+        "kind": "walk",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-quiet-breach"
+      },
+      {
+        "a": "breach",
+        "b": "bench",
+        "lengthM": 16,
+        "kind": "walk",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-breach-bench"
+      },
+      {
+        "a": "east",
+        "b": "landing",
+        "lengthM": 12,
+        "kind": "walk",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-east-landing"
+      },
+      {
+        "a": "landing",
+        "b": "platform",
+        "lengthM": 24,
+        "kind": "step",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-landing-platform"
+      },
+      {
+        "a": "platform",
+        "b": "bench",
+        "lengthM": 4,
+        "kind": "step",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-platform-bench"
+      },
+      {
+        "a": "east",
+        "b": "apron",
+        "lengthM": 24,
+        "kind": "walk",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-east-apron"
+      },
+      {
+        "a": "apron",
+        "b": "bay",
+        "lengthM": 10,
+        "kind": "walk",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-apron-bay",
+        "movement": "人员和空/满载推车均可经另一车道抵达外坪；其他径路无需经过指定装载桥。"
+      },
+      {
+        "a": "bay",
+        "b": "bench",
+        "lengthM": 20,
+        "kind": "walk",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-bay-bench"
+      },
+      {
+        "a": "bench",
+        "b": "cart",
+        "lengthM": 5,
+        "kind": "walk",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-bench-cart"
+      },
+      {
+        "a": "cart",
+        "b": "bay",
+        "lengthM": 14,
+        "kind": "walk",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-cart-bay"
+      },
+      {
+        "a": "bay",
+        "b": "handover",
+        "lengthM": 14,
+        "kind": "gate",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-bay-handover",
+        "pedestrianCondition": "门旁独立人员通口永久双向，门态只限制货运接驳。"
+      },
+      {
+        "a": "handover",
+        "b": "apron",
+        "lengthM": 8,
+        "kind": "walk",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-handover-apron"
+      },
+      {
+        "a": "breach",
+        "b": "north",
+        "lengthM": 9,
+        "kind": "step",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-breach-north"
+      },
+      {
+        "a": "north",
+        "b": "quiet",
+        "lengthM": 26,
+        "kind": "walk",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-north-quiet"
+      },
+      {
+        "a": "north",
+        "b": "alleyN",
+        "lengthM": 80,
+        "kind": "walk",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-north-alleyN"
+      },
+      {
+        "a": "alleyN",
+        "b": "exitN",
+        "lengthM": 80,
+        "kind": "walk",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-alleyN-exitN"
+      },
+      {
+        "a": "handover",
+        "b": "alleyS",
+        "lengthM": 90,
+        "kind": "walk",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-handover-alleyS"
+      },
+      {
+        "a": "alleyS",
+        "b": "exitS",
+        "lengthM": 80,
+        "kind": "walk",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-alleyS-exitS"
+      },
+      {
+        "a": "alleyS",
+        "b": "alleyN",
+        "lengthM": 22,
+        "kind": "walk",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-alleyS-alleyN"
+      },
+      {
+        "a": "exitN",
+        "b": "exitS",
+        "lengthM": 30,
+        "kind": "walk",
+        "mode": "V0",
+        "bidirectional": true,
+        "lengthRef": "LV-新增-FS-EDGE-exitN-exitS"
+      }
+    ],
+    "routes": [
+      {
+        "type": "stealth",
+        "nodes": [
+          "east",
+          "quiet",
+          "breach",
+          "bench"
+        ]
+      },
+      {
+        "type": "vertical",
+        "nodes": [
+          "east",
+          "landing",
+          "platform",
+          "bench"
+        ]
+      },
+      {
+        "type": "retreat",
+        "nodes": [
+          "east",
+          "apron",
+          "bay",
+          "bench"
+        ]
+      }
+    ],
+    "hasBackgate": false,
+    "edgeDisjointPaths": 3,
+    "drops": [],
+    "vantages": [
+      {
+        "node": "platform",
+        "overview": "从台沿辨认泵架和两条出口标志。",
+        "observe": "看表灯，辨推车空泊或制动态。",
+        "plan": "选择取情报或验泵交货。",
+        "execute": "原踏步下到维修工位或返回。",
+        "reward": "获得正确的短期目标和撤离方向。"
+      }
+    ],
+    "focalSight": "east 的侧向内窗、landing 的平台开口、apron 的卷门侧观察带各需有一向看到泵架识别标记；站号与纸质编号可从东厅重复确认。初次门厅防伤过渡覆盖到分流点，观察窗保持无穿透。"
+  },
+  "cover": [
+    {
+      "id": "cartShield",
+      "prefab": "MV-02",
+      "heightM": 0.98,
+      "retreatNodes": [
+        "bay",
+        "bench"
+      ],
+      "heightRef": "LV-新增-FS-CART-SHIELD-H"
+    },
+    {
+      "id": "breachStub",
+      "prefab": "CB-01",
+      "heightM": 1,
+      "retreatNodes": [
+        "quiet",
+        "north"
+      ],
+      "heightRef": "LV-新增-FS-COVER-H"
+    },
+    {
+      "id": "lobbyShieldA",
+      "prefab": "CB-01",
+      "heightM": 1,
+      "retreatNodes": [
+        "quiet",
+        "apron"
+      ],
+      "heightRef": "LV-新增-FS-COVER-H"
+    },
+    {
+      "id": "lobbyShieldB",
+      "prefab": "CB-01",
+      "heightM": 1,
+      "retreatNodes": [
+        "quiet",
+        "landing"
+      ],
+      "heightRef": "LV-新增-FS-COVER-H"
+    },
+    {
+      "id": "lobbyShieldC",
+      "prefab": "CB-01",
+      "heightM": 1,
+      "retreatNodes": [
+        "quiet",
+        "landing"
+      ],
+      "heightRef": "LV-新增-FS-COVER-H"
+    },
+    {
+      "id": "lobbyShieldD",
+      "prefab": "CB-01",
+      "heightM": 1,
+      "retreatNodes": [
+        "quiet",
+        "apron"
+      ],
+      "heightRef": "LV-新增-FS-COVER-H"
+    }
+  ],
+  "sightline": {
+    "route": [
+      "east",
+      "quiet",
+      "breach",
+      "bench"
+    ],
+    "samplesM": [
+      0,
+      10,
+      20,
+      30,
+      38,
+      46
+    ],
+    "features": [
+      "门斗转折",
+      "接待翼墙",
+      "员工廊回折",
+      "断墙残边",
+      "维护通道折角",
+      "试验台终点"
+    ],
+    "evidence": "E3：沿规划路径的遮挡位置，待最终相机采样。",
+    "samplesRef": "LV-新增-FS-SIGHT-SAMPLES"
+  },
+  "extraction": [
+    {
+      "id": "north_walk",
+      "nodes": [
+        "north",
+        "alleyN",
+        "exitN"
+      ],
+      "mode": "V0"
+    },
+    {
+      "id": "south_walk",
+      "nodes": [
+        "handover",
+        "alleyS",
+        "exitS"
+      ],
+      "mode": "V0"
+    }
+  ],
+  "breadcrumbs": {
+    "clues": [
+      {
+        "id": "sheet",
+        "node": "quiet",
+        "next": "tracks",
+        "target": "bay",
+        "spatial": "纸条压印的车轮纹呼应车库轮迹"
+      },
+      {
+        "id": "tracks",
+        "node": "bay",
+        "next": "tags",
+        "target": "bench",
+        "spatial": "轮迹终止在双泵托架"
+      },
+      {
+        "id": "tags",
+        "node": "bench",
+        "next": null,
+        "target": "bench",
+        "spatial": "架签轮廓与台座读表接口配对"
+      }
+    ],
+    "rejoin": "bench",
+    "order": "线索相互可见可寻，任意持有顺序运行集合并集；只在泵架复核后生成位置情报。"
+  },
+  "budget": {
+    "tri": 210000,
+    "interactables": 16,
+    "vehicles": 3,
+    "textureGB": 0.65,
+    "buildingMB": 6,
+    "streamUnit": "一个所属街区；维修工坊门厅触发室内资产预取。",
+    "status": "E3设计分配；运行性能未测",
+    "refs": {
+      "tri": "LV-新增-FS-BUDGET-TRI",
+      "interactables": "LV-新增-FS-BUDGET-INTERACTABLES",
+      "vehicles": "LV-新增-FS-BUDGET-VEHICLES",
+      "textureGB": "LV-新增-FS-BUDGET-TEXTUREGB",
+      "buildingMB": "LV-新增-FS-BUDGET-BUILDINGMB"
+    }
+  },
+  "evidence": {
+    "e1": [
+      "GDD §§2–7/10（项目需求原文）；Hill 博物馆演讲（无提示盲测方法）"
+    ],
+    "e2": [
+      "手册 §8.3 对空间读法的观测归纳；Lansing 双贯通站与西雅图洁污功能关系仅作建筑参考"
+    ],
+    "e3": [
+      "所有本关节奏、米数、预算和反馈强度皆属设计值，非运行测量。",
+      "REA 1.80 为身体，当前站姿胶囊以 CC-STAND-H 为准。无匍匐、无车底路线。"
+    ]
+  },
+  "stage": {
+    "M0": "立项六问见 inception",
+    "M1": "三层目标见 goals",
+    "M2": "节奏目标见 arc",
+    "M3": "机制契约见 mechanisms",
+    "M4": "仅交设计规格。等待真实角色、相机、推车和五分钟走位。",
+    "M5": "未进行真人测试、声场测试、联网污染边界测试。",
+    "M6": "布局未冻结，预算是分配值。"
+  },
+  "constants": {
+    "CC-CAP-RADIUS": {
+      "value": 0.32,
+      "evidence": "E3",
+      "calibration": "最终胶囊宽度复核",
+      "source": "00 §4"
+    },
+    "CC-STAND-H": {
+      "value": 1.78,
+      "evidence": "E3",
+      "calibration": "最终站姿胶囊实测",
+      "source": "00 §4"
+    },
+    "CC-CROUCH-H": {
+      "value": 1.05,
+      "evidence": "E3",
+      "calibration": "最终蹲姿胶囊实测",
+      "source": "00 §4"
+    },
+    "CC-STEP-UP": {
+      "value": 0.45,
+      "evidence": "E3",
+      "calibration": "动作控制器核验",
+      "source": "00 §4"
+    },
+    "LV-CLEAR-W": {
+      "value": 1.2,
+      "evidence": "E3",
+      "calibration": "最终胶囊与通行口",
+      "source": "手册附录 A"
+    },
+    "LV-COVER-LOW": {
+      "value": [
+        0.9,
+        1.1
+      ],
+      "evidence": "E3",
+      "calibration": "最终模型高度分布",
+      "source": "手册附录 A"
+    },
+    "LV-COVER-HIGH": {
+      "value": [
+        1.6,
+        1.85
+      ],
+      "evidence": "E3",
+      "calibration": "最终模型高度分布",
+      "source": "手册附录 A"
+    },
+    "LV-COVER-GAP": {
+      "value": [
+        1.1,
+        1.6
+      ],
+      "evidence": "E3",
+      "calibration": "开区间；玩家分类测试",
+      "source": "手册附录 A"
+    },
+    "LV-DROP-RETURN": {
+      "value": 40,
+      "evidence": "E3",
+      "calibration": "回程图路径及实走",
+      "source": "手册附录 A"
+    },
+    "LV-SIGHT-BREAK": {
+      "value": [
+        8,
+        12
+      ],
+      "evidence": "E3",
+      "calibration": "最终相机视线样条采样",
+      "source": "手册附录 A"
+    },
+    "LV-WALK-LAST": {
+      "value": [
+        150,
+        200
+      ],
+      "evidence": "E3",
+      "calibration": "路线中心线以及车辆可达层",
+      "source": "手册附录 A"
+    },
+    "LV-EMPTY-CROUCH": {
+      "value": 0.4,
+      "evidence": "E3",
+      "calibration": "十二人无提示观察",
+      "source": "手册附录 A"
+    },
+    "LV-BLIND-NAV": {
+      "value": 0.8,
+      "evidence": "E3",
+      "calibration": "首轮五人盲测",
+      "source": "手册附录 A"
+    },
+    "LV-新增-FS-READ-S": {
+      "value": 5,
+      "evidence": "E3",
+      "calibration": "记录交互开始/结束、首次盲测与取消反馈后校准",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-CRANK-TOOL": {
+      "value": 1,
+      "evidence": "E3",
+      "calibration": "记录交互开始/结束、首次盲测与取消反馈后校准",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-CAUTION-S": {
+      "value": 5,
+      "evidence": "E3",
+      "calibration": "记录交互开始/结束、首次盲测与取消反馈后校准",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-QUIET-DET-S": {
+      "value": 10,
+      "evidence": "E3",
+      "calibration": "记录交互开始/结束、首次盲测与取消反馈后校准",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-BREACH-W": {
+      "value": 2.4,
+      "evidence": "E3",
+      "calibration": "测碎块边缘之间的有效余量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-OBSERVE-S": {
+      "value": 3,
+      "evidence": "E3",
+      "calibration": "记录交互开始/结束、首次盲测与取消反馈后校准",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-PLATFORM-Y": {
+      "value": 0.84,
+      "evidence": "E3",
+      "calibration": "按最终角色、相机和室内层高实走",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-PUMP-PULSE": {
+      "value": 1,
+      "evidence": "E3",
+      "calibration": "记录交互开始/结束、首次盲测与取消反馈后校准",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-BRAKE-S": {
+      "value": 2,
+      "evidence": "E3",
+      "calibration": "记录交互开始/结束、首次盲测与取消反馈后校准",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-CART-SHIELD-H": {
+      "value": 0.98,
+      "evidence": "E3",
+      "calibration": "测钢端板包围盒、蹲姿探线和双面碰撞",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-CART-LOAD-H": {
+      "value": 1.5,
+      "evidence": "E3",
+      "calibration": "总轮廓和满载过门测试，货物不承诺遮挡",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-SHUTTER-SOUND": {
+      "value": 1,
+      "evidence": "E3",
+      "calibration": "记录交互开始/结束、首次盲测与取消反馈后校准",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-SHUTTER-HALF-H": {
+      "value": 1.25,
+      "evidence": "E3",
+      "calibration": "测蹲姿通过及重载拒绝",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-SHUTTER-FULL-H": {
+      "value": 4.5,
+      "evidence": "E3",
+      "calibration": "以车辆最大附件和载货过门复核",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-HANDOFF": {
+      "value": 1,
+      "evidence": "E3",
+      "calibration": "记录交互开始/结束、首次盲测与取消反馈后校准",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-east-quiet": {
+      "value": 10,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-quiet-breach": {
+      "value": 20,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-breach-bench": {
+      "value": 16,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-east-landing": {
+      "value": 12,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-landing-platform": {
+      "value": 24,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-platform-bench": {
+      "value": 4,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-east-apron": {
+      "value": 24,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-apron-bay": {
+      "value": 10,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-bay-bench": {
+      "value": 20,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-bench-cart": {
+      "value": 5,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-cart-bay": {
+      "value": 14,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-bay-handover": {
+      "value": 14,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-handover-apron": {
+      "value": 8,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-breach-north": {
+      "value": 9,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-north-quiet": {
+      "value": 26,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-north-alleyN": {
+      "value": 80,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-alleyN-exitN": {
+      "value": 80,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-handover-alleyS": {
+      "value": 90,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-alleyS-exitS": {
+      "value": 80,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-alleyS-alleyN": {
+      "value": 22,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-EDGE-exitN-exitS": {
+      "value": 30,
+      "evidence": "E3",
+      "calibration": "设计折线米数；M4 用走位样条复量",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-COVER-H": {
+      "value": 1,
+      "evidence": "E3",
+      "calibration": "从底面量到实心挡面上沿，测试两侧遮挡一致",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-ACT-1-TEMPO": {
+      "value": 0.24,
+      "evidence": "E3",
+      "calibration": "盲测决策停顿与紧张度自述",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-ACT-1-DURATION": {
+      "value": [
+        120,
+        240
+      ],
+      "evidence": "E3",
+      "calibration": "完整合同实测；五分钟走位仅测移动",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-ACT-2-TEMPO": {
+      "value": 0.6,
+      "evidence": "E3",
+      "calibration": "盲测决策停顿与紧张度自述",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-ACT-2-DURATION": {
+      "value": [
+        360,
+        480
+      ],
+      "evidence": "E3",
+      "calibration": "完整合同实测；五分钟走位仅测移动",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-ACT-3-TEMPO": {
+      "value": 0.85,
+      "evidence": "E3",
+      "calibration": "盲测决策停顿与紧张度自述",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-ACT-3-DURATION": {
+      "value": [
+        420,
+        480
+      ],
+      "evidence": "E3",
+      "calibration": "完整合同实测；五分钟走位仅测移动",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-SAFE-AREA": {
+      "value": 160,
+      "evidence": "E3",
+      "calibration": "初始外廊与门厅连续保护区平面求积",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-SAFE-GROUPS": {
+      "value": 4,
+      "evidence": "E3",
+      "calibration": "在保护区内按视线遮挡分组；测量每200平方米4–6簇",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-WALK-SPEED": {
+      "value": 1.6,
+      "evidence": "E3",
+      "calibration": "最终负重角色走表；只预测设计路径返回时间。",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-RESOLUTION-TEMPO": {
+      "value": 0.3,
+      "evidence": "E3",
+      "calibration": "撤离或放弃以后的回落段评估",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-BUDGET-TRI": {
+      "value": 210000,
+      "evidence": "E3",
+      "calibration": "冻结前量取最坏同屏、驻留与单资产峰值",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-BUDGET-INTERACTABLES": {
+      "value": 16,
+      "evidence": "E3",
+      "calibration": "冻结前量取最坏同屏、驻留与单资产峰值",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-BUDGET-VEHICLES": {
+      "value": 3,
+      "evidence": "E3",
+      "calibration": "冻结前量取最坏同屏、驻留与单资产峰值",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-BUDGET-TEXTUREGB": {
+      "value": 0.65,
+      "evidence": "E3",
+      "calibration": "冻结前量取最坏同屏、驻留与单资产峰值",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-BUDGET-BUILDINGMB": {
+      "value": 6,
+      "evidence": "E3",
+      "calibration": "冻结前量取最坏同屏、驻留与单资产峰值",
+      "source": "消防站设计登记"
+    },
+    "LV-新增-FS-SIGHT-SAMPLES": {
+      "value": [
+        0,
+        10,
+        20,
+        30,
+        38,
+        46
+      ],
+      "evidence": "E3",
+      "calibration": "M4用主线相机和遮挡物同步采样",
+      "source": "消防站设计登记"
+    }
+  }
+}

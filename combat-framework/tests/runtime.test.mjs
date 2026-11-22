@@ -1,4 +1,5 @@
 import {predictTrajectory} from '../src/anim/trajectory.mjs';
+import {movementInput} from '../src/input/buffer.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -101,4 +102,41 @@ test('look-driven player and rear camera turn together without movement or aim',
 
 test('rear-facing look input cannot bypass reverse sprint braking',()=>{
  const a=new World({enemyCount:0,obstacles:[]}).player;a.vel=[0,0,5.6];a.yaw=0;motor(a,{z:-1,yaw:0,lookDriven:true,sprint:true},1/60,[]);assert.equal(a.sprintBraking,true);assert.ok(a.vel[2]>3.35);assert.equal(a.yaw,0);
+});
+
+test('flat practice turns preserve the walking cycle through diagonal reversals',()=>{
+  const world=new World({enemyCount:0,obstacles:[],flatGroundPractice:true});
+  const p=world.player;
+  world.animationClips=new Map([['Idle_Loop',{duration:2.5}],['Walk_Loop',{duration:4/3}]]);
+  p.matcher={};
+  p.prepareLocomotion=dt=>world.selectLocomotion(p,dt);
+  let last=0;
+  for(const [x,z] of [[1,1],[-1,1],[1,-1],[-1,-1],[1,1]]){
+    for(let i=0;i<40;i++){
+      world.update({x,z,walk:true,freeMove:true},1/60);
+      assert.equal(p.clip,'Walk_Loop');
+      const advance=(p.clipTime-last+4/3)%(4/3);
+      assert.ok(advance>0 && advance<=1.12/60+1e-8);
+      last=p.clipTime;
+    }
+  }
+  for(let i=0;i<45;i++)world.update({walk:true},1/60);
+  assert.equal(p.clip,'Idle_Loop');
+});
+
+test('rear movement stays actor-relative across camera angles and postures',()=>{
+  for(const posture of ['stand','crouch','prone']) for(const side of [-1,0,1]) for(const mode of [{walk:true},{sprint:true},{aim:true}]){
+    const a=new World({enemyCount:0,obstacles:[]}).player;
+    a.posture=posture;
+    const facing=a.yaw=1.2, start=[...a.pos];
+    for(let step=0;step<60;step++){
+      const yaw=step*.07, move=movementInput(-1,side,yaw,a.yaw);
+      motor(a,{...move,...mode,yaw,lookDriven:!!mode.aim},1/60,[]);
+      assert.equal(a.yaw,facing);
+    }
+    const dx=a.pos[0]-start[0],dz=a.pos[2]-start[2];
+    assert.ok(dx*Math.sin(facing)+dz*Math.cos(facing)<-.1);
+    const lateral=-dx*Math.cos(facing)+dz*Math.sin(facing);
+    assert.ok(side ? side*lateral>.1 : Math.abs(lateral)<1e-6);
+  }
 });

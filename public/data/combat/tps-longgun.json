@@ -1,0 +1,79 @@
+[
+  {
+    "id": "TPS_LongGun_Idle",
+    "source": "BigLocomotionPackV04/Animations/M4A1/Aim/anim_m4a1_aim_idle.uasset",
+    "frames": 166,
+    "loop": true,
+    "duration": 5.5
+  },
+  {
+    "id": "TPS_LongGun_Walk",
+    "source": "BigLocomotionPackV04/Animations/M4A1/Aim/anim_m4a1_aim_walk_fwd_loop.uasset",
+    "frames": 36,
+    "loop": true,
+    "duration": 1.1666666666666667
+  },
+  {
+    "id": "TPS_LongGun_Run",
+    "source": "BigLocomotionPackV04/Animations/M4A1/Jog/anim_m4a1_jog_fwd_loop.uasset",
+    "frames": 21,
+    "loop": true,
+    "duration": 0.6666666666666666
+  },
+  {
+    "id": "TPS_LongGun_Aim_Run",
+    "source": "BigLocomotionPackV04/Animations/M4A1/Jog/anim_m4a1_jog_fwd_loop.uasset",
+    "frames": 21,
+    "loop": true,
+    "duration": 0.6666666666666666
+  },
+  {
+    "id": "TPS_LongGun_Strafe_Forward",
+    "source": "BigLocomotionPackV04/Animations/M4A1/Aim/anim_m4a1_aim_walk_fwd_loop.uasset",
+    "frames": 36,
+    "loop": true,
+    "duration": 1.1666666666666667
+  },
+  {
+    "id": "TPS_LongGun_Strafe_Back",
+    "source": "BigLocomotionPackV04/Animations/M4A1/Aim/anim_m4a1_aim_walk_bwd_loop.uasset",
+    "frames": 36,
+    "loop": true,
+    "duration": 1.1666666666666667
+  },
+  {
+    "id": "TPS_LongGun_Strafe_Left",
+    "source": "BigLocomotionPackV04/Animations/M4A1/Aim/anim_m4a1_aim_walk_left_loop.uasset",
+    "frames": 33,
+    "loop": true,
+    "duration": 1.0666666666666667
+  },
+  {
+    "id": "TPS_LongGun_Strafe_Right",
+    "source": "BigLocomotionPackV04/Animations/M4A1/Aim/anim_m4a1_aim_walk_right_loop.uasset",
+    "frames": 33,
+    "loop": true,
+    "duration": 1.0666666666666667
+  },
+  {
+    "id": "TPS_LongGun_Aim_Up",
+    "source": "BigLocomotionPackV04/Animations/M4A1/AimOffset/anim_m4a1_front_up.uasset",
+    "frames": 2,
+    "loop": false,
+    "duration": 0.03333333333333333
+  },
+  {
+    "id": "TPS_LongGun_Aim_Down",
+    "source": "BigLocomotionPackV04/Animations/M4A1/AimOffset/anim_m4a1_front_down.uasset",
+    "frames": 2,
+    "loop": false,
+    "duration": 0.03333333333333333
+  },
+  {
+    "id": "TPS_LongGun_Aim_Center",
+    "source": "BigLocomotionPackV04/Animations/M4A1/AimOffset/anim_m4a1_front_center.uasset",
+    "frames": 2,
+    "loop": false,
+    "duration": 0.03333333333333333
+  }
+]

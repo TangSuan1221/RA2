@@ -1,0 +1,51 @@
+[
+  {
+    "id": "Unv_Rifle_Idle",
+    "source": "BigLocomotionPackV04/Animations/M4A1/StandIdle/anim_m4a1_stand_idle.uasset",
+    "frames": 166,
+    "loop": true,
+    "duration": 5.5
+  },
+  {
+    "id": "Unv_Rifle_Walk",
+    "source": "BigLocomotionPackV04/Animations/M4A1/Walk/anim_m4a1_walk_fwd_loop.uasset",
+    "frames": 32,
+    "loop": true,
+    "duration": 1.0333333333333334
+  },
+  {
+    "id": "Unv_Rifle_Run",
+    "source": "BigLocomotionPackV04/Animations/M4A1/Jog/anim_m4a1_jog_fwd_loop.uasset",
+    "frames": 21,
+    "loop": true,
+    "duration": 0.6666666666666666
+  },
+  {
+    "id": "Unv_Rifle_CrouchWalk",
+    "source": "BigLocomotionPackV04/Animations/M4A1/Crouch/anim_m4a1_crouch_fwd_loop.uasset",
+    "frames": 31,
+    "loop": true,
+    "duration": 1
+  },
+  {
+    "id": "Unv_Rifle_Fire",
+    "source": "BigLocomotionPackV04/Animations/M4A1/Aim/anim_m4a1_aim_fire.uasset",
+    "frames": 7,
+    "loop": false,
+    "duration": 0.2
+  },
+  {
+    "id": "Unv_Rifle_Hold",
+    "source": "BigLocomotionPackV04/Animations/M4A1/Aim/anim_m4a1_aim_idle.uasset",
+    "frames": 166,
+    "loop": false,
+    "duration": 5.5
+  },
+  {
+    "id": "Unv_Rifle_Reload",
+    "loop": false,
+    "source": "BigLocomotionPackV04/Animations/M4A1/Reload/anim_m4a1_aim_reload.uasset",
+    "frames": 71,
+    "duration": 2.3333333333333335
+  }
+]

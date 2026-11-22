@@ -32,3 +32,16 @@ two trajectory outliers and adjacent samples excluded from the movement database
 Turn180_L / Turn180_R: Quaternius, Universal Animation Library 2, CC0 1.0.
 Public distribution: https://kinemiq.app/wp-content/kinemiq-app/library/clips/turn180_l.glb and https://kinemiq.app/wp-content/kinemiq-app/library/clips/turn180_r.glb
 Changes: retargeted to 65-bone rig; pelvis yaw extracted into per-frame heading metadata; source frame timing preserved.
+
+Current Pistol_*, TPS_LongGun_* and Unv_Rifle_* clips are retargeted from the supplied BigLocomotionPackV04 (Pistol and M4A1). Per-clip source paths are recorded in the animation manifests.
+
+Previous TPS_LongGun_* animations adapted from Godot TPS Demo by Juan Linietsky and Fernando Miguel Calabro (2018).
+Source: https://github.com/godotengine/tps-demo/blob/master/player/model/player.glb
+CC BY 3.0: https://creativecommons.org/licenses/by/3.0/
+Changes: Blender retarget to the project character, 30 Hz sampling, in-place horizontal motion, runtime ANIM encoding.
+
+Previous Unv_Rifle_* clips: derived from Unvanquished human male by Angelo and the Unvanquished team.
+Those previous adapted animation files are distributed under CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0/
+Source: https://github.com/UnvanquishedAssets/res-players_src.dpkdir/tree/bbf9e8f276b3cf3f4b3fab217f2c947d2dd25515/models/players/human_male
+Credits: https://wiki.unvanquished.net/wiki/Credits/Media
+Changes: Blender retarget to 65 bones, rotation basis conversion, removal of horizontal displacement, 30 Hz sampling, ANIM encoding.

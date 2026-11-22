@@ -1,0 +1,27 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>动作验收台</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:15px system-ui,sans-serif;color:#e6ece9;background:#182124}main{display:grid;grid-template-columns:clamp(250px,25vw,370px) 1fr;height:100dvh}aside{display:flex;flex-direction:column;gap:12px;padding:24px;background:#202a2c;min-height:0}h1{font-size:25px;margin:0 0 6px}button,select,input{font:inherit;color:inherit;background:#303d40;border:1px solid #526366;border-radius:5px;padding:7px}button{cursor:pointer}input[type=range]{accent-color:#91d7b9}#list{flex:1;min-height:50px;width:100%;padding:0}option{padding:6px}option:checked,button:hover{background:#446359}small,a{color:#b6c6c4}section{min-width:0;display:grid;grid-template-rows:minmax(0,1fr) auto}#view{position:relative;min-height:0}canvas{display:block;width:100%;height:100%}#info{position:absolute;left:20px;top:12px;color:#fff;background:#263032c9;padding:7px 12px;border-radius:5px;pointer-events:none}footer{padding:14px 20px;background:#202a2c}#time{width:100%}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}output{font-variant-numeric:tabular-nums}@media(max-width:700px){main{grid-template-columns:1fr;grid-template-rows:30% 70%}aside{padding:8px;gap:4px;display:grid;grid-template-columns:1fr 1fr}h1,#list{grid-column:1/-1}aside small{display:none}#list{height:100%}}
+html,body{height:100%;overflow:hidden}body{display:flex;flex-direction:column}nav{display:flex;align-items:center;gap:8px;padding:8px 16px;background:#182124}nav button[aria-pressed="true"]{background:#a2d9bb;color:#14261f}main,#practice-pane{flex:1;min-height:0;height:auto}#practice-pane{border:0;width:100%}[hidden]{display:none!important}
+nav{flex:none}
+main{grid-template-rows:minmax(0,1fr);grid-template-columns:clamp(220px,24vw,330px) minmax(0,1fr)}
+aside{min-width:0;overflow:auto;padding:14px;gap:8px}
+#vault-settings{min-width:0;margin:0;padding:6px 8px}
+#vault-settings label{display:flex;align-items:center;justify-content:space-between;gap:4px}
+#vault-settings input{width:5em;padding:3px}
+section{min-height:0;overflow:hidden}
+#view{min-width:0;overflow:hidden}
+#view canvas{position:absolute;inset:0}
+footer{max-height:45dvh;overflow:auto;padding:8px 12px}
+.row{gap:5px}
+@media(max-width:700px){
+ main{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,32%) minmax(0,1fr)}
+ aside{grid-auto-rows:max-content;align-content:start}
+ #list{height:4.5em}
+ #vault-settings{grid-column:1/-1}
+}
+#camera-tools{margin-left:auto;position:relative;z-index:5}
+#camera-tools summary{cursor:pointer;padding:5px 10px}
+#camera-fields{position:absolute;right:0;top:100%;background:#202a2c;border:1px solid #526366;border-radius:6px;padding:12px;width:min(390px,92vw);max-height:72vh;overflow:auto}
+#camera-fields label{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(64px,1fr) 66px;gap:8px;align-items:center;margin-bottom:8px}
+#camera-fields input{min-width:0;width:100%;padding:4px}
+</style></head><body><nav aria-label="验收模式"><button id="preview-tab" aria-pressed="true">动作预览</button><button id="practice-tab" aria-pressed="false">玩家实操</button><details id="camera-tools" hidden><summary>第三人称镜头</summary><div id="camera-fields"></div></details></nav><main id="preview-pane"><aside><h1>动作验收台</h1><select id="library" aria-label="动作来源"><option value="game">工程角色</option><option value="accad">ACCAD 原始动捕</option></select><input id="query" type="search" placeholder="筛选动作 · 走 / 跑 / 换弹 / 名称" aria-label="筛选动作"><select id="list" size="12" aria-label="动作列表"></select><small id="count"></small><fieldset id="vault-settings" hidden><legend>翻窗设置</legend><label>相机距离（米）<input id="vault-distance" type="number" min=".8" max="10" step="any"></label><label>相机停留时间（秒）<input id="vault-hold" type="number" min="0" max="5" step="any"></label><label>翻越动作速度（倍）<input id="vault-speed" type="number"></label></fieldset><small>点击画面后 WASD 移动 · Q/E 降升 · Shift 加速 · 右键环视 · 左键环绕 · 滚轮缩放</small><small>动捕来源 <a href="https://accad.osu.edu/research/motion-lab/mocap-system-and-data">ACCAD / The Ohio State University</a> · <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>　<a href="/data/combat/CREDITS.txt">工程素材署名</a></small></aside><section><div id="view"><canvas></canvas><p id="info" role="status">正在载入动作库…</p></div><footer><fieldset id="execution-timing" hidden><legend>处决节奏（双方同步）</legend></fieldset><input id="time" type="range" min="0" max="1" step="1" value="0" aria-label="动作帧"><div class="row"><button id="prev">上一帧</button><button id="play">暂停</button><button id="next">下一帧</button><label>动作倍率 <input id="clip-slider" aria-label="动作倍率滑条" type="range" min="0.1" max="4" step="0.01"><input id="clip-rate" type="number" style="width:5em"></label><label>预览速度 <input id="rate" type="range" min="0.1" max="4" step="0.01" value="1"></label><input id="preview-number" aria-label="预览速度数值" style="width:5em" type="number" min="0.1" max="4" step="any" value="1"><label><input id="loop" type="checkbox" checked>循环</label><button id="reset">复位视角</button><output id="frame"></output></div></footer></section></main><iframe hidden id="practice-pane" title="玩家实操"></iframe><script type="module" src="/combat-framework/render/motion-lab.mjs"></script></body></html>

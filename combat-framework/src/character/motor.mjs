@@ -7,7 +7,7 @@ export const wrap=a=>Math.atan2(Math.sin(a),Math.cos(a));
 export function motor(a,input,dt,obstacles) {
   const desiredHeight=a.posture==='prone'?CFG.proneHeight:a.posture==='crouch'?CC.CROUCH_H:CC.STAND_H;
   if(a.heightTransition?.to!==desiredHeight)a.heightTransition={from:a.height,to:desiredHeight,elapsed:0};
-  const transition=a.heightTransition,nextElapsed=Math.min(CFG.postureSeconds,transition.elapsed+dt),height=transition.from+(transition.to-transition.from)*nextElapsed/CFG.postureSeconds;
+  const transition=a.heightTransition,nextElapsed=Math.min(CFG.postureSeconds,transition.elapsed+dt*(a.rateFor?.(a.posture==='stand'?'@stand':'@crouch')??1)),height=transition.from+(transition.to-transition.from)*nextElapsed/CFG.postureSeconds;
   if(height<a.height || fits(a.pos,a.radius,height,obstacles)){a.height=height;transition.elapsed=nextElapsed;}
   const slope=a.groundNormal?Math.acos(Math.max(-1,Math.min(1,a.groundNormal[1]))):0;
   const sliding=a.onSlope&&slope>CC.SLOPE_SLIDE*Math.PI/180;
@@ -26,7 +26,9 @@ export function motor(a,input,dt,obstacles) {
   if(source&&a.grounded&&a.state==='idle'&&a.posture!=='prone'&&!input.aim&&!sliding){
     const rate=a.matcher?.playRate??1,local=meta?.measuredRoot?integrateRoot(source,source.loop?a.clipTime-dt*rate:Math.max(0,a.clipTime-dt*rate),a.clipTime):null;
     let root=displacementDelta;
-    if(local){const frame=Math.min(meta.frames-1,Math.floor(a.clipTime*30)),heading=meta.headings?.[frame]??0,angle=a.yaw-heading,si=Math.sin(angle),co=Math.cos(angle),scale=a.modelScale??1;root=[scale*(local[0]*co+local[2]*si),displacementDelta[1],scale*(-local[0]*si+local[2]*co)];usedRoot=true;}
+    // With no movement request the motor owns braking. Feeding the outgoing
+    // walk clip back into velocity can otherwise sustain that clip indefinitely.
+    if(local && mag>0 && !input.freeMove && !input.backpedal){const frame=Math.min(meta.frames-1,Math.floor(a.clipTime*30)),heading=meta.headings?.[frame]??0,angle=a.yaw-heading,si=Math.sin(angle),co=Math.cos(angle),scale=a.modelScale??1;root=[scale*(local[0]*co+local[2]*si),displacementDelta[1],scale*(-local[0]*si+local[2]*co)];usedRoot=true;}
     a.rootHandoff??={weight:0};const motion=arbitrateRoot(a.rootHandoff,{speed:Math.hypot(a.vel[0],a.vel[2]),motorDelta:displacementDelta,rootDelta:root,dt});displacementDelta=motion.delta;a.rootMotionClamped=motion.clamped;
   }else {a.rootMotionClamped=false;}
   const blocked=moveCapsule(a,displacementDelta,obstacles,a.posture==='prone'?0:CC.STEP_UP);

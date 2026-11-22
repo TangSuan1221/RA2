@@ -1,0 +1,74 @@
+{
+  "front": {
+    "engine": "three.js r187",
+    "calls": "145",
+    "triangles": "23778",
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "frameMedianMs": 5.6,
+    "frameP95Ms": 5.7
+  },
+  "corner": {
+    "engine": "three.js r187",
+    "calls": "143",
+    "triangles": "23694",
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "frameMedianMs": 5.5,
+    "frameP95Ms": 5.7
+  },
+  "rooftop": {
+    "engine": "three.js r187",
+    "calls": "145",
+    "triangles": "23778",
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "frameMedianMs": 5.6,
+    "frameP95Ms": 5.7
+  },
+  "garage": {
+    "engine": "three.js r187",
+    "calls": "92",
+    "triangles": "22220",
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "frameMedianMs": 5.6,
+    "frameP95Ms": 5.7
+  },
+  "workshop": {
+    "engine": "three.js r187",
+    "calls": "135",
+    "triangles": "23472",
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "frameMedianMs": 5.6,
+    "frameP95Ms": 5.7
+  },
+  "quarters": {
+    "engine": "three.js r187",
+    "calls": "73",
+    "triangles": "16382",
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "frameMedianMs": 5.6,
+    "frameP95Ms": 5.7
+  },
+  "foyer": {
+    "engine": "three.js r187",
+    "calls": "133",
+    "triangles": "23368",
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "frameMedianMs": 5.5,
+    "frameP95Ms": 5.7
+  },
+  "passage": {
+    "engine": "three.js r187",
+    "calls": "92",
+    "triangles": "22018",
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "frameMedianMs": 5.6,
+    "frameP95Ms": 5.6
+  },
+  "transom": {
+    "engine": "three.js r187",
+    "calls": "85",
+    "triangles": "22470",
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 (0x00002F04) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "frameMedianMs": 5.6,
+    "frameP95Ms": 5.6
+  }
+}

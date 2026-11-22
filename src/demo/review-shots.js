@@ -14,6 +14,12 @@ export const reviewShots = {
   tunnel: [[775.98,1.68,1308.75],[775.05,2.10,1322.5],62],
   corridor: [[991,1.94,1289.9],[903,3.9,1281.3],43],
 };
+export const stationViews={
+  stationFront: [[429,3,1227],[429,4,1204],52],
+  stationRoof: [[450,44,1224],[428,9,1198],46],
+};
+
+
 
 
 

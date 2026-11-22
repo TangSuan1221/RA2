@@ -5,7 +5,9 @@ const snapshot=a=>({pos:[...a.pos],yaw:a.yaw,hp:a.hp,poise:a.poise,staggerUntil:
 export function beginExecutionPair(player,target,context,durationSeconds){
  if(!Number.isFinite(durationSeconds)||durationSeconds<=0)throw Error('Execution duration must be finite and positive');
  const eligibility=executionEligibility(player,target,context);if(!eligibility.ok)return eligibility;
- const start=context.step,end=start+Math.ceil(Math.max(durationSeconds,CB.EXEC_STAGGER_WINDOW_MS/1000)/DT),id=`${player.id}:execution:${start}`,pair={id,attackerId:player.id,targetId:target.id,start,end,snapshots:{attacker:snapshot(player),target:snapshot(target)}};
+ const anchor=target.pos.map((v,i)=>v-(i===0?Math.sin(target.yaw):i===2?Math.cos(target.yaw):0)*(context.pairSpacing??.39));
+ if(eligibility.stealth&&context.clearPath&&!context.clearPath(anchor))return {ok:false,reason:'blocked'};
+ const start=context.step,end=start+Math.ceil(Math.max(eligibility.stealth?(context.pairedDuration??durationSeconds):durationSeconds,CB.EXEC_STAGGER_WINDOW_MS/1000)/DT),id=`${player.id}:execution:${start}`,pair={stealth:eligibility.stealth,anchor,yaw:target.yaw,id,attackerId:player.id,targetId:target.id,start,end,snapshots:{attacker:snapshot(player),target:snapshot(target)}};
  for(const [a,b]of [[player,target],[target,player]]){a.state='locked';a.execLock={partnerId:b.id,untilStep:end,sourceActionId:id};a.busyUntil=end;a.attack=null;a.vel=[0,0,0];a.knockback=[0,0,0];a.upperClip=null;}
  return {ok:true,pair};
 }
@@ -28,5 +30,11 @@ export function updateExecutionPair(pair,player,target,step,{anchorError=0}={}){
  else if(step<(player.stunUntil??0))reason='stun';
  else if(Math.hypot(player.pos[0]-target.pos[0],player.pos[2]-target.pos[2])>CB.EXEC_BREAK_DIST||anchorError>CB.EXEC_ANCHOR_TOL)reason='distance';
  if(reason||step>=pair.end)return finishExecutionPair(pair,player,target,step,reason);
+ if(pair.stealth){
+   const fraction=Math.min(1,(step-pair.start)*DT/.2),t=fraction*fraction*(3-2*fraction);
+   const from=pair.snapshots.attacker;
+   player.pos=from.pos.map((v,i)=>v+(pair.anchor[i]-v)*t);
+   player.yaw=from.yaw+t*Math.atan2(Math.sin(pair.yaw-from.yaw),Math.cos(pair.yaw-from.yaw));
+ }
  return null;
 }

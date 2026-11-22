@@ -1,4 +1,14 @@
-import {PropertyBinding,Quaternion} from 'three';
+import {Box3,PropertyBinding,Quaternion} from 'three';
+
+// Use the same standing pose to measure skinned bounds in every playable view.
+export function fitStandingCharacter(model,animations){
+  const pose=new PosePlayer(model,animations);
+  pose.sample('Idle_Loop',0,1);
+  const bounds=new Box3().setFromObject(model);
+  model.scale.setScalar(1.78/(bounds.max.y-bounds.min.y));
+  model.position.y=-bounds.min.y*model.scale.y;
+  return pose;
+}
 
 /** Direct track sampling: no AnimationMixer and no baked/synthetic substitute motion. */
 export class PosePlayer {

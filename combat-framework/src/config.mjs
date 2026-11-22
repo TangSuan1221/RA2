@@ -5,7 +5,7 @@ export const CFG={
   arenaHalf:18,health:100,playerSpawn:[0,0,-6],enemyCount:8,
   meleeRange:1.45,meleeHalfAngle:35,attackGapSteps:15,executionSteps:72,
   dodgeSpeed:4.2,proneHeight:0.55,proneSpeed:0.16,
-  weapon:{damage:34,magazine:8,reserve:40,reloadSteps:90,intervalSteps:15,range:60},
+  weapon:{damage:34,magazine:8,reserve:40,reloadSteps:90,reloadByWeapon:{rifle:108,sniper:150},intervalSteps:15,range:60},
   medkit:{heal:55,steps:150,count:2},throwable:{damage:65,radius:3.5,fuseSteps:90,count:3},
   obstacles:[
     {id:'west',min:[-18,0,-18],max:[-17,4,18]},
